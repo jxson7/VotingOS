@@ -30,8 +30,8 @@ Partial Class HeadBoyConfig
         Dim Number_of_GCSELabel As System.Windows.Forms.Label
         Dim ImageLabel As System.Windows.Forms.Label
         Dim Personal_SkillsLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HeadBoyConfig))
         Dim Previously_part_of_school_house_council_Label As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HeadBoyConfig))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CandidatesHeadBoyDataSet = New VotingOS.CandidatesHeadBoyDataSet()
         Me.CandidateHeadBoyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -158,6 +158,18 @@ Partial Class HeadBoyConfig
         Personal_SkillsLabel.TabIndex = 25
         Personal_SkillsLabel.Text = "Personal Skills (including whether you were previously part of house/school counc" &
     "il):"
+        '
+        'Previously_part_of_school_house_council_Label
+        '
+        Previously_part_of_school_house_council_Label.AutoSize = True
+        Previously_part_of_school_house_council_Label.BackColor = System.Drawing.Color.Transparent
+        Previously_part_of_school_house_council_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Previously_part_of_school_house_council_Label.ForeColor = System.Drawing.Color.White
+        Previously_part_of_school_house_council_Label.Location = New System.Drawing.Point(7, 234)
+        Previously_part_of_school_house_council_Label.Name = "Previously_part_of_school_house_council_Label"
+        Previously_part_of_school_house_council_Label.Size = New System.Drawing.Size(202, 13)
+        Previously_part_of_school_house_council_Label.TabIndex = 28
+        Previously_part_of_school_house_council_Label.Text = "Previously part of school/house council?:"
         '
         'Label2
         '
@@ -351,6 +363,7 @@ Partial Class HeadBoyConfig
         Me.ImagePictureBox.Location = New System.Drawing.Point(480, 52)
         Me.ImagePictureBox.Name = "ImagePictureBox"
         Me.ImagePictureBox.Size = New System.Drawing.Size(123, 164)
+        Me.ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.ImagePictureBox.TabIndex = 25
         Me.ImagePictureBox.TabStop = False
         '
@@ -387,18 +400,6 @@ Partial Class HeadBoyConfig
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
-        'Previously_part_of_school_house_council_Label
-        '
-        Previously_part_of_school_house_council_Label.AutoSize = True
-        Previously_part_of_school_house_council_Label.BackColor = System.Drawing.Color.Transparent
-        Previously_part_of_school_house_council_Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Previously_part_of_school_house_council_Label.ForeColor = System.Drawing.Color.White
-        Previously_part_of_school_house_council_Label.Location = New System.Drawing.Point(7, 234)
-        Previously_part_of_school_house_council_Label.Name = "Previously_part_of_school_house_council_Label"
-        Previously_part_of_school_house_council_Label.Size = New System.Drawing.Size(202, 13)
-        Previously_part_of_school_house_council_Label.TabIndex = 28
-        Previously_part_of_school_house_council_Label.Text = "Previously part of school/house council?:"
         '
         'Previously_part_of_school_house_council_CheckBox
         '
