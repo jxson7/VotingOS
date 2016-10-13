@@ -363,7 +363,7 @@ Partial Class HeadBoyConfig
         Me.ImagePictureBox.Location = New System.Drawing.Point(480, 52)
         Me.ImagePictureBox.Name = "ImagePictureBox"
         Me.ImagePictureBox.Size = New System.Drawing.Size(123, 164)
-        Me.ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.ImagePictureBox.TabIndex = 25
         Me.ImagePictureBox.TabStop = False
         '
@@ -438,11 +438,13 @@ Partial Class HeadBoyConfig
         Me.Controls.Add(Me.First_NameTextBox)
         Me.Controls.Add(Me.CandidateHeadBoyBindingNavigator)
         Me.Controls.Add(Me.Label2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "HeadBoyConfig"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Head Boy Configuration"
         CType(Me.CandidatesHeadBoyDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CandidateHeadBoyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

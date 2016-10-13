@@ -136,6 +136,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="StudentVotingForm.Designer.vb">
+      <DependentUpon>StudentVotingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentVotingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="usersDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -184,6 +190,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentVotingForm.resx">
+      <DependentUpon>StudentVotingForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VotersConfig.resx">
       <DependentUpon>VotersConfig.vb</DependentUpon>
