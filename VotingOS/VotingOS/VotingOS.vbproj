@@ -121,6 +121,12 @@
     <Compile Include="headgirlconfig.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="headgirlvote.Designer.vb">
+      <DependentUpon>headgirlvote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="headgirlvote.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainLogin.Designer.vb">
       <DependentUpon>MainLogin.vb</DependentUpon>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="headgirlconfig.resx">
       <DependentUpon>headgirlconfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="headgirlvote.resx">
+      <DependentUpon>headgirlvote.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainLogin.resx">
       <DependentUpon>MainLogin.vb</DependentUpon>
