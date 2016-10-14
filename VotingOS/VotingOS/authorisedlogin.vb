@@ -42,4 +42,12 @@ Public Class authorisedlogin
 
         myConnection.Close()
     End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub authorisedlogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TextBox1.Clear()
+    End Sub
 End Class

@@ -45,4 +45,11 @@ Public Class MainLogin
         Me.Hide()
         authorisedlogin.Show()
     End Sub
+
+    Private Sub MainLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TextBox1.Clear()
+        TextBox2.Clear()
+        TextBox3.Clear()
+
+    End Sub
 End Class
