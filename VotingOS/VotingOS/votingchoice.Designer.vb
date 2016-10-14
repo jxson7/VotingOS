@@ -90,7 +90,9 @@ Partial Class votingchoice
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "votingchoice"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "votingchoice"
         Me.ResumeLayout(False)
         Me.PerformLayout()

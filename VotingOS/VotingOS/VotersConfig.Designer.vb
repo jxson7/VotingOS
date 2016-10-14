@@ -23,29 +23,29 @@ Partial Class VotersConfig
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VotersConfig))
         Dim UserLabel As System.Windows.Forms.Label
         Dim FirstNameLabel As System.Windows.Forms.Label
         Dim LastNameLabel As System.Windows.Forms.Label
         Dim PasswordLabel As System.Windows.Forms.Label
         Dim YearGroupLabel As System.Windows.Forms.Label
         Dim VotedLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VotersConfig))
         Me.UsersDataSet = New VotingOS.usersDataSet()
         Me.UsersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UsersTableAdapter = New VotingOS.usersDataSetTableAdapters.usersTableAdapter()
         Me.TableAdapterManager = New VotingOS.usersDataSetTableAdapters.TableAdapterManager()
         Me.UsersBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.UsersBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.UserTextBox = New System.Windows.Forms.TextBox()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
@@ -67,6 +67,78 @@ Partial Class VotersConfig
         CType(Me.UsersBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UsersBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'UserLabel
+        '
+        UserLabel.AutoSize = True
+        UserLabel.BackColor = System.Drawing.Color.Transparent
+        UserLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        UserLabel.ForeColor = System.Drawing.Color.White
+        UserLabel.Location = New System.Drawing.Point(53, 150)
+        UserLabel.Name = "UserLabel"
+        UserLabel.Size = New System.Drawing.Size(81, 18)
+        UserLabel.TabIndex = 3
+        UserLabel.Text = "Username:"
+        '
+        'FirstNameLabel
+        '
+        FirstNameLabel.AutoSize = True
+        FirstNameLabel.BackColor = System.Drawing.Color.Transparent
+        FirstNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        FirstNameLabel.ForeColor = System.Drawing.Color.White
+        FirstNameLabel.Location = New System.Drawing.Point(51, 187)
+        FirstNameLabel.Name = "FirstNameLabel"
+        FirstNameLabel.Size = New System.Drawing.Size(85, 18)
+        FirstNameLabel.TabIndex = 5
+        FirstNameLabel.Text = "First Name:"
+        '
+        'LastNameLabel
+        '
+        LastNameLabel.AutoSize = True
+        LastNameLabel.BackColor = System.Drawing.Color.Transparent
+        LastNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        LastNameLabel.ForeColor = System.Drawing.Color.White
+        LastNameLabel.Location = New System.Drawing.Point(50, 225)
+        LastNameLabel.Name = "LastNameLabel"
+        LastNameLabel.Size = New System.Drawing.Size(84, 18)
+        LastNameLabel.TabIndex = 7
+        LastNameLabel.Text = "Last Name:"
+        '
+        'PasswordLabel
+        '
+        PasswordLabel.AutoSize = True
+        PasswordLabel.BackColor = System.Drawing.Color.Transparent
+        PasswordLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        PasswordLabel.ForeColor = System.Drawing.Color.White
+        PasswordLabel.Location = New System.Drawing.Point(18, 266)
+        PasswordLabel.Name = "PasswordLabel"
+        PasswordLabel.Size = New System.Drawing.Size(116, 18)
+        PasswordLabel.TabIndex = 9
+        PasswordLabel.Text = "Unique ID Code:"
+        '
+        'YearGroupLabel
+        '
+        YearGroupLabel.AutoSize = True
+        YearGroupLabel.BackColor = System.Drawing.Color.Transparent
+        YearGroupLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        YearGroupLabel.ForeColor = System.Drawing.Color.White
+        YearGroupLabel.Location = New System.Drawing.Point(47, 300)
+        YearGroupLabel.Name = "YearGroupLabel"
+        YearGroupLabel.Size = New System.Drawing.Size(88, 18)
+        YearGroupLabel.TabIndex = 11
+        YearGroupLabel.Text = "Year Group:"
+        '
+        'VotedLabel
+        '
+        VotedLabel.AutoSize = True
+        VotedLabel.BackColor = System.Drawing.Color.Transparent
+        VotedLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        VotedLabel.ForeColor = System.Drawing.Color.White
+        VotedLabel.Location = New System.Drawing.Point(73, 335)
+        VotedLabel.Name = "VotedLabel"
+        VotedLabel.Size = New System.Drawing.Size(50, 18)
+        VotedLabel.TabIndex = 13
+        VotedLabel.Text = "Voted:"
         '
         'UsersDataSet
         '
@@ -107,6 +179,31 @@ Partial Class VotersConfig
         Me.UsersBindingNavigator.TabIndex = 0
         Me.UsersBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -139,16 +236,9 @@ Partial Class VotersConfig
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -171,26 +261,8 @@ Partial Class VotersConfig
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'UsersBindingNavigatorSaveItem
         '
@@ -200,18 +272,6 @@ Partial Class VotersConfig
         Me.UsersBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.UsersBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'UserLabel
-        '
-        UserLabel.AutoSize = True
-        UserLabel.BackColor = System.Drawing.Color.Transparent
-        UserLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        UserLabel.ForeColor = System.Drawing.Color.White
-        UserLabel.Location = New System.Drawing.Point(53, 150)
-        UserLabel.Name = "UserLabel"
-        UserLabel.Size = New System.Drawing.Size(81, 18)
-        UserLabel.TabIndex = 3
-        UserLabel.Text = "Username:"
-        '
         'UserTextBox
         '
         Me.UserTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "user", True))
@@ -219,18 +279,6 @@ Partial Class VotersConfig
         Me.UserTextBox.Name = "UserTextBox"
         Me.UserTextBox.Size = New System.Drawing.Size(100, 20)
         Me.UserTextBox.TabIndex = 4
-        '
-        'FirstNameLabel
-        '
-        FirstNameLabel.AutoSize = True
-        FirstNameLabel.BackColor = System.Drawing.Color.Transparent
-        FirstNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        FirstNameLabel.ForeColor = System.Drawing.Color.White
-        FirstNameLabel.Location = New System.Drawing.Point(51, 187)
-        FirstNameLabel.Name = "FirstNameLabel"
-        FirstNameLabel.Size = New System.Drawing.Size(85, 18)
-        FirstNameLabel.TabIndex = 5
-        FirstNameLabel.Text = "First Name:"
         '
         'FirstNameTextBox
         '
@@ -240,18 +288,6 @@ Partial Class VotersConfig
         Me.FirstNameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.FirstNameTextBox.TabIndex = 6
         '
-        'LastNameLabel
-        '
-        LastNameLabel.AutoSize = True
-        LastNameLabel.BackColor = System.Drawing.Color.Transparent
-        LastNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        LastNameLabel.ForeColor = System.Drawing.Color.White
-        LastNameLabel.Location = New System.Drawing.Point(50, 225)
-        LastNameLabel.Name = "LastNameLabel"
-        LastNameLabel.Size = New System.Drawing.Size(84, 18)
-        LastNameLabel.TabIndex = 7
-        LastNameLabel.Text = "Last Name:"
-        '
         'LastNameTextBox
         '
         Me.LastNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "LastName", True))
@@ -259,18 +295,6 @@ Partial Class VotersConfig
         Me.LastNameTextBox.Name = "LastNameTextBox"
         Me.LastNameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.LastNameTextBox.TabIndex = 8
-        '
-        'PasswordLabel
-        '
-        PasswordLabel.AutoSize = True
-        PasswordLabel.BackColor = System.Drawing.Color.Transparent
-        PasswordLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        PasswordLabel.ForeColor = System.Drawing.Color.White
-        PasswordLabel.Location = New System.Drawing.Point(18, 266)
-        PasswordLabel.Name = "PasswordLabel"
-        PasswordLabel.Size = New System.Drawing.Size(116, 18)
-        PasswordLabel.TabIndex = 9
-        PasswordLabel.Text = "Unique ID Code:"
         '
         'PasswordTextBox
         '
@@ -280,18 +304,6 @@ Partial Class VotersConfig
         Me.PasswordTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PasswordTextBox.TabIndex = 10
         '
-        'YearGroupLabel
-        '
-        YearGroupLabel.AutoSize = True
-        YearGroupLabel.BackColor = System.Drawing.Color.Transparent
-        YearGroupLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        YearGroupLabel.ForeColor = System.Drawing.Color.White
-        YearGroupLabel.Location = New System.Drawing.Point(47, 300)
-        YearGroupLabel.Name = "YearGroupLabel"
-        YearGroupLabel.Size = New System.Drawing.Size(88, 18)
-        YearGroupLabel.TabIndex = 11
-        YearGroupLabel.Text = "Year Group:"
-        '
         'YearGroupTextBox
         '
         Me.YearGroupTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "YearGroup", True))
@@ -299,18 +311,6 @@ Partial Class VotersConfig
         Me.YearGroupTextBox.Name = "YearGroupTextBox"
         Me.YearGroupTextBox.Size = New System.Drawing.Size(100, 20)
         Me.YearGroupTextBox.TabIndex = 12
-        '
-        'VotedLabel
-        '
-        VotedLabel.AutoSize = True
-        VotedLabel.BackColor = System.Drawing.Color.Transparent
-        VotedLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        VotedLabel.ForeColor = System.Drawing.Color.White
-        VotedLabel.Location = New System.Drawing.Point(73, 335)
-        VotedLabel.Name = "VotedLabel"
-        VotedLabel.Size = New System.Drawing.Size(50, 18)
-        VotedLabel.TabIndex = 13
-        VotedLabel.Text = "Voted:"
         '
         'VotedCheckBox
         '
@@ -382,9 +382,11 @@ Partial Class VotersConfig
         Me.Controls.Add(UserLabel)
         Me.Controls.Add(Me.UserTextBox)
         Me.Controls.Add(Me.UsersBindingNavigator)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "VotersConfig"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " "
         CType(Me.UsersDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

@@ -61,6 +61,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(875, 523)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form1"

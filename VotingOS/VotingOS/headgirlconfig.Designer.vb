@@ -437,6 +437,7 @@ Partial Class headgirlconfig
         Me.Controls.Add(Me.FirstNameTextBox)
         Me.Controls.Add(Me.CandidatesHeadGirlBindingNavigator)
         Me.Controls.Add(Me.Label2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "headgirlconfig"
