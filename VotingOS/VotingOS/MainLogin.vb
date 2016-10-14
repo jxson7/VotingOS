@@ -21,14 +21,14 @@ Public Class MainLogin
         Dim FirstName As String = ""
         Dim LastName As String = ""
 
-        'if found:
+        'if found:CONFIRMATION IS REQUIRED IF IT IS NEEDED. 
         While dr.Read
             userFound = True
             FirstName = dr("FirstName").ToString
             LastName = dr("LastName").ToString
         End While
 
-        'checking the result
+        'checking the result: IF FOUND, THE PIECE IS DIRECTED FOR THE STUDENTS DIRECTLY TO THE VOTING PAGE OS (STUDENTS ONLY_)
         If userFound = True Then
             Me.Hide()
             votingchoice.Show()
