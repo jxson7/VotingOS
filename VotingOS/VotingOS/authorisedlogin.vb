@@ -8,11 +8,12 @@ Public Class authorisedlogin
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
         'Change the following to your access database location
-        dataFile = "N:\VotingOS\VotingOS\VotingOS\bin\Debug\authorisedmembers.accdb"
+        dataFile = "N:\Voting System\VotingOS\VotingOS\bin\Debug\authorisedmembers.accdb"
         connString = provider & dataFile
         myConnection.ConnectionString = connString
 
         myConnection.Open()
+
         Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM [authorisedmembers] WHERE [password] = '" & TextBox1.Text & "'", myConnection)
         Dim dr As OleDbDataReader = cmd.ExecuteReader
 
