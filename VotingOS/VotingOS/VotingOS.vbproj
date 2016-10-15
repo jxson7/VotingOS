@@ -78,6 +78,11 @@
     <Compile Include="authorisedlogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="authorisedmembersDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>authorisedmembersDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CandidatesHeadBoyDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -211,6 +216,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="authorisedmembersDataSet.xsc">
+      <DependentUpon>authorisedmembersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="authorisedmembersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>authorisedmembersDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="authorisedmembersDataSet.xss">
+      <DependentUpon>authorisedmembersDataSet.xsd</DependentUpon>
+    </None>
     <None Include="CandidatesHeadBoyDataSet.xsc">
       <DependentUpon>CandidatesHeadBoyDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -276,6 +292,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="authorisedmembers.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="CandidatesHeadBoy.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

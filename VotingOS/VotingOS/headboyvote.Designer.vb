@@ -34,10 +34,6 @@ Partial Class headboyvote
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(headboyvote))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.CandidatesHeadBoyDataSet = New VotingOS.CandidatesHeadBoyDataSet()
-        Me.CandidateHeadBoyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CandidateHeadBoyTableAdapter = New VotingOS.CandidatesHeadBoyDataSetTableAdapters.CandidateHeadBoyTableAdapter()
-        Me.TableAdapterManager = New VotingOS.CandidatesHeadBoyDataSetTableAdapters.TableAdapterManager()
         Me.CandidateHeadBoyBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -60,6 +56,11 @@ Partial Class headboyvote
         Me.Personal_SkillsLabel1 = New System.Windows.Forms.Label()
         Me.ImagePictureBox = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.CandidateHeadBoyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CandidatesHeadBoyDataSet = New VotingOS.CandidatesHeadBoyDataSet()
+        Me.CandidateHeadBoyTableAdapter = New VotingOS.CandidatesHeadBoyDataSetTableAdapters.CandidateHeadBoyTableAdapter()
+        Me.TableAdapterManager = New VotingOS.CandidatesHeadBoyDataSetTableAdapters.TableAdapterManager()
+        Me.Button1 = New System.Windows.Forms.Button()
         First_NameLabel = New System.Windows.Forms.Label()
         Last_NameLabel = New System.Windows.Forms.Label()
         Why_would_you_like_to_be_head_boy_girl_Label = New System.Windows.Forms.Label()
@@ -68,11 +69,11 @@ Partial Class headboyvote
         Previously_part_of_school_house_council_Label = New System.Windows.Forms.Label()
         Personal_SkillsLabel = New System.Windows.Forms.Label()
         ImageLabel = New System.Windows.Forms.Label()
-        CType(Me.CandidatesHeadBoyDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CandidateHeadBoyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CandidateHeadBoyBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CandidateHeadBoyBindingNavigator.SuspendLayout()
         CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CandidateHeadBoyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CandidatesHeadBoyDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'First_NameLabel
@@ -194,26 +195,6 @@ Partial Class headboyvote
         Me.Label2.Size = New System.Drawing.Size(224, 22)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Vote For Your Head Boy"
-        '
-        'CandidatesHeadBoyDataSet
-        '
-        Me.CandidatesHeadBoyDataSet.DataSetName = "CandidatesHeadBoyDataSet"
-        Me.CandidatesHeadBoyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'CandidateHeadBoyBindingSource
-        '
-        Me.CandidateHeadBoyBindingSource.DataMember = "CandidateHeadBoy"
-        Me.CandidateHeadBoyBindingSource.DataSource = Me.CandidatesHeadBoyDataSet
-        '
-        'CandidateHeadBoyTableAdapter
-        '
-        Me.CandidateHeadBoyTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.CandidateHeadBoyTableAdapter = Me.CandidateHeadBoyTableAdapter
-        Me.TableAdapterManager.UpdateOrder = VotingOS.CandidatesHeadBoyDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'CandidateHeadBoyBindingNavigator
         '
@@ -401,12 +382,45 @@ Partial Class headboyvote
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(81, 544)
+        Me.Button2.Location = New System.Drawing.Point(75, 505)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(154, 34)
         Me.Button2.TabIndex = 20
         Me.Button2.Text = "View Head Girl Profiles"
         Me.Button2.UseVisualStyleBackColor = False
+        '
+        'CandidateHeadBoyBindingSource
+        '
+        Me.CandidateHeadBoyBindingSource.DataMember = "CandidateHeadBoy"
+        Me.CandidateHeadBoyBindingSource.DataSource = Me.CandidatesHeadBoyDataSet
+        '
+        'CandidatesHeadBoyDataSet
+        '
+        Me.CandidatesHeadBoyDataSet.DataSetName = "CandidatesHeadBoyDataSet"
+        Me.CandidatesHeadBoyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CandidateHeadBoyTableAdapter
+        '
+        Me.CandidateHeadBoyTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CandidateHeadBoyTableAdapter = Me.CandidateHeadBoyTableAdapter
+        Me.TableAdapterManager.UpdateOrder = VotingOS.CandidatesHeadBoyDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(75, 545)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(154, 34)
+        Me.Button1.TabIndex = 21
+        Me.Button1.Text = "Cast Final Votes"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'headboyvote
         '
@@ -414,6 +428,7 @@ Partial Class headboyvote
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(752, 584)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(ImageLabel)
         Me.Controls.Add(Me.ImagePictureBox)
@@ -438,12 +453,12 @@ Partial Class headboyvote
         Me.Name = "headboyvote"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "headboyvote"
-        CType(Me.CandidatesHeadBoyDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CandidateHeadBoyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CandidateHeadBoyBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CandidateHeadBoyBindingNavigator.ResumeLayout(False)
         Me.CandidateHeadBoyBindingNavigator.PerformLayout()
         CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CandidateHeadBoyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CandidatesHeadBoyDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -477,4 +492,5 @@ Partial Class headboyvote
     Friend WithEvents Personal_SkillsLabel1 As Label
     Friend WithEvents ImagePictureBox As PictureBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
 End Class

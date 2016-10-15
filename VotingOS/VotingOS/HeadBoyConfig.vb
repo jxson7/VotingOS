@@ -20,7 +20,8 @@
         Me.CandidateHeadBoyTableAdapter.Fill(Me.CandidatesHeadBoyDataSet.CandidateHeadBoy)
 
     End Sub
-
+    ' This aspect allows the form to activate the allowance of uploading an image to the profile. 
+    'TODO: Set clearance of textbox name
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         OpenFileDialog1.ShowDialog()
 

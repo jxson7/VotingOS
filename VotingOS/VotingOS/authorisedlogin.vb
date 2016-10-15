@@ -7,8 +7,8 @@ Public Class authorisedlogin
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
-        'Change the following to your access database location
-        dataFile = "C:\Users\J Dookarun\Voting System\VotingOS\VotingOS\bin\Debug\authorisedmembers.accdb"
+        'Applies the confirmation of where exactly the file is for the databse. Applicable version that has been applied is recorded as a ACCDB (Access Only)
+        dataFile = "C:\Users\Owner\Voting System\VotingOS\VotingOS\bin\Debug\authorisedmembers.accdb"
         connString = provider & dataFile
         myConnection.ConnectionString = connString
 
@@ -36,6 +36,7 @@ Public Class authorisedlogin
             configchoice.Show()
 
         Else
+            'This is a validation confirmation to review whether the piece has been applied in order to verify whether the user credidentials are within the database. If not found, a msgbox is preseneted. 
             MsgBox("Sorry, your credentials are incorrect/have not been found. Please try again or contact your administrator. You will be taken back to the main login page.", MsgBoxStyle.OkOnly, "Invalid Login")
             Me.Hide()
             MainLogin.Show()
@@ -47,8 +48,9 @@ Public Class authorisedlogin
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
 
     End Sub
-
+    ' This is just to make sure that the credentials entered in the textbox1 is deleted if someone else wishes to enter their details without closing the entire form. 
     Private Sub authorisedlogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TextBox1.Clear()
+
     End Sub
 End Class
