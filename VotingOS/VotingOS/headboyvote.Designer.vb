@@ -36,6 +36,8 @@ Partial Class headboyvote
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CandidateHeadBoyBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.CandidateHeadBoyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CandidatesHeadBoyDataSet = New VotingOS.CandidatesHeadBoyDataSet()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
@@ -56,8 +58,6 @@ Partial Class headboyvote
         Me.Personal_SkillsLabel1 = New System.Windows.Forms.Label()
         Me.ImagePictureBox = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.CandidateHeadBoyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CandidatesHeadBoyDataSet = New VotingOS.CandidatesHeadBoyDataSet()
         Me.CandidateHeadBoyTableAdapter = New VotingOS.CandidatesHeadBoyDataSetTableAdapters.CandidateHeadBoyTableAdapter()
         Me.TableAdapterManager = New VotingOS.CandidatesHeadBoyDataSetTableAdapters.TableAdapterManager()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -71,9 +71,9 @@ Partial Class headboyvote
         ImageLabel = New System.Windows.Forms.Label()
         CType(Me.CandidateHeadBoyBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CandidateHeadBoyBindingNavigator.SuspendLayout()
-        CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CandidateHeadBoyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CandidatesHeadBoyDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'First_NameLabel
@@ -154,7 +154,7 @@ Partial Class headboyvote
         Personal_SkillsLabel.BackColor = System.Drawing.Color.Transparent
         Personal_SkillsLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Personal_SkillsLabel.ForeColor = System.Drawing.Color.White
-        Personal_SkillsLabel.Location = New System.Drawing.Point(139, 474)
+        Personal_SkillsLabel.Location = New System.Drawing.Point(155, 474)
         Personal_SkillsLabel.Name = "Personal_SkillsLabel"
         Personal_SkillsLabel.Size = New System.Drawing.Size(100, 16)
         Personal_SkillsLabel.TabIndex = 15
@@ -223,6 +223,16 @@ Partial Class headboyvote
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'CandidateHeadBoyBindingSource
+        '
+        Me.CandidateHeadBoyBindingSource.DataMember = "CandidateHeadBoy"
+        Me.CandidateHeadBoyBindingSource.DataSource = Me.CandidatesHeadBoyDataSet
+        '
+        'CandidatesHeadBoyDataSet
+        '
+        Me.CandidatesHeadBoyDataSet.DataSetName = "CandidatesHeadBoyDataSet"
+        Me.CandidatesHeadBoyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
         '
@@ -382,22 +392,12 @@ Partial Class headboyvote
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(75, 505)
+        Me.Button2.Location = New System.Drawing.Point(12, 507)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(154, 34)
         Me.Button2.TabIndex = 20
         Me.Button2.Text = "View Head Girl Profiles"
         Me.Button2.UseVisualStyleBackColor = False
-        '
-        'CandidateHeadBoyBindingSource
-        '
-        Me.CandidateHeadBoyBindingSource.DataMember = "CandidateHeadBoy"
-        Me.CandidateHeadBoyBindingSource.DataSource = Me.CandidatesHeadBoyDataSet
-        '
-        'CandidatesHeadBoyDataSet
-        '
-        Me.CandidatesHeadBoyDataSet.DataSetName = "CandidatesHeadBoyDataSet"
-        Me.CandidatesHeadBoyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CandidateHeadBoyTableAdapter
         '
@@ -415,7 +415,7 @@ Partial Class headboyvote
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(75, 545)
+        Me.Button1.Location = New System.Drawing.Point(12, 547)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(154, 34)
         Me.Button1.TabIndex = 21
@@ -456,9 +456,9 @@ Partial Class headboyvote
         CType(Me.CandidateHeadBoyBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CandidateHeadBoyBindingNavigator.ResumeLayout(False)
         Me.CandidateHeadBoyBindingNavigator.PerformLayout()
-        CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CandidateHeadBoyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CandidatesHeadBoyDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

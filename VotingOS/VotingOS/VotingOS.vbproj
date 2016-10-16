@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminconfig.Designer.vb">
+      <DependentUpon>adminconfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="adminconfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="authorisedlogin.Designer.vb">
       <DependentUpon>authorisedlogin.vb</DependentUpon>
     </Compile>
@@ -82,6 +88,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>authorisedmembersDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="CandidatesHeadBoyDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -178,6 +185,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="adminconfig.resx">
+      <DependentUpon>adminconfig.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="authorisedlogin.resx">
       <DependentUpon>authorisedlogin.vb</DependentUpon>
     </EmbeddedResource>
@@ -218,14 +228,17 @@
   <ItemGroup>
     <None Include="authorisedmembersDataSet.xsc">
       <DependentUpon>authorisedmembersDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="authorisedmembersDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>authorisedmembersDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="authorisedmembersDataSet.xss">
       <DependentUpon>authorisedmembersDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="CandidatesHeadBoyDataSet.xsc">
       <DependentUpon>CandidatesHeadBoyDataSet.xsd</DependentUpon>
@@ -293,7 +306,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="authorisedmembers.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="CandidatesHeadBoy.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

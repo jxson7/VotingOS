@@ -1,4 +1,5 @@
-﻿Public Class VotersConfig
+﻿' This asepct allows the system of datbases(s) INVOLVING VOTERS to be updated. However this may not function if the table is unavailable, the wrong database address is given, table is corrupted or an unexpected issues occurs, else the system will have the ability to resume. 
+Public Class VotersConfig
     Private Sub UsersBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles UsersBindingNavigatorSaveItem.Click
         Try
             Me.Validate()
@@ -20,7 +21,7 @@
         Me.UsersTableAdapter.Fill(Me.UsersDataSet.users)
 
     End Sub
-
+    ' This asepct allows the system of datbases(s) INVOLVING VOTERS to be updated. However this may not function if the table is unavailable, the wrong database address is given, table is corrupted or an unexpected issues occurs, else the system will have the ability to resume. 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Try
             Me.Validate()
