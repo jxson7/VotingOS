@@ -312,7 +312,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="CandidatesHeadGirl.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="users.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

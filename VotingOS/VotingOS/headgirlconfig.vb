@@ -1,7 +1,6 @@
 ﻿Public Class headgirlconfig
     Private Sub CandidatesHeadGirlBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles CandidatesHeadGirlBindingNavigatorSaveItem.Click
         TextBox1.Clear()
-
         Try
             Me.Validate()
         Me.CandidatesHeadGirlBindingSource.EndEdit()
