@@ -31,6 +31,7 @@ Partial Class configchoice
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.SuspendLayout()
         '
         'Label1
@@ -63,7 +64,7 @@ Partial Class configchoice
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(100, 202)
+        Me.Button1.Location = New System.Drawing.Point(100, 183)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(154, 33)
         Me.Button1.TabIndex = 10
@@ -76,7 +77,7 @@ Partial Class configchoice
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(100, 256)
+        Me.Button2.Location = New System.Drawing.Point(100, 237)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(154, 33)
         Me.Button2.TabIndex = 11
@@ -89,7 +90,7 @@ Partial Class configchoice
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(100, 309)
+        Me.Button3.Location = New System.Drawing.Point(100, 290)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(154, 33)
         Me.Button3.TabIndex = 12
@@ -102,7 +103,7 @@ Partial Class configchoice
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(100, 361)
+        Me.Button4.Location = New System.Drawing.Point(100, 342)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(154, 33)
         Me.Button4.TabIndex = 13
@@ -115,7 +116,7 @@ Partial Class configchoice
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(100, 400)
+        Me.Button5.Location = New System.Drawing.Point(100, 381)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(154, 33)
         Me.Button5.TabIndex = 14
@@ -166,4 +167,5 @@ Partial Class configchoice
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

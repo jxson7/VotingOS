@@ -26,4 +26,9 @@ Public Class headboyvote
     Private Sub BindingNavigatorMoveLastItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorMoveLastItem.Click
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
+        FINALVOTES.Show()
+    End Sub
 End Class

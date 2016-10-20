@@ -23,26 +23,26 @@ Partial Class adminconfig
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminconfig))
         Dim FirstNameLabel As System.Windows.Forms.Label
         Dim LastNameLabel As System.Windows.Forms.Label
         Dim PasswordLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(adminconfig))
         Me.AuthorisedmembersDataSet = New VotingOS.authorisedmembersDataSet()
         Me.AuthorisedmembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AuthorisedmembersTableAdapter = New VotingOS.authorisedmembersDataSetTableAdapters.authorisedmembersTableAdapter()
         Me.TableAdapterManager = New VotingOS.authorisedmembersDataSetTableAdapters.TableAdapterManager()
         Me.AuthorisedmembersBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.AuthorisedmembersBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.LastNameTextBox = New System.Windows.Forms.TextBox()
@@ -56,6 +56,39 @@ Partial Class adminconfig
         CType(Me.AuthorisedmembersBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AuthorisedmembersBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'FirstNameLabel
+        '
+        FirstNameLabel.AutoSize = True
+        FirstNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        FirstNameLabel.ForeColor = System.Drawing.Color.White
+        FirstNameLabel.Location = New System.Drawing.Point(87, 130)
+        FirstNameLabel.Name = "FirstNameLabel"
+        FirstNameLabel.Size = New System.Drawing.Size(76, 16)
+        FirstNameLabel.TabIndex = 1
+        FirstNameLabel.Text = "First Name:"
+        '
+        'LastNameLabel
+        '
+        LastNameLabel.AutoSize = True
+        LastNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        LastNameLabel.ForeColor = System.Drawing.Color.White
+        LastNameLabel.Location = New System.Drawing.Point(87, 168)
+        LastNameLabel.Name = "LastNameLabel"
+        LastNameLabel.Size = New System.Drawing.Size(76, 16)
+        LastNameLabel.TabIndex = 3
+        LastNameLabel.Text = "Last Name:"
+        '
+        'PasswordLabel
+        '
+        PasswordLabel.AutoSize = True
+        PasswordLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        PasswordLabel.ForeColor = System.Drawing.Color.White
+        PasswordLabel.Location = New System.Drawing.Point(57, 216)
+        PasswordLabel.Name = "PasswordLabel"
+        PasswordLabel.Size = New System.Drawing.Size(106, 16)
+        PasswordLabel.TabIndex = 5
+        PasswordLabel.Text = "Unique ID Code:"
         '
         'AuthorisedmembersDataSet
         '
@@ -95,6 +128,31 @@ Partial Class adminconfig
         Me.AuthorisedmembersBindingNavigator.TabIndex = 0
         Me.AuthorisedmembersBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -127,16 +185,9 @@ Partial Class adminconfig
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -159,26 +210,8 @@ Partial Class adminconfig
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'AuthorisedmembersBindingNavigatorSaveItem
         '
@@ -188,17 +221,6 @@ Partial Class adminconfig
         Me.AuthorisedmembersBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.AuthorisedmembersBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'FirstNameLabel
-        '
-        FirstNameLabel.AutoSize = True
-        FirstNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        FirstNameLabel.ForeColor = System.Drawing.Color.White
-        FirstNameLabel.Location = New System.Drawing.Point(87, 130)
-        FirstNameLabel.Name = "FirstNameLabel"
-        FirstNameLabel.Size = New System.Drawing.Size(76, 16)
-        FirstNameLabel.TabIndex = 1
-        FirstNameLabel.Text = "First Name:"
-        '
         'FirstNameTextBox
         '
         Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AuthorisedmembersBindingSource, "FirstName", True))
@@ -207,17 +229,6 @@ Partial Class adminconfig
         Me.FirstNameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.FirstNameTextBox.TabIndex = 2
         '
-        'LastNameLabel
-        '
-        LastNameLabel.AutoSize = True
-        LastNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        LastNameLabel.ForeColor = System.Drawing.Color.White
-        LastNameLabel.Location = New System.Drawing.Point(87, 168)
-        LastNameLabel.Name = "LastNameLabel"
-        LastNameLabel.Size = New System.Drawing.Size(76, 16)
-        LastNameLabel.TabIndex = 3
-        LastNameLabel.Text = "Last Name:"
-        '
         'LastNameTextBox
         '
         Me.LastNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AuthorisedmembersBindingSource, "LastName", True))
@@ -225,17 +236,6 @@ Partial Class adminconfig
         Me.LastNameTextBox.Name = "LastNameTextBox"
         Me.LastNameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.LastNameTextBox.TabIndex = 4
-        '
-        'PasswordLabel
-        '
-        PasswordLabel.AutoSize = True
-        PasswordLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        PasswordLabel.ForeColor = System.Drawing.Color.White
-        PasswordLabel.Location = New System.Drawing.Point(57, 216)
-        PasswordLabel.Name = "PasswordLabel"
-        PasswordLabel.Size = New System.Drawing.Size(106, 16)
-        PasswordLabel.TabIndex = 5
-        PasswordLabel.Text = "Unique ID Code:"
         '
         'PasswordTextBox
         '
@@ -263,6 +263,7 @@ Partial Class adminconfig
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(630, 416)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(PasswordLabel)

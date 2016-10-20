@@ -108,6 +108,12 @@
     <Compile Include="configchoice.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FINALVOTES.Designer.vb">
+      <DependentUpon>FINALVOTES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FINALVOTES.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="configchoice.resx">
       <DependentUpon>configchoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FINALVOTES.resx">
+      <DependentUpon>FINALVOTES.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
