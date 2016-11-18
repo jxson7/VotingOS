@@ -54,13 +54,13 @@ Partial Class headboyvote
         Me.Why_would_you_like_to_be_head_boy_girl_Label1 = New System.Windows.Forms.Label()
         Me.What_changes_would_you_make_Label1 = New System.Windows.Forms.Label()
         Me.Number_of_GCSELabel1 = New System.Windows.Forms.Label()
-        Me.Previously_part_of_school_house_council_Label1 = New System.Windows.Forms.Label()
         Me.Personal_SkillsLabel1 = New System.Windows.Forms.Label()
         Me.ImagePictureBox = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.CandidateHeadBoyTableAdapter = New VotingOS.CandidatesHeadBoyDataSetTableAdapters.CandidateHeadBoyTableAdapter()
         Me.TableAdapterManager = New VotingOS.CandidatesHeadBoyDataSetTableAdapters.TableAdapterManager()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Previously_part_of_school_house_council_CheckBox = New System.Windows.Forms.CheckBox()
         First_NameLabel = New System.Windows.Forms.Label()
         Last_NameLabel = New System.Windows.Forms.Label()
         Why_would_you_like_to_be_head_boy_girl_Label = New System.Windows.Forms.Label()
@@ -210,7 +210,7 @@ Partial Class headboyvote
         Me.CandidateHeadBoyBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.CandidateHeadBoyBindingNavigator.Name = "CandidateHeadBoyBindingNavigator"
         Me.CandidateHeadBoyBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.CandidateHeadBoyBindingNavigator.Size = New System.Drawing.Size(752, 25)
+        Me.CandidateHeadBoyBindingNavigator.Size = New System.Drawing.Size(926, 25)
         Me.CandidateHeadBoyBindingNavigator.TabIndex = 4
         Me.CandidateHeadBoyBindingNavigator.Text = "BindingNavigator1"
         '
@@ -360,14 +360,6 @@ Partial Class headboyvote
         Me.Number_of_GCSELabel1.Size = New System.Drawing.Size(100, 23)
         Me.Number_of_GCSELabel1.TabIndex = 12
         '
-        'Previously_part_of_school_house_council_Label1
-        '
-        Me.Previously_part_of_school_house_council_Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidateHeadBoyBindingSource, "Previously part of school/house council?", True))
-        Me.Previously_part_of_school_house_council_Label1.Location = New System.Drawing.Point(555, 235)
-        Me.Previously_part_of_school_house_council_Label1.Name = "Previously_part_of_school_house_council_Label1"
-        Me.Previously_part_of_school_house_council_Label1.Size = New System.Drawing.Size(100, 23)
-        Me.Previously_part_of_school_house_council_Label1.TabIndex = 14
-        '
         'Personal_SkillsLabel1
         '
         Me.Personal_SkillsLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidateHeadBoyBindingSource, "Personal Skills", True))
@@ -422,12 +414,24 @@ Partial Class headboyvote
         Me.Button1.Text = "Cast Final Votes"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'Previously_part_of_school_house_council_CheckBox
+        '
+        Me.Previously_part_of_school_house_council_CheckBox.BackColor = System.Drawing.Color.Transparent
+        Me.Previously_part_of_school_house_council_CheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.CandidateHeadBoyBindingSource, "Previously part of school/house council?", True))
+        Me.Previously_part_of_school_house_council_CheckBox.Location = New System.Drawing.Point(802, 241)
+        Me.Previously_part_of_school_house_council_CheckBox.Name = "Previously_part_of_school_house_council_CheckBox"
+        Me.Previously_part_of_school_house_council_CheckBox.Size = New System.Drawing.Size(104, 24)
+        Me.Previously_part_of_school_house_council_CheckBox.TabIndex = 22
+        Me.Previously_part_of_school_house_council_CheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Previously_part_of_school_house_council_CheckBox.UseVisualStyleBackColor = False
+        '
         'headboyvote
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(752, 584)
+        Me.ClientSize = New System.Drawing.Size(926, 601)
+        Me.Controls.Add(Me.Previously_part_of_school_house_council_CheckBox)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(ImageLabel)
@@ -435,7 +439,6 @@ Partial Class headboyvote
         Me.Controls.Add(Personal_SkillsLabel)
         Me.Controls.Add(Me.Personal_SkillsLabel1)
         Me.Controls.Add(Previously_part_of_school_house_council_Label)
-        Me.Controls.Add(Me.Previously_part_of_school_house_council_Label1)
         Me.Controls.Add(Number_of_GCSELabel)
         Me.Controls.Add(Me.Number_of_GCSELabel1)
         Me.Controls.Add(What_changes_would_you_make_Label)
@@ -488,9 +491,9 @@ Partial Class headboyvote
     Friend WithEvents Why_would_you_like_to_be_head_boy_girl_Label1 As Label
     Friend WithEvents What_changes_would_you_make_Label1 As Label
     Friend WithEvents Number_of_GCSELabel1 As Label
-    Friend WithEvents Previously_part_of_school_house_council_Label1 As Label
     Friend WithEvents Personal_SkillsLabel1 As Label
     Friend WithEvents ImagePictureBox As PictureBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Previously_part_of_school_house_council_CheckBox As CheckBox
 End Class

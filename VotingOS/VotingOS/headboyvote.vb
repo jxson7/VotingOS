@@ -31,4 +31,8 @@ Public Class headboyvote
         Me.Hide()
         FINALVOTES.Show()
     End Sub
+
+    Private Sub Previously_part_of_school_house_council_CheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles Previously_part_of_school_house_council_CheckBox.CheckedChanged
+
+    End Sub
 End Class

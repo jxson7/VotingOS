@@ -29,4 +29,8 @@
 
         ImagePictureBox.Image = Image.FromFile(TextBox1.Text)
     End Sub
+
+    Private Sub ImagePictureBox_Click(sender As Object, e As EventArgs) Handles ImagePictureBox.Click
+
+    End Sub
 End Class

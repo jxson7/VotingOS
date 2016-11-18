@@ -31,6 +31,15 @@ Partial Class FINALVOTES
         Me.CandidateHeadBoyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CandidateHeadBoyTableAdapter = New VotingOS.CandidatesHeadBoyDataSetTableAdapters.CandidateHeadBoyTableAdapter()
         Me.TableAdapterManager = New VotingOS.CandidatesHeadBoyDataSetTableAdapters.TableAdapterManager()
+        Me.ImagePictureBox = New System.Windows.Forms.PictureBox()
+        Me.CandidatesHeadGirlDataSet = New VotingOS.CandidatesHeadGirlDataSet()
+        Me.CandidatesHeadGirlBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CandidatesHeadGirlTableAdapter = New VotingOS.CandidatesHeadGirlDataSetTableAdapters.CandidatesHeadGirlTableAdapter()
+        Me.TableAdapterManager1 = New VotingOS.CandidatesHeadGirlDataSetTableAdapters.TableAdapterManager()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Profile_ImagePictureBox = New System.Windows.Forms.PictureBox()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
@@ -41,33 +50,24 @@ Partial Class FINALVOTES
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.CandidateHeadBoyBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.ImagePictureBox = New System.Windows.Forms.PictureBox()
-        Me.CandidatesHeadGirlDataSet = New VotingOS.CandidatesHeadGirlDataSet()
-        Me.CandidatesHeadGirlBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CandidatesHeadGirlTableAdapter = New VotingOS.CandidatesHeadGirlDataSetTableAdapters.CandidatesHeadGirlTableAdapter()
-        Me.TableAdapterManager1 = New VotingOS.CandidatesHeadGirlDataSetTableAdapters.TableAdapterManager()
-        Me.Profile_ImagePictureBox = New System.Windows.Forms.PictureBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         CType(Me.CandidatesHeadBoyDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CandidateHeadBoyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CandidateHeadBoyBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.CandidateHeadBoyBindingNavigator.SuspendLayout()
         CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CandidatesHeadGirlDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CandidatesHeadGirlBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Profile_ImagePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CandidateHeadBoyBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CandidateHeadBoyBindingNavigator.SuspendLayout()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         Me.SuspendLayout()
@@ -127,6 +127,82 @@ Partial Class FINALVOTES
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.CandidateHeadBoyTableAdapter = Me.CandidateHeadBoyTableAdapter
         Me.TableAdapterManager.UpdateOrder = VotingOS.CandidatesHeadBoyDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'ImagePictureBox
+        '
+        Me.ImagePictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.CandidateHeadBoyBindingSource, "Image", True))
+        Me.ImagePictureBox.Location = New System.Drawing.Point(120, 184)
+        Me.ImagePictureBox.Name = "ImagePictureBox"
+        Me.ImagePictureBox.Size = New System.Drawing.Size(106, 155)
+        Me.ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.ImagePictureBox.TabIndex = 8
+        Me.ImagePictureBox.TabStop = False
+        '
+        'CandidatesHeadGirlDataSet
+        '
+        Me.CandidatesHeadGirlDataSet.DataSetName = "CandidatesHeadGirlDataSet"
+        Me.CandidatesHeadGirlDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CandidatesHeadGirlBindingSource
+        '
+        Me.CandidatesHeadGirlBindingSource.DataMember = "CandidatesHeadGirl"
+        Me.CandidatesHeadGirlBindingSource.DataSource = Me.CandidatesHeadGirlDataSet
+        '
+        'CandidatesHeadGirlTableAdapter
+        '
+        Me.CandidatesHeadGirlTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.CandidatesHeadGirlTableAdapter = Me.CandidatesHeadGirlTableAdapter
+        Me.TableAdapterManager1.UpdateOrder = VotingOS.CandidatesHeadGirlDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(120, 426)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(106, 73)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "PLACE VOTE FOR THIS HEAD BOY"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(502, 426)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(106, 73)
+        Me.Button2.TabIndex = 12
+        Me.Button2.Text = "PLACE VOTE FOR THIS HEAD GIRL"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(434, 135)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(227, 22)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "HEAD GIRL CANDIDATES"
+        '
+        'Profile_ImagePictureBox
+        '
+        Me.Profile_ImagePictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.CandidatesHeadGirlBindingSource, "Profile Image", True))
+        Me.Profile_ImagePictureBox.Location = New System.Drawing.Point(502, 180)
+        Me.Profile_ImagePictureBox.Name = "Profile_ImagePictureBox"
+        Me.Profile_ImagePictureBox.Size = New System.Drawing.Size(106, 155)
+        Me.Profile_ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.Profile_ImagePictureBox.TabIndex = 9
+        Me.Profile_ImagePictureBox.TabStop = False
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -213,107 +289,6 @@ Partial Class FINALVOTES
         Me.CandidateHeadBoyBindingNavigator.TabIndex = 7
         Me.CandidateHeadBoyBindingNavigator.Text = "BindingNavigator1"
         '
-        'ImagePictureBox
-        '
-        Me.ImagePictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.CandidateHeadBoyBindingSource, "Image", True))
-        Me.ImagePictureBox.Location = New System.Drawing.Point(120, 184)
-        Me.ImagePictureBox.Name = "ImagePictureBox"
-        Me.ImagePictureBox.Size = New System.Drawing.Size(106, 155)
-        Me.ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.ImagePictureBox.TabIndex = 8
-        Me.ImagePictureBox.TabStop = False
-        '
-        'CandidatesHeadGirlDataSet
-        '
-        Me.CandidatesHeadGirlDataSet.DataSetName = "CandidatesHeadGirlDataSet"
-        Me.CandidatesHeadGirlDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'CandidatesHeadGirlBindingSource
-        '
-        Me.CandidatesHeadGirlBindingSource.DataMember = "CandidatesHeadGirl"
-        Me.CandidatesHeadGirlBindingSource.DataSource = Me.CandidatesHeadGirlDataSet
-        '
-        'CandidatesHeadGirlTableAdapter
-        '
-        Me.CandidatesHeadGirlTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager1
-        '
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.CandidatesHeadGirlTableAdapter = Me.CandidatesHeadGirlTableAdapter
-        Me.TableAdapterManager1.UpdateOrder = VotingOS.CandidatesHeadGirlDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'Profile_ImagePictureBox
-        '
-        Me.Profile_ImagePictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.CandidatesHeadGirlBindingSource, "Profile Image", True))
-        Me.Profile_ImagePictureBox.Location = New System.Drawing.Point(502, 180)
-        Me.Profile_ImagePictureBox.Name = "Profile_ImagePictureBox"
-        Me.Profile_ImagePictureBox.Size = New System.Drawing.Size(106, 155)
-        Me.Profile_ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.Profile_ImagePictureBox.TabIndex = 9
-        Me.Profile_ImagePictureBox.TabStop = False
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(434, 135)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(227, 22)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "HEAD GIRL CANDIDATES"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(120, 426)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(106, 73)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "PLACE VOTE FOR THIS HEAD BOY"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(502, 426)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(106, 73)
-        Me.Button2.TabIndex = 12
-        Me.Button2.Text = "PLACE VOTE FOR THIS HEAD GIRL"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'BindingNavigator1
-        '
-        Me.BindingNavigator1.AddNewItem = Nothing
-        Me.BindingNavigator1.BindingSource = Me.CandidatesHeadGirlBindingSource
-        Me.BindingNavigator1.CountItem = Me.ToolStripLabel1
-        Me.BindingNavigator1.DeleteItem = Nothing
-        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3})
-        Me.BindingNavigator1.Location = New System.Drawing.Point(0, 25)
-        Me.BindingNavigator1.MoveFirstItem = Me.ToolStripButton3
-        Me.BindingNavigator1.MoveLastItem = Me.ToolStripButton6
-        Me.BindingNavigator1.MoveNextItem = Me.ToolStripButton5
-        Me.BindingNavigator1.MovePreviousItem = Me.ToolStripButton4
-        Me.BindingNavigator1.Name = "BindingNavigator1"
-        Me.BindingNavigator1.PositionItem = Me.ToolStripTextBox1
-        Me.BindingNavigator1.Size = New System.Drawing.Size(893, 25)
-        Me.BindingNavigator1.TabIndex = 13
-        Me.BindingNavigator1.Text = "BindingNavigator1"
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(35, 22)
-        Me.ToolStripLabel1.Text = "of {0}"
-        Me.ToolStripLabel1.ToolTipText = "Total number of items"
-        '
         'ToolStripButton3
         '
         Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -346,6 +321,13 @@ Partial Class FINALVOTES
         Me.ToolStripTextBox1.Text = "0"
         Me.ToolStripTextBox1.ToolTipText = "Current position"
         '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(35, 22)
+        Me.ToolStripLabel1.Text = "of {0}"
+        Me.ToolStripLabel1.ToolTipText = "Total number of items"
+        '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
@@ -374,6 +356,24 @@ Partial Class FINALVOTES
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
         '
+        'BindingNavigator1
+        '
+        Me.BindingNavigator1.AddNewItem = Nothing
+        Me.BindingNavigator1.BindingSource = Me.CandidatesHeadGirlBindingSource
+        Me.BindingNavigator1.CountItem = Me.ToolStripLabel1
+        Me.BindingNavigator1.DeleteItem = Nothing
+        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3})
+        Me.BindingNavigator1.Location = New System.Drawing.Point(0, 25)
+        Me.BindingNavigator1.MoveFirstItem = Me.ToolStripButton3
+        Me.BindingNavigator1.MoveLastItem = Me.ToolStripButton6
+        Me.BindingNavigator1.MoveNextItem = Me.ToolStripButton5
+        Me.BindingNavigator1.MovePreviousItem = Me.ToolStripButton4
+        Me.BindingNavigator1.Name = "BindingNavigator1"
+        Me.BindingNavigator1.PositionItem = Me.ToolStripTextBox1
+        Me.BindingNavigator1.Size = New System.Drawing.Size(893, 25)
+        Me.BindingNavigator1.TabIndex = 13
+        Me.BindingNavigator1.Text = "BindingNavigator1"
+        '
         'FINALVOTES
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -396,13 +396,13 @@ Partial Class FINALVOTES
         Me.Text = "FINALVOTES"
         CType(Me.CandidatesHeadBoyDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CandidateHeadBoyBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CandidateHeadBoyBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.CandidateHeadBoyBindingNavigator.ResumeLayout(False)
-        Me.CandidateHeadBoyBindingNavigator.PerformLayout()
         CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CandidatesHeadGirlDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CandidatesHeadGirlBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Profile_ImagePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CandidateHeadBoyBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CandidateHeadBoyBindingNavigator.ResumeLayout(False)
+        Me.CandidateHeadBoyBindingNavigator.PerformLayout()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
@@ -418,6 +418,15 @@ Partial Class FINALVOTES
     Friend WithEvents CandidateHeadBoyBindingSource As BindingSource
     Friend WithEvents CandidateHeadBoyTableAdapter As CandidatesHeadBoyDataSetTableAdapters.CandidateHeadBoyTableAdapter
     Friend WithEvents TableAdapterManager As CandidatesHeadBoyDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents ImagePictureBox As PictureBox
+    Friend WithEvents CandidatesHeadGirlDataSet As CandidatesHeadGirlDataSet
+    Friend WithEvents CandidatesHeadGirlBindingSource As BindingSource
+    Friend WithEvents CandidatesHeadGirlTableAdapter As CandidatesHeadGirlDataSetTableAdapters.CandidatesHeadGirlTableAdapter
+    Friend WithEvents TableAdapterManager1 As CandidatesHeadGirlDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Profile_ImagePictureBox As PictureBox
     Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
     Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
@@ -428,23 +437,14 @@ Partial Class FINALVOTES
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents CandidateHeadBoyBindingNavigator As BindingNavigator
-    Friend WithEvents ImagePictureBox As PictureBox
-    Friend WithEvents CandidatesHeadGirlDataSet As CandidatesHeadGirlDataSet
-    Friend WithEvents CandidatesHeadGirlBindingSource As BindingSource
-    Friend WithEvents CandidatesHeadGirlTableAdapter As CandidatesHeadGirlDataSetTableAdapters.CandidatesHeadGirlTableAdapter
-    Friend WithEvents TableAdapterManager1 As CandidatesHeadGirlDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents Profile_ImagePictureBox As PictureBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents BindingNavigator1 As BindingNavigator
-    Friend WithEvents ToolStripLabel1 As ToolStripLabel
     Friend WithEvents ToolStripButton3 As ToolStripButton
     Friend WithEvents ToolStripButton4 As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ToolStripTextBox1 As ToolStripTextBox
+    Friend WithEvents ToolStripLabel1 As ToolStripLabel
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents ToolStripButton5 As ToolStripButton
     Friend WithEvents ToolStripButton6 As ToolStripButton
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents BindingNavigator1 As BindingNavigator
 End Class
