@@ -60,6 +60,7 @@ Partial Class FINALVOTES
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.btnnext = New System.Windows.Forms.Button()
         CType(Me.CandidatesHeadBoyDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CandidateHeadBoyBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -374,12 +375,26 @@ Partial Class FINALVOTES
         Me.BindingNavigator1.TabIndex = 13
         Me.BindingNavigator1.Text = "BindingNavigator1"
         '
+        'btnnext
+        '
+        Me.btnnext.BackColor = System.Drawing.Color.Transparent
+        Me.btnnext.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnnext.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnnext.ForeColor = System.Drawing.Color.White
+        Me.btnnext.Location = New System.Drawing.Point(286, 253)
+        Me.btnnext.Name = "btnnext"
+        Me.btnnext.Size = New System.Drawing.Size(50, 39)
+        Me.btnnext.TabIndex = 14
+        Me.btnnext.Text = ">>"
+        Me.btnnext.UseVisualStyleBackColor = False
+        '
         'FINALVOTES
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(893, 622)
+        Me.Controls.Add(Me.btnnext)
         Me.Controls.Add(Me.BindingNavigator1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -447,4 +462,5 @@ Partial Class FINALVOTES
     Friend WithEvents ToolStripButton6 As ToolStripButton
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents BindingNavigator1 As BindingNavigator
+    Friend WithEvents btnnext As Button
 End Class

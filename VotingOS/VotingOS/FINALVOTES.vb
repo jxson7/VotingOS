@@ -1,4 +1,8 @@
 ﻿Public Class FINALVOTES
+    Dim ds As New DataSet
+    Dim da As OleDb.OleDbDataAdapter
+    Dim sql As String
+    Dim recordIdx As Integer
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
 
     End Sub
@@ -18,10 +22,21 @@
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub BindingNavigatorMoveLastItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorMoveLastItem.Click
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles BindingNavigatorMoveNextItem.Click
+        Me.CandidateHeadBoyBindingSource.MoveNext()
+
+
+    End Sub
+
+    Private Sub BindingNavigatorMoveNextItem_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class
