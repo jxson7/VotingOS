@@ -81,35 +81,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="adminconfig.Designer.vb">
-      <DependentUpon>adminconfig.vb</DependentUpon>
-    </Compile>
-    <Compile Include="adminconfig.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="authorisedlogin.Designer.vb">
       <DependentUpon>authorisedlogin.vb</DependentUpon>
     </Compile>
     <Compile Include="authorisedlogin.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="authorisedmembersDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>authorisedmembersDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="CandidatesHeadBoyDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CandidatesHeadBoyDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="CandidatesHeadGirlDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CandidatesHeadGirlDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="configchoice.Designer.vb">
       <DependentUpon>configchoice.vb</DependentUpon>
@@ -123,12 +99,6 @@
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="FINALVOTES.Designer.vb">
-      <DependentUpon>FINALVOTES.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FINALVOTES.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -140,30 +110,6 @@
       <DependentUpon>HeadBoyConfig.vb</DependentUpon>
     </Compile>
     <Compile Include="HeadBoyConfig.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="headboyvote.Designer.vb">
-      <DependentUpon>headboyvote.vb</DependentUpon>
-    </Compile>
-    <Compile Include="headboyvote.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="headgirlconfig.Designer.vb">
-      <DependentUpon>headgirlconfig.vb</DependentUpon>
-    </Compile>
-    <Compile Include="headgirlconfig.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="headgirlvote.Designer.vb">
-      <DependentUpon>headgirlvote.vb</DependentUpon>
-    </Compile>
-    <Compile Include="headgirlvote.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Loader.Designer.vb">
-      <DependentUpon>Loader.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Loader.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainLogin.Designer.vb">
@@ -187,17 +133,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="usersDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>usersDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="usersDataSet1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>usersDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="VotersConfig.Designer.vb">
       <DependentUpon>VotersConfig.vb</DependentUpon>
     </Compile>
@@ -212,35 +147,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="adminconfig.resx">
-      <DependentUpon>adminconfig.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="authorisedlogin.resx">
       <DependentUpon>authorisedlogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="configchoice.resx">
       <DependentUpon>configchoice.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FINALVOTES.resx">
-      <DependentUpon>FINALVOTES.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeadBoyConfig.resx">
       <DependentUpon>HeadBoyConfig.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="headboyvote.resx">
-      <DependentUpon>headboyvote.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="headgirlconfig.resx">
-      <DependentUpon>headgirlconfig.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="headgirlvote.resx">
-      <DependentUpon>headgirlvote.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Loader.resx">
-      <DependentUpon>Loader.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainLogin.resx">
       <DependentUpon>MainLogin.vb</DependentUpon>
@@ -259,48 +176,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="authorisedmembersDataSet.xsc">
-      <DependentUpon>authorisedmembersDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="authorisedmembersDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>authorisedmembersDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="authorisedmembersDataSet.xss">
-      <DependentUpon>authorisedmembersDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="CandidatesHeadBoyDataSet.xsc">
-      <DependentUpon>CandidatesHeadBoyDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="CandidatesHeadBoyDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CandidatesHeadBoyDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="CandidatesHeadBoyDataSet.xss">
-      <DependentUpon>CandidatesHeadBoyDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="CandidatesHeadGirlDataSet.xsc">
-      <DependentUpon>CandidatesHeadGirlDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="CandidatesHeadGirlDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CandidatesHeadGirlDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="CandidatesHeadGirlDataSet.xss">
-      <DependentUpon>CandidatesHeadGirlDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="DatabaseDataSet.xsc">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -326,47 +201,10 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="usersDataSet.xsc">
-      <DependentUpon>usersDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="usersDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>usersDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="usersDataSet.xss">
-      <DependentUpon>usersDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="usersDataSet1.xsc">
-      <DependentUpon>usersDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="usersDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>usersDataSet1.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="usersDataSet1.xss">
-      <DependentUpon>usersDataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="authorisedmembers.accdb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="CandidatesHeadBoy.accdb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="CandidatesHeadGirl.accdb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Database.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="users.accdb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

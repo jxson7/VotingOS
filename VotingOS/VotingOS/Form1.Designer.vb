@@ -26,9 +26,6 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.CandidatesHeadBoyDataSet1 = New VotingOS.CandidatesHeadBoyDataSet()
-        CType(Me.CandidatesHeadBoyDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
         '
         'Label1
         '
@@ -71,8 +68,7 @@ Partial Class Form1
         '
         'CandidatesHeadBoyDataSet1
         '
-        Me.CandidatesHeadBoyDataSet1.DataSetName = "CandidatesHeadBoyDataSet"
-        Me.CandidatesHeadBoyDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+
         '
         'Form1
         '
@@ -93,7 +89,6 @@ Partial Class Form1
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Now Loading...."
-        CType(Me.CandidatesHeadBoyDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -102,5 +97,4 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents CandidatesHeadBoyDataSet1 As CandidatesHeadBoyDataSet
 End Class
