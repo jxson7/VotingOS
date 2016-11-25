@@ -12,6 +12,7 @@
     End Sub
     ' If wanting to config head girl profiles
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        HeadGirlConfig.Show()
         Me.Hide()
     End Sub
     ' If wanting to exit the entire system. 
