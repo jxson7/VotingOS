@@ -59,13 +59,13 @@ Public Class authorisedlogin
 
             provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
             'Applies the confirmation of where exactly the file is for the databse. Applicable version that has been applied is recorded as a ACCDB (Access Only)
-            dataFile = "N:\VOTER_OS\VotingOS\VotingOS\bin\Debug\authorisedmembers.accdb"
+            dataFile = "N:\VOTER_OS\VotingOS\VotingOS\bin\Debug\Database.accdb"
             connString = provider & dataFile
             myConnection.ConnectionString = connString
 
             myConnection.Open()
 
-            Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM [authorisedmembers] WHERE [password] = '" & TextBox1.Text & "'", myConnection)
+            Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM [Database] WHERE [authorisedmembers] = '" & TextBox1.Text & "'", myConnection)
             Dim dr As OleDbDataReader = cmd.ExecuteReader
 
             ' the following variable is hold true if user is found, and false if user is not found

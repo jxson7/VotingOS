@@ -7,12 +7,12 @@ Public Class MainLogin
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
         'Change the following to your access database location
-        dataFile = "N:\VOTER_OS\VotingOS\VotingOS\bin\Debug\users.accdb"
+        dataFile = "N:\VOTER_OS\VotingOS\VotingOS\bin\Debug\Database.accdb"
         connString = provider & dataFile
         myConnection.ConnectionString = connString
 
         myConnection.Open()
-        Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM [users] WHERE [user] = '" & TextBox1.Text & "' AND [password] = '" & TextBox2.Text & "' AND [YearGroup] & '" & TextBox3.Text & "'", myConnection)
+        Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM [Database] WHERE [users] = '" & TextBox1.Text & "' AND [password] = '" & TextBox2.Text & "' AND [YearGroup] & '" & TextBox3.Text & "'", myConnection)
         Dim dr As OleDbDataReader = cmd.ExecuteReader
 
         ' the following variable is hold true if user is found, and false if user is not found
