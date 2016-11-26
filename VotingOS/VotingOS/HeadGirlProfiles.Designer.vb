@@ -23,23 +23,23 @@ Partial Class HeadGirlProfiles
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HeadGirlProfiles))
         Dim Why_would_you_like_to_be_head_girl_Label As System.Windows.Forms.Label
         Dim What_changes_would_you_make_Label As System.Windows.Forms.Label
         Dim Number_of_GCSEsLabel As System.Windows.Forms.Label
         Dim Previously_Part_of_School_House_CouncilLabel As System.Windows.Forms.Label
         Dim Personal_SkillsLabel As System.Windows.Forms.Label
         Dim IDLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HeadGirlProfiles))
         Me.DatabaseDataSet = New VotingOS.DatabaseDataSet()
         Me.CandidatesHeadGirlBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CandidatesHeadGirlTableAdapter = New VotingOS.DatabaseDataSetTableAdapters.CandidatesHeadGirlTableAdapter()
         Me.TableAdapterManager = New VotingOS.DatabaseDataSetTableAdapters.TableAdapterManager()
         Me.CandidatesHeadGirlBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
@@ -67,6 +67,67 @@ Partial Class HeadGirlProfiles
         Me.CandidatesHeadGirlBindingNavigator.SuspendLayout()
         CType(Me.Profile_ImagePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Why_would_you_like_to_be_head_girl_Label
+        '
+        Why_would_you_like_to_be_head_girl_Label.AutoSize = True
+        Why_would_you_like_to_be_head_girl_Label.ForeColor = System.Drawing.Color.White
+        Why_would_you_like_to_be_head_girl_Label.Location = New System.Drawing.Point(217, 53)
+        Why_would_you_like_to_be_head_girl_Label.Name = "Why_would_you_like_to_be_head_girl_Label"
+        Why_would_you_like_to_be_head_girl_Label.Size = New System.Drawing.Size(178, 13)
+        Why_would_you_like_to_be_head_girl_Label.TabIndex = 4
+        Why_would_you_like_to_be_head_girl_Label.Text = "Why would you like to be head girl?:"
+        '
+        'What_changes_would_you_make_Label
+        '
+        What_changes_would_you_make_Label.AutoSize = True
+        What_changes_would_you_make_Label.ForeColor = System.Drawing.Color.White
+        What_changes_would_you_make_Label.Location = New System.Drawing.Point(226, 153)
+        What_changes_would_you_make_Label.Name = "What_changes_would_you_make_Label"
+        What_changes_would_you_make_Label.Size = New System.Drawing.Size(166, 13)
+        What_changes_would_you_make_Label.TabIndex = 6
+        What_changes_would_you_make_Label.Text = "What changes would you make?:"
+        '
+        'Number_of_GCSEsLabel
+        '
+        Number_of_GCSEsLabel.AutoSize = True
+        Number_of_GCSEsLabel.ForeColor = System.Drawing.Color.White
+        Number_of_GCSEsLabel.Location = New System.Drawing.Point(16, 257)
+        Number_of_GCSEsLabel.Name = "Number_of_GCSEsLabel"
+        Number_of_GCSEsLabel.Size = New System.Drawing.Size(96, 13)
+        Number_of_GCSEsLabel.TabIndex = 8
+        Number_of_GCSEsLabel.Text = "Number of GCSEs:"
+        '
+        'Previously_Part_of_School_House_CouncilLabel
+        '
+        Previously_Part_of_School_House_CouncilLabel.AutoSize = True
+        Previously_Part_of_School_House_CouncilLabel.ForeColor = System.Drawing.Color.White
+        Previously_Part_of_School_House_CouncilLabel.Location = New System.Drawing.Point(265, 262)
+        Previously_Part_of_School_House_CouncilLabel.Name = "Previously_Part_of_School_House_CouncilLabel"
+        Previously_Part_of_School_House_CouncilLabel.Size = New System.Drawing.Size(202, 13)
+        Previously_Part_of_School_House_CouncilLabel.TabIndex = 10
+        Previously_Part_of_School_House_CouncilLabel.Text = "Previously Part of School/House Council:"
+        '
+        'Personal_SkillsLabel
+        '
+        Personal_SkillsLabel.AutoSize = True
+        Personal_SkillsLabel.ForeColor = System.Drawing.Color.White
+        Personal_SkillsLabel.Location = New System.Drawing.Point(133, 311)
+        Personal_SkillsLabel.Name = "Personal_SkillsLabel"
+        Personal_SkillsLabel.Size = New System.Drawing.Size(78, 13)
+        Personal_SkillsLabel.TabIndex = 12
+        Personal_SkillsLabel.Text = "Personal Skills:"
+        '
+        'IDLabel
+        '
+        IDLabel.AutoSize = True
+        IDLabel.BackColor = System.Drawing.Color.Transparent
+        IDLabel.ForeColor = System.Drawing.Color.White
+        IDLabel.Location = New System.Drawing.Point(29, 37)
+        IDLabel.Name = "IDLabel"
+        IDLabel.Size = New System.Drawing.Size(98, 13)
+        IDLabel.TabIndex = 16
+        IDLabel.Text = "Candidate Number:"
         '
         'DatabaseDataSet
         '
@@ -110,6 +171,13 @@ Partial Class HeadGirlProfiles
         Me.CandidatesHeadGirlBindingNavigator.TabIndex = 0
         Me.CandidatesHeadGirlBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -142,16 +210,9 @@ Partial Class HeadGirlProfiles
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -174,7 +235,7 @@ Partial Class HeadGirlProfiles
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'Profile_ImagePictureBox
@@ -205,16 +266,6 @@ Partial Class HeadGirlProfiles
         Me.Last_NameLabel1.Size = New System.Drawing.Size(100, 23)
         Me.Last_NameLabel1.TabIndex = 4
         '
-        'Why_would_you_like_to_be_head_girl_Label
-        '
-        Why_would_you_like_to_be_head_girl_Label.AutoSize = True
-        Why_would_you_like_to_be_head_girl_Label.ForeColor = System.Drawing.Color.White
-        Why_would_you_like_to_be_head_girl_Label.Location = New System.Drawing.Point(217, 53)
-        Why_would_you_like_to_be_head_girl_Label.Name = "Why_would_you_like_to_be_head_girl_Label"
-        Why_would_you_like_to_be_head_girl_Label.Size = New System.Drawing.Size(178, 13)
-        Why_would_you_like_to_be_head_girl_Label.TabIndex = 4
-        Why_would_you_like_to_be_head_girl_Label.Text = "Why would you like to be head girl?:"
-        '
         'Why_would_you_like_to_be_head_girl_Label1
         '
         Me.Why_would_you_like_to_be_head_girl_Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -223,16 +274,6 @@ Partial Class HeadGirlProfiles
         Me.Why_would_you_like_to_be_head_girl_Label1.Name = "Why_would_you_like_to_be_head_girl_Label1"
         Me.Why_would_you_like_to_be_head_girl_Label1.Size = New System.Drawing.Size(267, 79)
         Me.Why_would_you_like_to_be_head_girl_Label1.TabIndex = 5
-        '
-        'What_changes_would_you_make_Label
-        '
-        What_changes_would_you_make_Label.AutoSize = True
-        What_changes_would_you_make_Label.ForeColor = System.Drawing.Color.White
-        What_changes_would_you_make_Label.Location = New System.Drawing.Point(226, 153)
-        What_changes_would_you_make_Label.Name = "What_changes_would_you_make_Label"
-        What_changes_would_you_make_Label.Size = New System.Drawing.Size(166, 13)
-        What_changes_would_you_make_Label.TabIndex = 6
-        What_changes_would_you_make_Label.Text = "What changes would you make?:"
         '
         'What_changes_would_you_make_Label1
         '
@@ -243,16 +284,6 @@ Partial Class HeadGirlProfiles
         Me.What_changes_would_you_make_Label1.Size = New System.Drawing.Size(270, 75)
         Me.What_changes_would_you_make_Label1.TabIndex = 7
         '
-        'Number_of_GCSEsLabel
-        '
-        Number_of_GCSEsLabel.AutoSize = True
-        Number_of_GCSEsLabel.ForeColor = System.Drawing.Color.White
-        Number_of_GCSEsLabel.Location = New System.Drawing.Point(16, 257)
-        Number_of_GCSEsLabel.Name = "Number_of_GCSEsLabel"
-        Number_of_GCSEsLabel.Size = New System.Drawing.Size(96, 13)
-        Number_of_GCSEsLabel.TabIndex = 8
-        Number_of_GCSEsLabel.Text = "Number of GCSEs:"
-        '
         'Number_of_GCSEsLabel1
         '
         Me.Number_of_GCSEsLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -261,16 +292,6 @@ Partial Class HeadGirlProfiles
         Me.Number_of_GCSEsLabel1.Name = "Number_of_GCSEsLabel1"
         Me.Number_of_GCSEsLabel1.Size = New System.Drawing.Size(100, 23)
         Me.Number_of_GCSEsLabel1.TabIndex = 9
-        '
-        'Previously_Part_of_School_House_CouncilLabel
-        '
-        Previously_Part_of_School_House_CouncilLabel.AutoSize = True
-        Previously_Part_of_School_House_CouncilLabel.ForeColor = System.Drawing.Color.White
-        Previously_Part_of_School_House_CouncilLabel.Location = New System.Drawing.Point(265, 262)
-        Previously_Part_of_School_House_CouncilLabel.Name = "Previously_Part_of_School_House_CouncilLabel"
-        Previously_Part_of_School_House_CouncilLabel.Size = New System.Drawing.Size(202, 13)
-        Previously_Part_of_School_House_CouncilLabel.TabIndex = 10
-        Previously_Part_of_School_House_CouncilLabel.Text = "Previously Part of School/House Council:"
         '
         'Previously_Part_of_School_House_CouncilCheckBox
         '
@@ -281,16 +302,6 @@ Partial Class HeadGirlProfiles
         Me.Previously_Part_of_School_House_CouncilCheckBox.Size = New System.Drawing.Size(104, 24)
         Me.Previously_Part_of_School_House_CouncilCheckBox.TabIndex = 11
         Me.Previously_Part_of_School_House_CouncilCheckBox.UseVisualStyleBackColor = True
-        '
-        'Personal_SkillsLabel
-        '
-        Personal_SkillsLabel.AutoSize = True
-        Personal_SkillsLabel.ForeColor = System.Drawing.Color.White
-        Personal_SkillsLabel.Location = New System.Drawing.Point(133, 311)
-        Personal_SkillsLabel.Name = "Personal_SkillsLabel"
-        Personal_SkillsLabel.Size = New System.Drawing.Size(78, 13)
-        Personal_SkillsLabel.TabIndex = 12
-        Personal_SkillsLabel.Text = "Personal Skills:"
         '
         'Personal_SkillsLabel1
         '
@@ -318,17 +329,6 @@ Partial Class HeadGirlProfiles
         Me.Button2.TabIndex = 15
         Me.Button2.Text = "Cast Your Final Vote"
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'IDLabel
-        '
-        IDLabel.AutoSize = True
-        IDLabel.BackColor = System.Drawing.Color.Transparent
-        IDLabel.ForeColor = System.Drawing.Color.White
-        IDLabel.Location = New System.Drawing.Point(29, 37)
-        IDLabel.Name = "IDLabel"
-        IDLabel.Size = New System.Drawing.Size(98, 13)
-        IDLabel.TabIndex = 16
-        IDLabel.Text = "Candidate Number:"
         '
         'IDLabel1
         '
