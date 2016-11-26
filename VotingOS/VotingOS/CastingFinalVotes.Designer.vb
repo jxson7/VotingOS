@@ -27,18 +27,18 @@ Partial Class CastingFinalVotes
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.VotedHeadBoyComboBox = New System.Windows.Forms.ComboBox()
+        Me.VotedHeadGirlComboBox = New System.Windows.Forms.ComboBox()
+        Me.UsersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DatabaseDataSet = New VotingOS.DatabaseDataSet()
         Me.HeadBoyCountBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.HeadBoyCountTableAdapter = New VotingOS.DatabaseDataSetTableAdapters.HeadBoyCountTableAdapter()
         Me.TableAdapterManager = New VotingOS.DatabaseDataSetTableAdapters.TableAdapterManager()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.UsersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UsersTableAdapter = New VotingOS.DatabaseDataSetTableAdapters.usersTableAdapter()
-        Me.VotedHeadBoyComboBox = New System.Windows.Forms.ComboBox()
-        Me.VotedHeadGirlComboBox = New System.Windows.Forms.ComboBox()
+        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HeadBoyCountBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -77,6 +77,49 @@ Partial Class CastingFinalVotes
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Head Boy"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(127, 240)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(77, 20)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Head Girl"
+        '
+        'VotedHeadBoyComboBox
+        '
+        Me.VotedHeadBoyComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadBoy", True))
+        Me.VotedHeadBoyComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.UsersBindingSource, "VotedHeadBoy", True))
+        Me.VotedHeadBoyComboBox.DataSource = Me.DatabaseDataSet
+        Me.VotedHeadBoyComboBox.DisplayMember = "CandidateHeadBoy.ID"
+        Me.VotedHeadBoyComboBox.FormattingEnabled = True
+        Me.VotedHeadBoyComboBox.Location = New System.Drawing.Point(246, 168)
+        Me.VotedHeadBoyComboBox.Name = "VotedHeadBoyComboBox"
+        Me.VotedHeadBoyComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.VotedHeadBoyComboBox.TabIndex = 8
+        Me.VotedHeadBoyComboBox.ValueMember = "CandidateHeadBoy.ID"
+        '
+        'VotedHeadGirlComboBox
+        '
+        Me.VotedHeadGirlComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadGirl", True))
+        Me.VotedHeadGirlComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.UsersBindingSource, "VotedHeadGirl", True))
+        Me.VotedHeadGirlComboBox.DataSource = Me.DatabaseDataSet
+        Me.VotedHeadGirlComboBox.DisplayMember = "CandidatesHeadGirl.ID"
+        Me.VotedHeadGirlComboBox.FormattingEnabled = True
+        Me.VotedHeadGirlComboBox.Location = New System.Drawing.Point(246, 242)
+        Me.VotedHeadGirlComboBox.Name = "VotedHeadGirlComboBox"
+        Me.VotedHeadGirlComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.VotedHeadGirlComboBox.TabIndex = 9
+        Me.VotedHeadGirlComboBox.ValueMember = "CandidatesHeadGirl.ID"
+        '
+        'UsersBindingSource
+        '
+        Me.UsersBindingSource.DataMember = "users"
+        Me.UsersBindingSource.DataSource = Me.DatabaseDataSet
+        '
         'DatabaseDataSet
         '
         Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
@@ -101,44 +144,9 @@ Partial Class CastingFinalVotes
         Me.TableAdapterManager.usersTableAdapter = Me.UsersTableAdapter
         Me.TableAdapterManager.VotesTableAdapter = Nothing
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(127, 240)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(77, 20)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "Head Girl"
-        '
-        'UsersBindingSource
-        '
-        Me.UsersBindingSource.DataMember = "users"
-        Me.UsersBindingSource.DataSource = Me.DatabaseDataSet
-        '
         'UsersTableAdapter
         '
         Me.UsersTableAdapter.ClearBeforeFill = True
-        '
-        'VotedHeadBoyComboBox
-        '
-        Me.VotedHeadBoyComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadBoy", True))
-        Me.VotedHeadBoyComboBox.FormattingEnabled = True
-        Me.VotedHeadBoyComboBox.Location = New System.Drawing.Point(246, 168)
-        Me.VotedHeadBoyComboBox.Name = "VotedHeadBoyComboBox"
-        Me.VotedHeadBoyComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.VotedHeadBoyComboBox.TabIndex = 8
-        '
-        'VotedHeadGirlComboBox
-        '
-        Me.VotedHeadGirlComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadGirl", True))
-        Me.VotedHeadGirlComboBox.FormattingEnabled = True
-        Me.VotedHeadGirlComboBox.Location = New System.Drawing.Point(246, 242)
-        Me.VotedHeadGirlComboBox.Name = "VotedHeadGirlComboBox"
-        Me.VotedHeadGirlComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.VotedHeadGirlComboBox.TabIndex = 9
         '
         'CastingFinalVotes
         '
@@ -155,9 +163,9 @@ Partial Class CastingFinalVotes
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "CastingFinalVotes"
         Me.Text = "CastingFinalVotes"
+        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.HeadBoyCountBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
