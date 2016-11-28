@@ -140,14 +140,14 @@ Partial Class VotersConfig
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
         'BindingNavigatorSeparator1
         '
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -155,7 +155,7 @@ Partial Class VotersConfig
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -164,13 +164,13 @@ Partial Class VotersConfig
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorAddNewItem
         '
@@ -187,7 +187,7 @@ Partial Class VotersConfig
         Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
         Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'UsersBindingNavigatorSaveItem
@@ -195,27 +195,28 @@ Partial Class VotersConfig
         Me.UsersBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.UsersBindingNavigatorSaveItem.Image = CType(resources.GetObject("UsersBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.UsersBindingNavigatorSaveItem.Name = "UsersBindingNavigatorSaveItem"
-        Me.UsersBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.UsersBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.UsersBindingNavigatorSaveItem.Text = "Save Data"
         '
         'UserTextBox
         '
         Me.UserTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "user", True))
+        Me.UserTextBox.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UserTextBox.Location = New System.Drawing.Point(190, 232)
         Me.UserTextBox.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.UserTextBox.Name = "UserTextBox"
-        Me.UserTextBox.Size = New System.Drawing.Size(100, 26)
+        Me.UserTextBox.Size = New System.Drawing.Size(100, 21)
         Me.UserTextBox.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(48, 232)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(85, 17)
+        Me.Label1.Size = New System.Drawing.Size(90, 18)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Username: "
         '
@@ -223,11 +224,11 @@ Partial Class VotersConfig
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(48, 280)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(85, 17)
+        Me.Label2.Size = New System.Drawing.Size(88, 18)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "First Name:"
         '
@@ -235,11 +236,11 @@ Partial Class VotersConfig
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(48, 331)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(84, 17)
+        Me.Label3.Size = New System.Drawing.Size(89, 18)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Last Name:"
         '
@@ -247,11 +248,11 @@ Partial Class VotersConfig
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(48, 431)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(116, 17)
+        Me.Label4.Size = New System.Drawing.Size(128, 18)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Unique ID Code:"
         '
@@ -259,11 +260,11 @@ Partial Class VotersConfig
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(48, 377)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(87, 17)
+        Me.Label5.Size = New System.Drawing.Size(95, 18)
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Year Group:"
         '
@@ -271,11 +272,11 @@ Partial Class VotersConfig
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(318, 360)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(265, 17)
+        Me.Label6.Size = New System.Drawing.Size(302, 18)
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Candidate Voted for Head Boy Position:"
         '
@@ -283,56 +284,61 @@ Partial Class VotersConfig
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(318, 409)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(262, 17)
+        Me.Label7.Size = New System.Drawing.Size(302, 18)
         Me.Label7.TabIndex = 9
         Me.Label7.Text = "Candidate Voted for Head Girl Position:"
         '
         'FirstNameTextBox
         '
         Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "FirstName", True))
+        Me.FirstNameTextBox.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FirstNameTextBox.Location = New System.Drawing.Point(190, 280)
         Me.FirstNameTextBox.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
-        Me.FirstNameTextBox.Size = New System.Drawing.Size(100, 26)
+        Me.FirstNameTextBox.Size = New System.Drawing.Size(100, 21)
         Me.FirstNameTextBox.TabIndex = 10
         '
         'LastNameTextBox
         '
         Me.LastNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "LastName", True))
+        Me.LastNameTextBox.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LastNameTextBox.Location = New System.Drawing.Point(190, 331)
         Me.LastNameTextBox.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.LastNameTextBox.Name = "LastNameTextBox"
-        Me.LastNameTextBox.Size = New System.Drawing.Size(100, 26)
+        Me.LastNameTextBox.Size = New System.Drawing.Size(100, 21)
         Me.LastNameTextBox.TabIndex = 11
         '
         'PasswordTextBox
         '
         Me.PasswordTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "password", True))
+        Me.PasswordTextBox.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PasswordTextBox.Location = New System.Drawing.Point(190, 430)
         Me.PasswordTextBox.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.PasswordTextBox.Name = "PasswordTextBox"
-        Me.PasswordTextBox.Size = New System.Drawing.Size(100, 26)
+        Me.PasswordTextBox.Size = New System.Drawing.Size(100, 21)
         Me.PasswordTextBox.TabIndex = 12
         '
         'YearGroupComboBox
         '
         Me.YearGroupComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "YearGroup", True))
+        Me.YearGroupComboBox.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.YearGroupComboBox.FormattingEnabled = True
         Me.YearGroupComboBox.Items.AddRange(New Object() {"7", "8", "9", "10", "11", "12", "13"})
         Me.YearGroupComboBox.Location = New System.Drawing.Point(190, 377)
         Me.YearGroupComboBox.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.YearGroupComboBox.Name = "YearGroupComboBox"
-        Me.YearGroupComboBox.Size = New System.Drawing.Size(39, 28)
+        Me.YearGroupComboBox.Size = New System.Drawing.Size(39, 24)
         Me.YearGroupComboBox.TabIndex = 13
         '
         'VotedHeadBoyLabel1
         '
         Me.VotedHeadBoyLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadBoy", True))
-        Me.VotedHeadBoyLabel1.Location = New System.Drawing.Point(617, 351)
+        Me.VotedHeadBoyLabel1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VotedHeadBoyLabel1.Location = New System.Drawing.Point(665, 360)
         Me.VotedHeadBoyLabel1.Name = "VotedHeadBoyLabel1"
         Me.VotedHeadBoyLabel1.Size = New System.Drawing.Size(100, 35)
         Me.VotedHeadBoyLabel1.TabIndex = 14
@@ -340,7 +346,8 @@ Partial Class VotersConfig
         'VotedHeadGirlLabel1
         '
         Me.VotedHeadGirlLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadGirl", True))
-        Me.VotedHeadGirlLabel1.Location = New System.Drawing.Point(617, 409)
+        Me.VotedHeadGirlLabel1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VotedHeadGirlLabel1.Location = New System.Drawing.Point(665, 409)
         Me.VotedHeadGirlLabel1.Name = "VotedHeadGirlLabel1"
         Me.VotedHeadGirlLabel1.Size = New System.Drawing.Size(100, 35)
         Me.VotedHeadGirlLabel1.TabIndex = 15
