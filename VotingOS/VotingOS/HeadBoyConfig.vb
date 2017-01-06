@@ -20,6 +20,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'This section will allow the user to select the image they want to use in order to represent the candidate running for this position. All image file types are accepted as shown in the line below
         OpenFileDialog1.Filter = "image file (*.jpg, *.bmp,* .png| *.jpg; *.bmp; *.png| all files (*.*)"
         TextBox1.Text = OpenFileDialog1.SafeFileName
 

@@ -12,6 +12,7 @@
     End Sub
 
     Private Sub VotedHeadBoyTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles VotedHeadBoyTextBox.KeyPress
+        'This section will allow a trigger notice as a method of validation to confirm that if the value entered in the textbox is not entered, then notify the user that only numbers are accepted
         If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
             MessageBox.Show("Please enter numbers only")
             e.Handled = True
@@ -24,6 +25,7 @@
     End Sub
 
     Private Sub VotedHeadGirlTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles VotedHeadGirlTextBox.KeyPress
+        'Same as above, he line will simply replicate the fact that only numerical values can be entered into this system. 
         If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
             MessageBox.Show("Please enter numbers only")
             e.Handled = True
@@ -35,6 +37,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'This part will allow saving the data, when the save button is clicked.
         Try
             Me.Validate()
             Me.UsersBindingSource.EndEdit()

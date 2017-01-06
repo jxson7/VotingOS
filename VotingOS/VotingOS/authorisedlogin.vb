@@ -7,7 +7,7 @@ Public Class authorisedlogin
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
-        'Applies the confirmation of where exactly the file is for the databse. Applicable version that has been applied is recorded as a ACCDB (Access Only)
+        'Applies the confirmation of where exactly the file is for the database. Applicable version that has been applied is recorded as a ACCDB (Access Only)
         dataFile = "N:\VOTER_OS\VotingOS\VotingOS\Database.accdb"
         connString = provider & dataFile
         myConnection.ConnectionString = connString
@@ -54,6 +54,7 @@ Public Class authorisedlogin
     End Sub
 
     Private Sub Textbox1_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyDown
+        'This section allows the acceptance of the enter key to trigger the next module instead of pressing the sign in button; a feature used by the majority of the program
         If (e.KeyCode = Keys.Enter) Then
             e.SuppressKeyPress = True
 
