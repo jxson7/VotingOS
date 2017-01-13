@@ -1,5 +1,8 @@
-﻿Public Class CastingFinalVotes
+﻿Imports VotingOS.MainLogin
+Public Class CastingFinalVotes
     Private Sub CastingFinalVotes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        VotedHeadBoyTextBox.Clear()
+        VotedHeadGirlTextBox.Clear()
         'TODO: This line of code loads data into the 'DatabaseDataSet.CandidatesHeadGirl' table. You can move, or remove it, as needed.
         Me.CandidatesHeadGirlTableAdapter.Fill(Me.DatabaseDataSet.CandidatesHeadGirl)
         'TODO: This line of code loads data into the 'DatabaseDataSet.CandidateHeadBoy' table. You can move, or remove it, as needed.
@@ -38,13 +41,27 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'This part will allow saving the data, when the save button is clicked.
+        provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
+        'Change the following to your access database location
+        dataFile = "N:\VOTER_OS\VotingOS\VotingOS\Database.accdb"
+        connString = provider & dataFile
+        myConnection.ConnectionString = connString
+
         Try
             Me.Validate()
             Me.UsersBindingSource.EndEdit()
             Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
             MsgBox("Update Successful")
+            Select Case MsgBox("You have casted your vote, do you now wish to sign out?", MsgBoxStyle.YesNo)
+                Case MsgBoxResult.Yes
+                    Application.Exit()
+                Case MsgBoxResult.No
+                    HeadBoyProfiles.Show()
+            End Select
         Catch ex As Exception
             MsgBox("Update Failed. Please try again later or conbtact your administrator.")
         End Try
+        VotedHeadBoyTextBox.Clear()
+        VotedHeadGirlTextBox.Clear()
     End Sub
 End Class
