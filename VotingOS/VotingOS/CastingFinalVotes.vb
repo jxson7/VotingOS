@@ -39,14 +39,8 @@ Public Class CastingFinalVotes
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'This part will allow saving the data, when the save button is clicked.
-        provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
-        'Change the following to your access database location
-        dataFile = "N:\VOTER_OS\VotingOS\VotingOS\Database.accdb"
-        connString = provider & dataFile
-        myConnection.ConnectionString = connString
-
+    Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'This part will allow saving the data, when the save button is clicked'
         Try
             Me.Validate()
             Me.UsersBindingSource.EndEdit()

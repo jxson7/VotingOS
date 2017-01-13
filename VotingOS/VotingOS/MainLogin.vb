@@ -5,7 +5,7 @@ Public Class MainLogin
     Dim connString As String
     Dim username As String
     Dim myConnection As OleDbConnection = New OleDbConnection
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
         'Change the following to your access database location
         dataFile = "N:\VOTER_OS\VotingOS\VotingOS\Database.accdb"
