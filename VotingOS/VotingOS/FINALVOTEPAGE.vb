@@ -37,15 +37,12 @@ Public Class FINALVOTEPAGE
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            Dim cmd As New System.Data.SqlClient.SqlCommand
-            cmd.CommandType = System.Data.CommandType.Text
-            cmd.CommandType = "UPDATE VotedHeadBoy SET [users] WHERE [user] = mainlogin.username"
-
-
+            Dim update() As Data.DataRow
+            update = DatabaseDataSet.Tables("Users").Select("User" = MainLogin.Username)
             Me.Validate()
-                Me.CandidatesHeadGirlBindingSource.EndEdit()
-                Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
-                MsgBox("Update Successful")
+            Me.UsersBindingSource.EndEdit()
+            Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
+            MsgBox("Update Successful")
         Catch ex As Exception
             MsgBox("Update Failed. Please try again later or contact administrator.")
         End Try
@@ -85,6 +82,15 @@ Public Class FINALVOTEPAGE
     End Sub
 
     Private Sub FirstNameTextBox_TextChanged(sender As Object, e As EventArgs) Handles FirstNameTextBox.TextChanged
+
+    End Sub
+
+    Private Sub FillByToolStripButton_Click(sender As Object, e As EventArgs) Handles FillByToolStripButton.Click
+        Try
+            Me.UsersTableAdapter.FillBy(Me.DatabaseDataSet.users)
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
 
     End Sub
 End Class

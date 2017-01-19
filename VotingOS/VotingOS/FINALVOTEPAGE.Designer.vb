@@ -52,17 +52,24 @@ Partial Class FINALVOTEPAGE
         Me.VotedHeadBoyTextBox = New System.Windows.Forms.TextBox()
         Me.VotedHeadGirlTextBox = New System.Windows.Forms.TextBox()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.UsersDataGridView = New System.Windows.Forms.DataGridView()
+        Me.FillByToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.FillByToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         FirstNameLabel = New System.Windows.Forms.Label()
         LastNameLabel = New System.Windows.Forms.Label()
         VotedHeadBoyLabel = New System.Windows.Forms.Label()
@@ -75,7 +82,45 @@ Partial Class FINALVOTEPAGE
         CType(Me.CandidatesHeadGirlDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
+        CType(Me.UsersDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FillByToolStrip.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'FirstNameLabel
+        '
+        FirstNameLabel.AutoSize = True
+        FirstNameLabel.Location = New System.Drawing.Point(94, 141)
+        FirstNameLabel.Name = "FirstNameLabel"
+        FirstNameLabel.Size = New System.Drawing.Size(60, 13)
+        FirstNameLabel.TabIndex = 21
+        FirstNameLabel.Text = "First Name:"
+        '
+        'LastNameLabel
+        '
+        LastNameLabel.AutoSize = True
+        LastNameLabel.Location = New System.Drawing.Point(79, 167)
+        LastNameLabel.Name = "LastNameLabel"
+        LastNameLabel.Size = New System.Drawing.Size(61, 13)
+        LastNameLabel.TabIndex = 22
+        LastNameLabel.Text = "Last Name:"
+        '
+        'VotedHeadBoyLabel
+        '
+        VotedHeadBoyLabel.AutoSize = True
+        VotedHeadBoyLabel.Location = New System.Drawing.Point(52, 287)
+        VotedHeadBoyLabel.Name = "VotedHeadBoyLabel"
+        VotedHeadBoyLabel.Size = New System.Drawing.Size(88, 13)
+        VotedHeadBoyLabel.TabIndex = 23
+        VotedHeadBoyLabel.Text = "Voted Head Boy:"
+        '
+        'VotedHeadGirlLabel
+        '
+        VotedHeadGirlLabel.AutoSize = True
+        VotedHeadGirlLabel.Location = New System.Drawing.Point(55, 323)
+        VotedHeadGirlLabel.Name = "VotedHeadGirlLabel"
+        VotedHeadGirlLabel.Size = New System.Drawing.Size(85, 13)
+        VotedHeadGirlLabel.TabIndex = 24
+        VotedHeadGirlLabel.Text = "Voted Head Girl:"
         '
         'DatabaseDataSet
         '
@@ -222,15 +267,6 @@ Partial Class FINALVOTEPAGE
         Me.Button2.Text = "Load"
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'FirstNameLabel
-        '
-        FirstNameLabel.AutoSize = True
-        FirstNameLabel.Location = New System.Drawing.Point(94, 141)
-        FirstNameLabel.Name = "FirstNameLabel"
-        FirstNameLabel.Size = New System.Drawing.Size(60, 13)
-        FirstNameLabel.TabIndex = 21
-        FirstNameLabel.Text = "First Name:"
-        '
         'FirstNameTextBox
         '
         Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "FirstName", True))
@@ -238,15 +274,6 @@ Partial Class FINALVOTEPAGE
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
         Me.FirstNameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.FirstNameTextBox.TabIndex = 22
-        '
-        'LastNameLabel
-        '
-        LastNameLabel.AutoSize = True
-        LastNameLabel.Location = New System.Drawing.Point(79, 167)
-        LastNameLabel.Name = "LastNameLabel"
-        LastNameLabel.Size = New System.Drawing.Size(61, 13)
-        LastNameLabel.TabIndex = 22
-        LastNameLabel.Text = "Last Name:"
         '
         'LastNameTextBox
         '
@@ -256,15 +283,6 @@ Partial Class FINALVOTEPAGE
         Me.LastNameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.LastNameTextBox.TabIndex = 23
         '
-        'VotedHeadBoyLabel
-        '
-        VotedHeadBoyLabel.AutoSize = True
-        VotedHeadBoyLabel.Location = New System.Drawing.Point(52, 287)
-        VotedHeadBoyLabel.Name = "VotedHeadBoyLabel"
-        VotedHeadBoyLabel.Size = New System.Drawing.Size(88, 13)
-        VotedHeadBoyLabel.TabIndex = 23
-        VotedHeadBoyLabel.Text = "Voted Head Boy:"
-        '
         'VotedHeadBoyTextBox
         '
         Me.VotedHeadBoyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadBoy", True))
@@ -272,15 +290,6 @@ Partial Class FINALVOTEPAGE
         Me.VotedHeadBoyTextBox.Name = "VotedHeadBoyTextBox"
         Me.VotedHeadBoyTextBox.Size = New System.Drawing.Size(100, 20)
         Me.VotedHeadBoyTextBox.TabIndex = 24
-        '
-        'VotedHeadGirlLabel
-        '
-        VotedHeadGirlLabel.AutoSize = True
-        VotedHeadGirlLabel.Location = New System.Drawing.Point(55, 323)
-        VotedHeadGirlLabel.Name = "VotedHeadGirlLabel"
-        VotedHeadGirlLabel.Size = New System.Drawing.Size(85, 13)
-        VotedHeadGirlLabel.TabIndex = 24
-        VotedHeadGirlLabel.Text = "Voted Head Girl:"
         '
         'VotedHeadGirlTextBox
         '
@@ -306,6 +315,31 @@ Partial Class FINALVOTEPAGE
         Me.BindingNavigator1.Size = New System.Drawing.Size(907, 25)
         Me.BindingNavigator1.TabIndex = 26
         Me.BindingNavigator1.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -339,16 +373,9 @@ Partial Class FINALVOTEPAGE
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -371,26 +398,61 @@ Partial Class FINALVOTEPAGE
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
-        'BindingNavigatorAddNewItem
+        'UsersDataGridView
         '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        Me.UsersDataGridView.AllowUserToAddRows = False
+        Me.UsersDataGridView.AllowUserToDeleteRows = False
+        Me.UsersDataGridView.AutoGenerateColumns = False
+        Me.UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.UsersDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn14})
+        Me.UsersDataGridView.DataSource = Me.UsersBindingSource
+        Me.UsersDataGridView.Location = New System.Drawing.Point(97, 167)
+        Me.UsersDataGridView.Name = "UsersDataGridView"
+        Me.UsersDataGridView.Size = New System.Drawing.Size(341, 240)
+        Me.UsersDataGridView.TabIndex = 26
         '
-        'BindingNavigatorDeleteItem
+        'FillByToolStrip
         '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.FillByToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FillByToolStripButton})
+        Me.FillByToolStrip.Location = New System.Drawing.Point(0, 25)
+        Me.FillByToolStrip.Name = "FillByToolStrip"
+        Me.FillByToolStrip.Size = New System.Drawing.Size(907, 25)
+        Me.FillByToolStrip.TabIndex = 27
+        Me.FillByToolStrip.Text = "FillByToolStrip"
+        '
+        'FillByToolStripButton
+        '
+        Me.FillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.FillByToolStripButton.Name = "FillByToolStripButton"
+        Me.FillByToolStripButton.Size = New System.Drawing.Size(39, 22)
+        Me.FillByToolStripButton.Text = "FillBy"
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "FirstName"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "FirstName"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        '
+        'DataGridViewTextBoxColumn10
+        '
+        Me.DataGridViewTextBoxColumn10.DataPropertyName = "LastName"
+        Me.DataGridViewTextBoxColumn10.HeaderText = "LastName"
+        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.DataPropertyName = "VotedHeadBoy"
+        Me.DataGridViewTextBoxColumn13.HeaderText = "VotedHeadBoy"
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.DataPropertyName = "VotedHeadGirl"
+        Me.DataGridViewTextBoxColumn14.HeaderText = "VotedHeadGirl"
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
         '
         'FINALVOTEPAGE
         '
@@ -398,6 +460,8 @@ Partial Class FINALVOTEPAGE
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(907, 596)
+        Me.Controls.Add(Me.FillByToolStrip)
+        Me.Controls.Add(Me.UsersDataGridView)
         Me.Controls.Add(Me.BindingNavigator1)
         Me.Controls.Add(VotedHeadGirlLabel)
         Me.Controls.Add(Me.VotedHeadGirlTextBox)
@@ -423,6 +487,9 @@ Partial Class FINALVOTEPAGE
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)
         Me.BindingNavigator1.PerformLayout()
+        CType(Me.UsersDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FillByToolStrip.ResumeLayout(False)
+        Me.FillByToolStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -463,4 +530,11 @@ Partial Class FINALVOTEPAGE
     Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
+    Friend WithEvents UsersDataGridView As DataGridView
+    Friend WithEvents FillByToolStrip As ToolStrip
+    Friend WithEvents FillByToolStripButton As ToolStripButton
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
 End Class

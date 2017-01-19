@@ -43,7 +43,7 @@ Public Class CastingFinalVotes
         Try
             provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
             'Change the following to your access database location
-            dataFile = "N:\VOTER_OS\VotingOS\VotingOS\Database.accdb"
+            dataFile = "N:\VOTER_OS\VotingOS\VotingOS\bin\debug\Database.accdb"
             connString = provider & dataFile
             myConnection.ConnectionString = connString
 
