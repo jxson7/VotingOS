@@ -15,7 +15,6 @@ Public Class MainLogin
         myConnection.Open()
         Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM [users] WHERE [user] = '" & TextBox1.Text & "' AND [password] = '" & TextBox2.Text & "' AND [YearGroup] & '" & TextBox3.Text & "'", myConnection)
         Dim dr As OleDbDataReader = cmd.ExecuteReader
-        TextBox1.Text = username
 
         ' the following variable is hold true if user is found, and false if user is not found
         Dim userFound As Boolean = False
@@ -32,6 +31,7 @@ Public Class MainLogin
 
         'checking the result: IF FOUND, THE PIECE IS DIRECTED FOR THE STUDENTS DIRECTLY TO THE VOTING PAGE OS (STUDENTS ONLY_)
         If userFound = True Then
+            MsgBox("Hi", username)
             Me.Hide()
             votingchoice.Show()
 
