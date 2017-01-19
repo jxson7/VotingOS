@@ -57,10 +57,13 @@ Partial Class VotersConfig
         Me.VotedHeadGirlLabel1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
         CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsersBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UsersBindingNavigator.SuspendLayout()
+        Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
+        Me.ToolStripContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DatabaseDataSet
@@ -93,15 +96,16 @@ Partial Class VotersConfig
         Me.UsersBindingNavigator.BindingSource = Me.UsersBindingSource
         Me.UsersBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.UsersBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.UsersBindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.UsersBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.UsersBindingNavigatorSaveItem})
-        Me.UsersBindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.UsersBindingNavigator.Location = New System.Drawing.Point(3, 0)
         Me.UsersBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.UsersBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.UsersBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
         Me.UsersBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.UsersBindingNavigator.Name = "UsersBindingNavigator"
         Me.UsersBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.UsersBindingNavigator.Size = New System.Drawing.Size(850, 25)
+        Me.UsersBindingNavigator.Size = New System.Drawing.Size(278, 25)
         Me.UsersBindingNavigator.TabIndex = 0
         Me.UsersBindingNavigator.Text = "BindingNavigator1"
         '
@@ -202,7 +206,7 @@ Partial Class VotersConfig
         '
         Me.UserTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "user", True))
         Me.UserTextBox.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UserTextBox.Location = New System.Drawing.Point(190, 232)
+        Me.UserTextBox.Location = New System.Drawing.Point(317, 210)
         Me.UserTextBox.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.UserTextBox.Name = "UserTextBox"
         Me.UserTextBox.Size = New System.Drawing.Size(100, 21)
@@ -214,7 +218,7 @@ Partial Class VotersConfig
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(48, 232)
+        Me.Label1.Location = New System.Drawing.Point(213, 213)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(90, 18)
         Me.Label1.TabIndex = 3
@@ -226,7 +230,7 @@ Partial Class VotersConfig
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(48, 280)
+        Me.Label2.Location = New System.Drawing.Point(215, 261)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(88, 18)
         Me.Label2.TabIndex = 4
@@ -238,7 +242,7 @@ Partial Class VotersConfig
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(48, 331)
+        Me.Label3.Location = New System.Drawing.Point(214, 312)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(89, 18)
         Me.Label3.TabIndex = 5
@@ -250,7 +254,7 @@ Partial Class VotersConfig
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(48, 431)
+        Me.Label4.Location = New System.Drawing.Point(175, 409)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(128, 18)
         Me.Label4.TabIndex = 6
@@ -262,7 +266,7 @@ Partial Class VotersConfig
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(48, 377)
+        Me.Label5.Location = New System.Drawing.Point(208, 361)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(95, 18)
         Me.Label5.TabIndex = 7
@@ -274,11 +278,11 @@ Partial Class VotersConfig
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(318, 360)
+        Me.Label6.Location = New System.Drawing.Point(472, 235)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(302, 18)
+        Me.Label6.Size = New System.Drawing.Size(341, 18)
         Me.Label6.TabIndex = 8
-        Me.Label6.Text = "Candidate Voted for Head Boy Position:"
+        Me.Label6.Text = "ID of Candidate Voted for Head Boy Position:"
         '
         'Label7
         '
@@ -286,17 +290,17 @@ Partial Class VotersConfig
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(318, 409)
+        Me.Label7.Location = New System.Drawing.Point(472, 334)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(302, 18)
+        Me.Label7.Size = New System.Drawing.Size(341, 18)
         Me.Label7.TabIndex = 9
-        Me.Label7.Text = "Candidate Voted for Head Girl Position:"
+        Me.Label7.Text = "ID of Candidate Voted for Head Girl Position:"
         '
         'FirstNameTextBox
         '
         Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "FirstName", True))
         Me.FirstNameTextBox.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FirstNameTextBox.Location = New System.Drawing.Point(190, 280)
+        Me.FirstNameTextBox.Location = New System.Drawing.Point(317, 258)
         Me.FirstNameTextBox.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
         Me.FirstNameTextBox.Size = New System.Drawing.Size(100, 21)
@@ -306,7 +310,7 @@ Partial Class VotersConfig
         '
         Me.LastNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "LastName", True))
         Me.LastNameTextBox.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LastNameTextBox.Location = New System.Drawing.Point(190, 331)
+        Me.LastNameTextBox.Location = New System.Drawing.Point(317, 309)
         Me.LastNameTextBox.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.LastNameTextBox.Name = "LastNameTextBox"
         Me.LastNameTextBox.Size = New System.Drawing.Size(100, 21)
@@ -316,7 +320,7 @@ Partial Class VotersConfig
         '
         Me.PasswordTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "password", True))
         Me.PasswordTextBox.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PasswordTextBox.Location = New System.Drawing.Point(190, 430)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(317, 408)
         Me.PasswordTextBox.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.Size = New System.Drawing.Size(100, 21)
@@ -328,7 +332,7 @@ Partial Class VotersConfig
         Me.YearGroupComboBox.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.YearGroupComboBox.FormattingEnabled = True
         Me.YearGroupComboBox.Items.AddRange(New Object() {"7", "8", "9", "10", "11", "12", "13"})
-        Me.YearGroupComboBox.Location = New System.Drawing.Point(190, 377)
+        Me.YearGroupComboBox.Location = New System.Drawing.Point(317, 355)
         Me.YearGroupComboBox.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.YearGroupComboBox.Name = "YearGroupComboBox"
         Me.YearGroupComboBox.Size = New System.Drawing.Size(39, 24)
@@ -338,7 +342,7 @@ Partial Class VotersConfig
         '
         Me.VotedHeadBoyLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadBoy", True))
         Me.VotedHeadBoyLabel1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VotedHeadBoyLabel1.Location = New System.Drawing.Point(665, 360)
+        Me.VotedHeadBoyLabel1.Location = New System.Drawing.Point(590, 266)
         Me.VotedHeadBoyLabel1.Name = "VotedHeadBoyLabel1"
         Me.VotedHeadBoyLabel1.Size = New System.Drawing.Size(100, 35)
         Me.VotedHeadBoyLabel1.TabIndex = 14
@@ -347,7 +351,7 @@ Partial Class VotersConfig
         '
         Me.VotedHeadGirlLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadGirl", True))
         Me.VotedHeadGirlLabel1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VotedHeadGirlLabel1.Location = New System.Drawing.Point(665, 409)
+        Me.VotedHeadGirlLabel1.Location = New System.Drawing.Point(590, 373)
         Me.VotedHeadGirlLabel1.Name = "VotedHeadGirlLabel1"
         Me.VotedHeadGirlLabel1.Size = New System.Drawing.Size(100, 35)
         Me.VotedHeadGirlLabel1.TabIndex = 15
@@ -355,35 +359,55 @@ Partial Class VotersConfig
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(321, 541)
+        Me.Button1.Location = New System.Drawing.Point(408, 476)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(150, 43)
+        Me.Button1.Size = New System.Drawing.Size(123, 33)
         Me.Button1.TabIndex = 16
-        Me.Button1.Text = "Save"
+        Me.Button1.Text = "SAVE"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(62, 118)
+        Me.Label8.Location = New System.Drawing.Point(331, 92)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(102, 24)
+        Me.Label8.Size = New System.Drawing.Size(275, 24)
         Me.Label8.TabIndex = 17
-        Me.Label8.Text = "VotingOS"
+        Me.Label8.Text = "Configure Student Details"
+        '
+        'ToolStripContainer1
+        '
+        Me.ToolStripContainer1.BottomToolStripPanelVisible = False
+        '
+        'ToolStripContainer1.ContentPanel
+        '
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(282, 0)
+        Me.ToolStripContainer1.LeftToolStripPanelVisible = False
+        Me.ToolStripContainer1.Location = New System.Drawing.Point(330, 133)
+        Me.ToolStripContainer1.Name = "ToolStripContainer1"
+        Me.ToolStripContainer1.RightToolStripPanelVisible = False
+        Me.ToolStripContainer1.Size = New System.Drawing.Size(282, 24)
+        Me.ToolStripContainer1.TabIndex = 18
+        Me.ToolStripContainer1.Text = "ToolStripContainer1"
+        '
+        'ToolStripContainer1.TopToolStripPanel
+        '
+        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.UsersBindingNavigator)
         '
         'VotersConfig
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(850, 624)
+        Me.ClientSize = New System.Drawing.Size(901, 567)
+        Me.Controls.Add(Me.ToolStripContainer1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.VotedHeadGirlLabel1)
@@ -400,8 +424,7 @@ Partial Class VotersConfig
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.UserTextBox)
-        Me.Controls.Add(Me.UsersBindingNavigator)
-        Me.Font = New System.Drawing.Font("Vani", 8.25!)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.Name = "VotersConfig"
@@ -412,6 +435,10 @@ Partial Class VotersConfig
         CType(Me.UsersBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UsersBindingNavigator.ResumeLayout(False)
         Me.UsersBindingNavigator.PerformLayout()
+        Me.ToolStripContainer1.TopToolStripPanel.ResumeLayout(False)
+        Me.ToolStripContainer1.TopToolStripPanel.PerformLayout()
+        Me.ToolStripContainer1.ResumeLayout(False)
+        Me.ToolStripContainer1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -450,4 +477,5 @@ Partial Class VotersConfig
     Friend WithEvents VotedHeadGirlLabel1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Label8 As Label
+    Friend WithEvents ToolStripContainer1 As ToolStripContainer
 End Class

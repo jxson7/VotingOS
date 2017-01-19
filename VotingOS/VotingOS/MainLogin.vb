@@ -8,12 +8,12 @@ Public Class MainLogin
     Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
         'Change the following to your access database location
-        dataFile = "N:\VOTER_OS\VotingOS\VotingOS\Database.accdb"
+        dataFile = "N:\VOTER_OS\VotingOS\VotingOS\bin\debug\Database.accdb"
         connString = provider & dataFile
         myConnection.ConnectionString = connString
 
         myConnection.Open()
-        Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM [users] WHERE [user] = '" & userinput.Text & "' AND [password] = '" & TextBox2.Text & "' AND [YearGroup] & '" & TextBox3.Text & "'", myConnection)
+        Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM [users] WHERE [user] = '" & userinput.Text & "' AND [password] = '" & TextBox2.Text & "'", myConnection)
         Dim dr As OleDbDataReader = cmd.ExecuteReader
         ' the following variable is hold true if user is found, and false if user is not found
         Dim userFound As Boolean = False
@@ -50,7 +50,4 @@ Public Class MainLogin
         authorisedlogin.Show()
     End Sub
 
-    Private Sub MainLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
