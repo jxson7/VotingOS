@@ -3,8 +3,8 @@ Public Class MainLogin
     Dim provider As String
     Dim dataFile As String
     Dim connString As String
-    Dim username As String
     Dim myConnection As OleDbConnection = New OleDbConnection
+    Public Shared Username As String
     Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
         'Change the following to your access database location
@@ -13,25 +13,27 @@ Public Class MainLogin
         myConnection.ConnectionString = connString
 
         myConnection.Open()
-        Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM [users] WHERE [user] = '" & TextBox1.Text & "' AND [password] = '" & TextBox2.Text & "' AND [YearGroup] & '" & TextBox3.Text & "'", myConnection)
+        Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM [users] WHERE [user] = '" & userinput.Text & "' AND [password] = '" & TextBox2.Text & "' AND [YearGroup] & '" & TextBox3.Text & "'", myConnection)
         Dim dr As OleDbDataReader = cmd.ExecuteReader
-        TextBox1.Text = username
-
         ' the following variable is hold true if user is found, and false if user is not found
         Dim userFound As Boolean = False
         ' the following variables will hold the user first and last name if found.
         Dim FirstName As String = ""
         Dim LastName As String = ""
+        Dim Username As String = ""
 
         'if found:CONFIRMATION IS REQUIRED IF IT IS NEEDED. 
         While dr.Read
             userFound = True
             FirstName = dr("FirstName").ToString
             LastName = dr("LastName").ToString
+            Username = dr("user").ToString
         End While
 
-        'checking the result: IF FOUND, THE PIECE IS DIRECTED FOR THE STUDENTS DIRECTLY TO THE VOTING PAGE OS (STUDENTS ONLY_)
+        'checking the result: IF FOUND, THE PIECE IS DIRECTED FOR THE STUDENTS DIRECTLY TO THE VOTING PAGE OS (STUDENTS ONLY)
         If userFound = True Then
+            username = userinput.Text
+            MessageBox.Show("Hi " & Username)
             Me.Hide()
             votingchoice.Show()
 
@@ -49,9 +51,6 @@ Public Class MainLogin
     End Sub
 
     Private Sub MainLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TextBox1.Clear()
-        TextBox2.Clear()
-        TextBox3.Clear()
 
     End Sub
 End Class

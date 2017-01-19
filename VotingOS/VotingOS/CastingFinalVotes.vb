@@ -1,6 +1,12 @@
-﻿Imports VotingOS.MainLogin
+﻿Imports System.Data.OleDb
+Imports VotingOS.MainLogin
 Public Class CastingFinalVotes
+    Dim provider As String
+    Dim dataFile As String
+    Dim connString As String
+    Dim myConnection As OleDbConnection = New OleDbConnection
     Private Sub CastingFinalVotes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TextBox1.Text = MainLogin.Username
         VotedHeadBoyTextBox.Clear()
         VotedHeadGirlTextBox.Clear()
         'TODO: This line of code loads data into the 'DatabaseDataSet.CandidatesHeadGirl' table. You can move, or remove it, as needed.
@@ -23,10 +29,6 @@ Public Class CastingFinalVotes
 
     End Sub
 
-    Private Sub VotedHeadBoyTextBox_TextChanged(sender As Object, e As EventArgs) Handles VotedHeadBoyTextBox.TextChanged
-
-    End Sub
-
     Private Sub VotedHeadGirlTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles VotedHeadGirlTextBox.KeyPress
         'Same as above, he line will simply replicate the fact that only numerical values can be entered into this system. 
         If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
@@ -35,17 +37,35 @@ Public Class CastingFinalVotes
         End If
     End Sub
 
-    Private Sub VotedHeadGirlTextBox_TextChanged(sender As Object, e As EventArgs) Handles VotedHeadGirlTextBox.TextChanged
-
-    End Sub
 
     Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'This part will allow saving the data, when the save button is clicked'
         Try
+            provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
+            'Change the following to your access database location
+            dataFile = "N:\VOTER_OS\VotingOS\VotingOS\Database.accdb"
+            connString = provider & dataFile
+            myConnection.ConnectionString = connString
+
+            myConnection.Open()
+            Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM [users] WHERE [user] = '" & MainLogin.Username, myConnection)
+            Dim dr As OleDbDataReader = cmd.ExecuteReader
+            ' the following variable is hold true if user is found, and false if user is not found
+            Dim userFound As Boolean = False
+            Dim Username As String = ""
+
+            'if found:CONFIRMATION IS REQUIRED IF IT IS NEEDED. 
+            While dr.Read
+                userFound = True
+                Username = dr("user").ToString
+            End While
+
             Me.Validate()
             Me.UsersBindingSource.EndEdit()
             Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
             MsgBox("Update Successful")
+
+
             Select Case MsgBox("You have casted your vote, do you now wish to sign out?", MsgBoxStyle.YesNo)
                 Case MsgBoxResult.Yes
                     Application.Exit()
@@ -57,5 +77,9 @@ Public Class CastingFinalVotes
         End Try
         VotedHeadBoyTextBox.Clear()
         VotedHeadGirlTextBox.Clear()
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
     End Sub
 End Class

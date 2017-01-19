@@ -28,7 +28,7 @@ Partial Class MainLogin
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.userinput = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -95,12 +95,12 @@ Partial Class MainLogin
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "YEAR GROUP:"
         '
-        'TextBox1
+        'userinput
         '
-        Me.TextBox1.Location = New System.Drawing.Point(317, 211)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(156, 20)
-        Me.TextBox1.TabIndex = 6
+        Me.userinput.Location = New System.Drawing.Point(317, 211)
+        Me.userinput.Name = "userinput"
+        Me.userinput.Size = New System.Drawing.Size(156, 20)
+        Me.userinput.TabIndex = 6
         '
         'TextBox3
         '
@@ -153,7 +153,7 @@ Partial Class MainLogin
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.userinput)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -176,7 +176,7 @@ Partial Class MainLogin
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents userinput As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button1 As Button
