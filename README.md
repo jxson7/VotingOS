@@ -8,4 +8,5 @@ What's New:
 - Sign in as a student or authorised member
 - Add more members to increase voting.
 - Add,remove and/or change candidates credentials
-- Add a profile picture to present
+- Profile Picture feature for Candidates
+
