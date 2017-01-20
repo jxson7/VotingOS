@@ -50,8 +50,8 @@ Partial Class VotePage
         Me.UsersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.headboyvote = New System.Windows.Forms.TextBox()
+        Me.headgirlvote = New System.Windows.Forms.TextBox()
         VotedHeadBoyLabel = New System.Windows.Forms.Label()
         Label5 = New System.Windows.Forms.Label()
         Label6 = New System.Windows.Forms.Label()
@@ -80,7 +80,7 @@ Partial Class VotePage
         Label5.AutoSize = True
         Label5.BackColor = System.Drawing.Color.Transparent
         Label5.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label5.Location = New System.Drawing.Point(303, 284)
+        Label5.Location = New System.Drawing.Point(305, 282)
         Label5.Name = "Label5"
         Label5.Size = New System.Drawing.Size(89, 16)
         Label5.TabIndex = 27
@@ -91,7 +91,7 @@ Partial Class VotePage
         Label6.AutoSize = True
         Label6.BackColor = System.Drawing.Color.Transparent
         Label6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label6.Location = New System.Drawing.Point(304, 349)
+        Label6.Location = New System.Drawing.Point(305, 352)
         Label6.Name = "Label6"
         Label6.Size = New System.Drawing.Size(88, 16)
         Label6.TabIndex = 30
@@ -102,7 +102,7 @@ Partial Class VotePage
         Label7.AutoSize = True
         Label7.BackColor = System.Drawing.Color.Transparent
         Label7.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label7.Location = New System.Drawing.Point(126, 349)
+        Label7.Location = New System.Drawing.Point(126, 352)
         Label7.Name = "Label7"
         Label7.Size = New System.Drawing.Size(125, 16)
         Label7.TabIndex = 28
@@ -288,21 +288,19 @@ Partial Class VotePage
         Me.TextBox1.Size = New System.Drawing.Size(206, 23)
         Me.TextBox1.TabIndex = 34
         '
-        'ComboBox1
+        'headboyvote
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(251, 280)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(46, 21)
-        Me.ComboBox1.TabIndex = 35
+        Me.headboyvote.Location = New System.Drawing.Point(251, 278)
+        Me.headboyvote.Name = "headboyvote"
+        Me.headboyvote.Size = New System.Drawing.Size(48, 20)
+        Me.headboyvote.TabIndex = 37
         '
-        'ComboBox2
+        'headgirlvote
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(251, 348)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(46, 21)
-        Me.ComboBox2.TabIndex = 36
+        Me.headgirlvote.Location = New System.Drawing.Point(251, 348)
+        Me.headgirlvote.Name = "headgirlvote"
+        Me.headgirlvote.Size = New System.Drawing.Size(48, 20)
+        Me.headgirlvote.TabIndex = 38
         '
         'VotePage
         '
@@ -310,8 +308,8 @@ Partial Class VotePage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(901, 567)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.headgirlvote)
+        Me.Controls.Add(Me.headboyvote)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Label6)
@@ -361,6 +359,6 @@ Partial Class VotePage
     Friend WithEvents UsersBindingSource As BindingSource
     Friend WithEvents Button1 As Button
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents headboyvote As TextBox
+    Friend WithEvents headgirlvote As TextBox
 End Class

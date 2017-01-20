@@ -18,6 +18,8 @@ Class VotePage
         'TODO: This line of code loads data into the 'DatabaseDataSet.CandidateHeadBoy' table. You can move, or remove it, as needed.
         Me.CandidateHeadBoyTableAdapter.Fill(Me.DatabaseDataSet.CandidateHeadBoy)
         TextBox1.Text = ("Name: " & MainLogin.MyName & " " & MainLogin.MySurname)
+        Dim SQL As String = "SELECT * FROM Database"
+
 
     End Sub
 
@@ -26,40 +28,42 @@ Class VotePage
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'Try
-        'Me.Validate()
-        'Me.UsersBindingSource.EndEdit()
-        'Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
-        'MsgBox("Update Successful")
-        'Catch ex As Exception
-        'MsgBox("Update Failed. Please try again later or conbtact your administrator.")
-        'End Try
 
-        'Dim provider As String
-        'Dim dataFile As String
-        'Dim connString As String
 
 
 
         Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
-        'provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
-        'Change the following to your access database location
-        'dataFile = "N:\VOTER_OS\VotingOS\VotingOS\bin\debug\Database.accdb"
-        'connString = provider & dataFile
+
         myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
         myConnection.Open()
         cmd.CommandText = "UPDATE users SET VotedHeadBoy = @update1, VotedHeadGirl = @update2 WHERE user = @update3 "
-        cmd.Parameters.AddWithValue("@update1", headboyvote.Text)
-        cmd.Parameters.AddWithValue("@update2", headgirlvote.Text)
+        cmd.Parameters.AddWithValue("@update1", headboyvote.text)
+        cmd.Parameters.AddWithValue("@update2", headgirlvote.text)
         cmd.Parameters.AddWithValue("@update3", Username)
-        MsgBox(Username)
+        MsgBox("Update Successful. You will now be signed out.")
         cmd.ExecuteNonQuery()
         cmd.Dispose()
         myConnection.Close()
+        Me.Close()
+
 
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
 
+
+    Private Sub headgirlvote_KeyPress(sender As Object, e As KeyPressEventArgs) Handles headgirlvote.KeyPress
+        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+            MessageBox.Show("Please enter numbers only. Make sure the value you have entered is a candidate running for this position else your vote will not be counted.")
+            e.Handled = True
+        End If
+
+    End Sub
+
+
+    Private Sub headboyvote_KeyPress(sender As Object, e As KeyPressEventArgs) Handles headboyvote.KeyPress
+        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+            MessageBox.Show("Please enter numbers only. Make sure the value you have entered is a candidate running for this position else your vote will not be counted.")
+            e.Handled = True
+        End If
     End Sub
 End Class

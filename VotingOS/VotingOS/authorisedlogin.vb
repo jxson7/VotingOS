@@ -53,10 +53,12 @@ Public Class authorisedlogin
 
     End Sub
 
-    Private Sub Textbox1_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyDown
-        'This section allows the acceptance of the enter key to trigger the next module instead of pressing the sign in button; a feature used by the majority of the program
-        If (e.KeyCode = Keys.Enter) Then
-            e.SuppressKeyPress = True
+
+
+
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
+        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Enter) Then
+            e.Handled = True
 
             provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
             'Applies the confirmation of where exactly the file is for the databse. Applicable version that has been applied is recorded as a ACCDB (Access Only)
@@ -96,10 +98,5 @@ Public Class authorisedlogin
 
             myConnection.Close()
         End If
-
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
     End Sub
 End Class
