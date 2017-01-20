@@ -5,6 +5,7 @@ Public Class MainLogin
     Public Shared Username As String
     Public Shared MyName As String
     Public Shared MySurname As String
+    Public Shared Voted As String
     Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         Dim provider As String
@@ -33,18 +34,25 @@ Public Class MainLogin
             FirstName = dr("FirstName").ToString
             LastName = dr("LastName").ToString
             Username = dr("user").ToString
+            Voted = dr("Voted").ToString
         End While
 
         'checking the result: IF FOUND, THE PIECE IS DIRECTED FOR THE STUDENTS DIRECTLY TO THE VOTING PAGE OS (STUDENTS ONLY)
-        If userFound = True Then
-            MainLogin.Username = userinput.Text
-            MainLogin.MyName = FirstName
-            MainLogin.MySurname = LastName
-            Me.Hide()
-            ContinueMsgBox.Show()
 
-        Else
-            MsgBox("Sorry, your credentials are incorrect/have not been found. Please try again or contact your administrator", MsgBoxStyle.OkOnly, "Invalid Login")
+
+
+
+        If Voted = True Then
+            MsgBox("You have already casted your vote. If you haven't previously casted a vote, please contact your administrator ")
+            Me.Close()
+        ElseIf userFound = True Then
+            MainLogin.Username = userinput.Text
+                MainLogin.MyName = FirstName
+                MainLogin.MySurname = LastName
+                Me.Hide()
+                ContinueMsgBox.Show()
+            Else
+                MsgBox("Sorry, your credentials are incorrect/have not been found. Please try again or contact your administrator", MsgBoxStyle.OkOnly, "Invalid Login")
         End If
 
         myConnection.Close()
@@ -65,7 +73,6 @@ Public Class MainLogin
             MessageBox.Show("Numeric values only.")
             e.Handled = True
         End If
-
 
         If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Enter) Then
             e.Handled = True
@@ -96,16 +103,21 @@ Public Class MainLogin
                 FirstName = dr("FirstName").ToString
                 LastName = dr("LastName").ToString
                 Username = dr("user").ToString
+                Voted = dr("Voted").ToString
             End While
 
             'checking the result: IF FOUND, THE PIECE IS DIRECTED FOR THE STUDENTS DIRECTLY TO THE VOTING PAGE OS (STUDENTS ONLY)
-            If userFound = True Then
+
+
+            If Voted = True Then
+                MsgBox("You have already casted your vote. If you haven't previously casted a vote, please contact your administrator ")
+                Me.Close()
+            ElseIf userFound = True Then
                 MainLogin.Username = userinput.Text
                 MainLogin.MyName = FirstName
                 MainLogin.MySurname = LastName
                 Me.Hide()
                 ContinueMsgBox.Show()
-
             Else
                 MsgBox("Sorry, your credentials are incorrect/have not been found. Please try again or contact your administrator", MsgBoxStyle.OkOnly, "Invalid Login")
             End If
@@ -113,5 +125,6 @@ Public Class MainLogin
             myConnection.Close()
 
         End If
+
     End Sub
 End Class

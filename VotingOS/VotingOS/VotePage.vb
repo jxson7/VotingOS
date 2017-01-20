@@ -36,11 +36,12 @@ Class VotePage
 
         myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
         myConnection.Open()
-        cmd.CommandText = "UPDATE users SET VotedHeadBoy = @update1, VotedHeadGirl = @update2 WHERE user = @update3 "
+        cmd.CommandText = "UPDATE users SET VotedHeadBoy = @update1, VotedHeadGirl = @update2, Voted = True WHERE user = @update3 "
         cmd.Parameters.AddWithValue("@update1", headboyvote.text)
         cmd.Parameters.AddWithValue("@update2", headgirlvote.text)
         cmd.Parameters.AddWithValue("@update3", Username)
-        MsgBox("Update Successful. You will now be signed out.")
+
+        MsgBox("You have successfully casted your vote. You will now be signed out. Thank you and goodbye.")
         cmd.ExecuteNonQuery()
         cmd.Dispose()
         myConnection.Close()
