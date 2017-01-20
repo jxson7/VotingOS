@@ -118,17 +118,17 @@
     <Compile Include="configchoice.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ContinueMsgBox.Designer.vb">
+      <DependentUpon>ContinueMsgBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContinueMsgBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DatabaseDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="FINALVOTEPAGE.Designer.vb">
-      <DependentUpon>FINALVOTEPAGE.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FINALVOTEPAGE.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -182,6 +182,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="VotePage.Designer.vb">
+      <DependentUpon>VotePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VotePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VotersConfig.Designer.vb">
       <DependentUpon>VotersConfig.vb</DependentUpon>
     </Compile>
@@ -205,8 +211,8 @@
     <EmbeddedResource Include="configchoice.resx">
       <DependentUpon>configchoice.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FINALVOTEPAGE.resx">
-      <DependentUpon>FINALVOTEPAGE.vb</DependentUpon>
+    <EmbeddedResource Include="ContinueMsgBox.resx">
+      <DependentUpon>ContinueMsgBox.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -231,6 +237,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VotePage.resx">
+      <DependentUpon>VotePage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VotersConfig.resx">
       <DependentUpon>VotersConfig.vb</DependentUpon>

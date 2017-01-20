@@ -5,6 +5,8 @@ Public Class MainLogin
     Dim connString As String
     Dim myConnection As OleDbConnection = New OleDbConnection
     Public Shared Username As String
+    Public Shared MyName As String
+    Public Shared MySurname As String
     Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
         'Change the following to your access database location
@@ -32,10 +34,11 @@ Public Class MainLogin
 
         'checking the result: IF FOUND, THE PIECE IS DIRECTED FOR THE STUDENTS DIRECTLY TO THE VOTING PAGE OS (STUDENTS ONLY)
         If userFound = True Then
-            username = userinput.Text
-            MessageBox.Show("Hi " & Username)
+            MainLogin.Username = userinput.Text
+            MainLogin.MyName = FirstName
+            MainLogin.MySurname = LastName
             Me.Hide()
-            votingchoice.Show()
+            ContinueMsgBox.Show()
 
         Else
             MsgBox("Sorry, your credentials are incorrect/have not been found. Please try again or contact your administrator", MsgBoxStyle.OkOnly, "Invalid Login")

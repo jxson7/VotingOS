@@ -278,7 +278,10 @@ Partial Class HeadBoyConfig
         '
         'First_NameTextBox
         '
+        Me.First_NameTextBox.BackColor = System.Drawing.Color.Black
+        Me.First_NameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.First_NameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidateHeadBoyBindingSource, "Last Name", True))
+        Me.First_NameTextBox.ForeColor = System.Drawing.Color.White
         Me.First_NameTextBox.Location = New System.Drawing.Point(670, 204)
         Me.First_NameTextBox.Name = "First_NameTextBox"
         Me.First_NameTextBox.Size = New System.Drawing.Size(100, 20)
@@ -286,7 +289,10 @@ Partial Class HeadBoyConfig
         '
         'Last_NameTextBox
         '
+        Me.Last_NameTextBox.BackColor = System.Drawing.Color.Black
+        Me.Last_NameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Last_NameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidateHeadBoyBindingSource, "Last Name", True))
+        Me.Last_NameTextBox.ForeColor = System.Drawing.Color.White
         Me.Last_NameTextBox.Location = New System.Drawing.Point(670, 243)
         Me.Last_NameTextBox.Name = "Last_NameTextBox"
         Me.Last_NameTextBox.Size = New System.Drawing.Size(100, 20)
@@ -294,7 +300,10 @@ Partial Class HeadBoyConfig
         '
         'Why_would_you_like_to_be_head_boy_girl_TextBox
         '
+        Me.Why_would_you_like_to_be_head_boy_girl_TextBox.BackColor = System.Drawing.Color.Black
+        Me.Why_would_you_like_to_be_head_boy_girl_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Why_would_you_like_to_be_head_boy_girl_TextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidateHeadBoyBindingSource, "Why would you like to be head boy/girl?", True))
+        Me.Why_would_you_like_to_be_head_boy_girl_TextBox.ForeColor = System.Drawing.Color.White
         Me.Why_would_you_like_to_be_head_boy_girl_TextBox.Location = New System.Drawing.Point(450, 372)
         Me.Why_would_you_like_to_be_head_boy_girl_TextBox.Multiline = True
         Me.Why_would_you_like_to_be_head_boy_girl_TextBox.Name = "Why_would_you_like_to_be_head_boy_girl_TextBox"
@@ -321,7 +330,10 @@ Partial Class HeadBoyConfig
         '
         'Personal_SkillsTextBox
         '
+        Me.Personal_SkillsTextBox.BackColor = System.Drawing.Color.Black
+        Me.Personal_SkillsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Personal_SkillsTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidateHeadBoyBindingSource, "Personal Skills", True))
+        Me.Personal_SkillsTextBox.ForeColor = System.Drawing.Color.White
         Me.Personal_SkillsTextBox.Location = New System.Drawing.Point(450, 443)
         Me.Personal_SkillsTextBox.Multiline = True
         Me.Personal_SkillsTextBox.Name = "Personal_SkillsTextBox"
@@ -352,6 +364,9 @@ Partial Class HeadBoyConfig
         '
         'TextBox1
         '
+        Me.TextBox1.BackColor = System.Drawing.Color.Black
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.ForeColor = System.Drawing.Color.White
         Me.TextBox1.Location = New System.Drawing.Point(124, 303)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(166, 20)

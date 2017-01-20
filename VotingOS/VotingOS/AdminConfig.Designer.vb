@@ -143,7 +143,7 @@ Partial Class AdminConfig
         Me.AuthorisedmembersBindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.AuthorisedmembersBindingNavigator.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.AuthorisedmembersBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.AuthorisedmembersBindingNavigatorSaveItem})
-        Me.AuthorisedmembersBindingNavigator.Location = New System.Drawing.Point(3, 0)
+        Me.AuthorisedmembersBindingNavigator.Location = New System.Drawing.Point(3, 25)
         Me.AuthorisedmembersBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.AuthorisedmembersBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.AuthorisedmembersBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
@@ -284,12 +284,15 @@ Partial Class AdminConfig
         '
         'ToolStripContainer1.ContentPanel
         '
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(186, 0)
-        Me.ToolStripContainer1.Location = New System.Drawing.Point(197, 160)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(187, 0)
+        Me.ToolStripContainer1.LeftToolStripPanelVisible = False
+        Me.ToolStripContainer1.Location = New System.Drawing.Point(210, 137)
         Me.ToolStripContainer1.Name = "ToolStripContainer1"
-        Me.ToolStripContainer1.Size = New System.Drawing.Size(186, 23)
+        Me.ToolStripContainer1.RightToolStripPanelVisible = False
+        Me.ToolStripContainer1.Size = New System.Drawing.Size(187, 23)
         Me.ToolStripContainer1.TabIndex = 10
         Me.ToolStripContainer1.Text = "ToolStripContainer1"
+        Me.ToolStripContainer1.TopToolStripPanelVisible = False
         '
         'Label1
         '

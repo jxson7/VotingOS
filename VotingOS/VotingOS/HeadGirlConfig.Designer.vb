@@ -55,7 +55,6 @@ Partial Class HeadGirlConfig
         Me.Why_would_you_like_to_be_head_girl_TextBox = New System.Windows.Forms.TextBox()
         Me.Personal_SkillsTextBox = New System.Windows.Forms.TextBox()
         Me.Profile_ImagePictureBox = New System.Windows.Forms.PictureBox()
-        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
         Me.Label1 = New System.Windows.Forms.Label()
         ImageLabel = New System.Windows.Forms.Label()
         Personal_SkillsLabel = New System.Windows.Forms.Label()
@@ -70,8 +69,6 @@ Partial Class HeadGirlConfig
         Me.CandidatesHeadGirlBindingNavigator.SuspendLayout()
         CType(Me.Number_of_GCSEsNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Profile_ImagePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
-        Me.ToolStripContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ImageLabel
@@ -209,7 +206,7 @@ Partial Class HeadGirlConfig
         Me.CandidatesHeadGirlBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
         Me.CandidatesHeadGirlBindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.CandidatesHeadGirlBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.CandidatesHeadGirlBindingNavigatorSaveItem})
-        Me.CandidatesHeadGirlBindingNavigator.Location = New System.Drawing.Point(3, 0)
+        Me.CandidatesHeadGirlBindingNavigator.Location = New System.Drawing.Point(350, 137)
         Me.CandidatesHeadGirlBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.CandidatesHeadGirlBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.CandidatesHeadGirlBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
@@ -360,22 +357,6 @@ Partial Class HeadGirlConfig
         Me.Profile_ImagePictureBox.TabIndex = 33
         Me.Profile_ImagePictureBox.TabStop = False
         '
-        'ToolStripContainer1
-        '
-        '
-        'ToolStripContainer1.ContentPanel
-        '
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(282, 1)
-        Me.ToolStripContainer1.Location = New System.Drawing.Point(314, 131)
-        Me.ToolStripContainer1.Name = "ToolStripContainer1"
-        Me.ToolStripContainer1.Size = New System.Drawing.Size(282, 26)
-        Me.ToolStripContainer1.TabIndex = 34
-        Me.ToolStripContainer1.Text = "ToolStripContainer1"
-        '
-        'ToolStripContainer1.TopToolStripPanel
-        '
-        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.CandidatesHeadGirlBindingNavigator)
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -395,8 +376,8 @@ Partial Class HeadGirlConfig
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(901, 567)
+        Me.Controls.Add(Me.CandidatesHeadGirlBindingNavigator)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ToolStripContainer1)
         Me.Controls.Add(Me.Profile_ImagePictureBox)
         Me.Controls.Add(Me.Personal_SkillsTextBox)
         Me.Controls.Add(Me.Why_would_you_like_to_be_head_girl_TextBox)
@@ -413,6 +394,7 @@ Partial Class HeadGirlConfig
         Me.Controls.Add(Why_would_you_like_to_be_head_boy_girl_Label)
         Me.Controls.Add(Last_NameLabel)
         Me.Controls.Add(First_NameLabel)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "HeadGirlConfig"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -424,10 +406,6 @@ Partial Class HeadGirlConfig
         Me.CandidatesHeadGirlBindingNavigator.PerformLayout()
         CType(Me.Number_of_GCSEsNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Profile_ImagePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ToolStripContainer1.TopToolStripPanel.ResumeLayout(False)
-        Me.ToolStripContainer1.TopToolStripPanel.PerformLayout()
-        Me.ToolStripContainer1.ResumeLayout(False)
-        Me.ToolStripContainer1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -457,6 +435,5 @@ Partial Class HeadGirlConfig
     Friend WithEvents Why_would_you_like_to_be_head_girl_TextBox As TextBox
     Friend WithEvents Personal_SkillsTextBox As TextBox
     Friend WithEvents Profile_ImagePictureBox As PictureBox
-    Friend WithEvents ToolStripContainer1 As ToolStripContainer
     Friend WithEvents Label1 As Label
 End Class
