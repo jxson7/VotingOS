@@ -52,6 +52,7 @@ Partial Class VotePage
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.headboyvote = New System.Windows.Forms.TextBox()
         Me.headgirlvote = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         VotedHeadBoyLabel = New System.Windows.Forms.Label()
         Label5 = New System.Windows.Forms.Label()
         Label6 = New System.Windows.Forms.Label()
@@ -302,12 +303,21 @@ Partial Class VotePage
         Me.headgirlvote.Size = New System.Drawing.Size(48, 20)
         Me.headgirlvote.TabIndex = 38
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(507, 280)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 39
+        '
         'VotePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(901, 567)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.headgirlvote)
         Me.Controls.Add(Me.headboyvote)
         Me.Controls.Add(Me.TextBox1)
@@ -361,4 +371,5 @@ Partial Class VotePage
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents headboyvote As TextBox
     Friend WithEvents headgirlvote As TextBox
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
