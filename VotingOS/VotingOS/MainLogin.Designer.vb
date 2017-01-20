@@ -93,6 +93,7 @@ Partial Class MainLogin
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.Size = New System.Drawing.Size(156, 20)
         Me.TextBox2.TabIndex = 7
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Button1
         '

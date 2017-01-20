@@ -130,11 +130,11 @@
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="Start.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Start.Designer.vb">
+      <DependentUpon>Start.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HeadBoyConfig.Designer.vb">
@@ -214,8 +214,8 @@
     <EmbeddedResource Include="ContinueMsgBox.resx">
       <DependentUpon>ContinueMsgBox.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeadBoyConfig.resx">
       <DependentUpon>HeadBoyConfig.vb</DependentUpon>

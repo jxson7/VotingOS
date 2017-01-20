@@ -45,11 +45,12 @@ Partial Class ContinueMsgBox
         Me.TextBox1.Enabled = False
         Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.TextBox1.Location = New System.Drawing.Point(64, 71)
+        Me.TextBox1.Location = New System.Drawing.Point(64, 80)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(202, 34)
+        Me.TextBox1.Size = New System.Drawing.Size(219, 25)
         Me.TextBox1.TabIndex = 1
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label2
         '

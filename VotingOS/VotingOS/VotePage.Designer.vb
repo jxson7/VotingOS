@@ -33,6 +33,8 @@ Partial Class VotePage
         Me.CandidateHeadBoyBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CandidateHeadBoyTableAdapter = New VotingOS.DatabaseDataSetTableAdapters.CandidateHeadBoyTableAdapter()
         Me.TableAdapterManager = New VotingOS.DatabaseDataSetTableAdapters.TableAdapterManager()
+        Me.CandidatesHeadGirlTableAdapter = New VotingOS.DatabaseDataSetTableAdapters.CandidatesHeadGirlTableAdapter()
+        Me.UsersTableAdapter = New VotingOS.DatabaseDataSetTableAdapters.usersTableAdapter()
         Me.CandidateHeadBoyDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -40,18 +42,15 @@ Partial Class VotePage
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.CandidatesHeadGirlBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CandidatesHeadGirlTableAdapter = New VotingOS.DatabaseDataSetTableAdapters.CandidatesHeadGirlTableAdapter()
         Me.CandidatesHeadGirlDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.UsersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.UsersTableAdapter = New VotingOS.DatabaseDataSetTableAdapters.usersTableAdapter()
         Me.VotedHeadBoyComboBox = New System.Windows.Forms.ComboBox()
         Me.VotedHeadGirlComboBox = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         VotedHeadBoyLabel = New System.Windows.Forms.Label()
         Label5 = New System.Windows.Forms.Label()
@@ -64,6 +63,50 @@ Partial Class VotePage
         CType(Me.CandidatesHeadGirlDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'VotedHeadBoyLabel
+        '
+        VotedHeadBoyLabel.AutoSize = True
+        VotedHeadBoyLabel.BackColor = System.Drawing.Color.Transparent
+        VotedHeadBoyLabel.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        VotedHeadBoyLabel.Location = New System.Drawing.Point(126, 282)
+        VotedHeadBoyLabel.Name = "VotedHeadBoyLabel"
+        VotedHeadBoyLabel.Size = New System.Drawing.Size(125, 16)
+        VotedHeadBoyLabel.TabIndex = 25
+        VotedHeadBoyLabel.Text = "I voted candidate"
+        '
+        'Label5
+        '
+        Label5.AutoSize = True
+        Label5.BackColor = System.Drawing.Color.Transparent
+        Label5.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label5.Location = New System.Drawing.Point(303, 284)
+        Label5.Name = "Label5"
+        Label5.Size = New System.Drawing.Size(89, 16)
+        Label5.TabIndex = 27
+        Label5.Text = "for Head Boy"
+        '
+        'Label6
+        '
+        Label6.AutoSize = True
+        Label6.BackColor = System.Drawing.Color.Transparent
+        Label6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label6.Location = New System.Drawing.Point(304, 349)
+        Label6.Name = "Label6"
+        Label6.Size = New System.Drawing.Size(88, 16)
+        Label6.TabIndex = 30
+        Label6.Text = "for Head Girl"
+        '
+        'Label7
+        '
+        Label7.AutoSize = True
+        Label7.BackColor = System.Drawing.Color.Transparent
+        Label7.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label7.Location = New System.Drawing.Point(126, 349)
+        Label7.Name = "Label7"
+        Label7.Size = New System.Drawing.Size(125, 16)
+        Label7.TabIndex = 28
+        Label7.Text = "I voted candidate"
         '
         'Label1
         '
@@ -101,6 +144,14 @@ Partial Class VotePage
         Me.TableAdapterManager.usersTableAdapter = Me.UsersTableAdapter
         Me.TableAdapterManager.VotesTableAdapter = Nothing
         '
+        'CandidatesHeadGirlTableAdapter
+        '
+        Me.CandidatesHeadGirlTableAdapter.ClearBeforeFill = True
+        '
+        'UsersTableAdapter
+        '
+        Me.UsersTableAdapter.ClearBeforeFill = True
+        '
         'CandidateHeadBoyDataGridView
         '
         Me.CandidateHeadBoyDataGridView.AllowUserToAddRows = False
@@ -109,7 +160,7 @@ Partial Class VotePage
         Me.CandidateHeadBoyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.CandidateHeadBoyDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.CandidateHeadBoyDataGridView.DataSource = Me.CandidateHeadBoyBindingSource
-        Me.CandidateHeadBoyDataGridView.Location = New System.Drawing.Point(468, 175)
+        Me.CandidateHeadBoyDataGridView.Location = New System.Drawing.Point(457, 181)
         Me.CandidateHeadBoyDataGridView.Name = "CandidateHeadBoyDataGridView"
         Me.CandidateHeadBoyDataGridView.ReadOnly = True
         Me.CandidateHeadBoyDataGridView.Size = New System.Drawing.Size(346, 120)
@@ -142,7 +193,7 @@ Partial Class VotePage
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(547, 150)
+        Me.Label2.Location = New System.Drawing.Point(526, 157)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(202, 21)
         Me.Label2.TabIndex = 23
@@ -154,7 +205,7 @@ Partial Class VotePage
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(540, 323)
+        Me.Label3.Location = New System.Drawing.Point(524, 325)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(204, 21)
         Me.Label3.TabIndex = 24
@@ -165,10 +216,6 @@ Partial Class VotePage
         Me.CandidatesHeadGirlBindingSource.DataMember = "CandidatesHeadGirl"
         Me.CandidatesHeadGirlBindingSource.DataSource = Me.DatabaseDataSet
         '
-        'CandidatesHeadGirlTableAdapter
-        '
-        Me.CandidatesHeadGirlTableAdapter.ClearBeforeFill = True
-        '
         'CandidatesHeadGirlDataGridView
         '
         Me.CandidatesHeadGirlDataGridView.AllowUserToAddRows = False
@@ -177,7 +224,7 @@ Partial Class VotePage
         Me.CandidatesHeadGirlDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.CandidatesHeadGirlDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.CandidatesHeadGirlDataGridView.DataSource = Me.CandidatesHeadGirlBindingSource
-        Me.CandidatesHeadGirlDataGridView.Location = New System.Drawing.Point(467, 359)
+        Me.CandidatesHeadGirlDataGridView.Location = New System.Drawing.Point(457, 349)
         Me.CandidatesHeadGirlDataGridView.Name = "CandidatesHeadGirlDataGridView"
         Me.CandidatesHeadGirlDataGridView.ReadOnly = True
         Me.CandidatesHeadGirlDataGridView.Size = New System.Drawing.Size(346, 120)
@@ -221,65 +268,17 @@ Partial Class VotePage
         Me.UsersBindingSource.DataMember = "users"
         Me.UsersBindingSource.DataSource = Me.DatabaseDataSet
         '
-        'UsersTableAdapter
-        '
-        Me.UsersTableAdapter.ClearBeforeFill = True
-        '
-        'VotedHeadBoyLabel
-        '
-        VotedHeadBoyLabel.AutoSize = True
-        VotedHeadBoyLabel.BackColor = System.Drawing.Color.Transparent
-        VotedHeadBoyLabel.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        VotedHeadBoyLabel.Location = New System.Drawing.Point(129, 287)
-        VotedHeadBoyLabel.Name = "VotedHeadBoyLabel"
-        VotedHeadBoyLabel.Size = New System.Drawing.Size(125, 16)
-        VotedHeadBoyLabel.TabIndex = 25
-        VotedHeadBoyLabel.Text = "I voted candidate"
-        '
         'VotedHeadBoyComboBox
         '
         Me.VotedHeadBoyComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadBoy", True))
         Me.VotedHeadBoyComboBox.DataSource = Me.CandidateHeadBoyBindingSource
         Me.VotedHeadBoyComboBox.DisplayMember = "ID"
         Me.VotedHeadBoyComboBox.FormattingEnabled = True
-        Me.VotedHeadBoyComboBox.Location = New System.Drawing.Point(254, 284)
+        Me.VotedHeadBoyComboBox.Location = New System.Drawing.Point(251, 280)
         Me.VotedHeadBoyComboBox.Name = "VotedHeadBoyComboBox"
-        Me.VotedHeadBoyComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.VotedHeadBoyComboBox.Size = New System.Drawing.Size(46, 21)
         Me.VotedHeadBoyComboBox.TabIndex = 26
         Me.VotedHeadBoyComboBox.ValueMember = "ID"
-        '
-        'Label5
-        '
-        Label5.AutoSize = True
-        Label5.BackColor = System.Drawing.Color.Transparent
-        Label5.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label5.Location = New System.Drawing.Point(375, 287)
-        Label5.Name = "Label5"
-        Label5.Size = New System.Drawing.Size(89, 16)
-        Label5.TabIndex = 27
-        Label5.Text = "for Head Boy"
-        '
-        'Label6
-        '
-        Label6.AutoSize = True
-        Label6.BackColor = System.Drawing.Color.Transparent
-        Label6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label6.Location = New System.Drawing.Point(375, 326)
-        Label6.Name = "Label6"
-        Label6.Size = New System.Drawing.Size(88, 16)
-        Label6.TabIndex = 30
-        Label6.Text = "for Head Girl"
-        '
-        'Label7
-        '
-        Label7.AutoSize = True
-        Label7.BackColor = System.Drawing.Color.Transparent
-        Label7.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label7.Location = New System.Drawing.Point(129, 326)
-        Label7.Name = "Label7"
-        Label7.Size = New System.Drawing.Size(125, 16)
-        Label7.TabIndex = 28
-        Label7.Text = "I voted candidate"
         '
         'VotedHeadGirlComboBox
         '
@@ -287,9 +286,9 @@ Partial Class VotePage
         Me.VotedHeadGirlComboBox.DataSource = Me.CandidatesHeadGirlBindingSource
         Me.VotedHeadGirlComboBox.DisplayMember = "ID"
         Me.VotedHeadGirlComboBox.FormattingEnabled = True
-        Me.VotedHeadGirlComboBox.Location = New System.Drawing.Point(254, 323)
+        Me.VotedHeadGirlComboBox.Location = New System.Drawing.Point(251, 346)
         Me.VotedHeadGirlComboBox.Name = "VotedHeadGirlComboBox"
-        Me.VotedHeadGirlComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.VotedHeadGirlComboBox.Size = New System.Drawing.Size(47, 21)
         Me.VotedHeadGirlComboBox.TabIndex = 31
         Me.VotedHeadGirlComboBox.ValueMember = "ID"
         '
@@ -297,29 +296,18 @@ Partial Class VotePage
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(211, 425)
+        Me.Button1.Location = New System.Drawing.Point(203, 431)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(124, 38)
         Me.Button1.TabIndex = 32
         Me.Button1.Text = "SUBMIT"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(234, 175)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(101, 19)
-        Me.Label8.TabIndex = 33
-        Me.Label8.Text = "My Decision"
-        '
         'TextBox1
         '
         Me.TextBox1.Enabled = False
         Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(169, 212)
+        Me.TextBox1.Location = New System.Drawing.Point(153, 214)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(206, 23)
         Me.TextBox1.TabIndex = 34
@@ -331,7 +319,6 @@ Partial Class VotePage
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(901, 567)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.VotedHeadGirlComboBox)
         Me.Controls.Add(Label6)
@@ -383,6 +370,5 @@ Partial Class VotePage
     Friend WithEvents VotedHeadBoyComboBox As ComboBox
     Friend WithEvents VotedHeadGirlComboBox As ComboBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents Label8 As Label
     Friend WithEvents TextBox1 As TextBox
 End Class
