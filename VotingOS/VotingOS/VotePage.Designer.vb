@@ -48,10 +48,10 @@ Partial Class VotePage
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.UsersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.VotedHeadBoyComboBox = New System.Windows.Forms.ComboBox()
-        Me.VotedHeadGirlComboBox = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         VotedHeadBoyLabel = New System.Windows.Forms.Label()
         Label5 = New System.Windows.Forms.Label()
         Label6 = New System.Windows.Forms.Label()
@@ -268,30 +268,6 @@ Partial Class VotePage
         Me.UsersBindingSource.DataMember = "users"
         Me.UsersBindingSource.DataSource = Me.DatabaseDataSet
         '
-        'VotedHeadBoyComboBox
-        '
-        Me.VotedHeadBoyComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadBoy", True))
-        Me.VotedHeadBoyComboBox.DataSource = Me.CandidateHeadBoyBindingSource
-        Me.VotedHeadBoyComboBox.DisplayMember = "ID"
-        Me.VotedHeadBoyComboBox.FormattingEnabled = True
-        Me.VotedHeadBoyComboBox.Location = New System.Drawing.Point(251, 280)
-        Me.VotedHeadBoyComboBox.Name = "VotedHeadBoyComboBox"
-        Me.VotedHeadBoyComboBox.Size = New System.Drawing.Size(46, 21)
-        Me.VotedHeadBoyComboBox.TabIndex = 26
-        Me.VotedHeadBoyComboBox.ValueMember = "ID"
-        '
-        'VotedHeadGirlComboBox
-        '
-        Me.VotedHeadGirlComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadGirl", True))
-        Me.VotedHeadGirlComboBox.DataSource = Me.CandidatesHeadGirlBindingSource
-        Me.VotedHeadGirlComboBox.DisplayMember = "ID"
-        Me.VotedHeadGirlComboBox.FormattingEnabled = True
-        Me.VotedHeadGirlComboBox.Location = New System.Drawing.Point(251, 346)
-        Me.VotedHeadGirlComboBox.Name = "VotedHeadGirlComboBox"
-        Me.VotedHeadGirlComboBox.Size = New System.Drawing.Size(47, 21)
-        Me.VotedHeadGirlComboBox.TabIndex = 31
-        Me.VotedHeadGirlComboBox.ValueMember = "ID"
-        '
         'Button1
         '
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
@@ -312,20 +288,36 @@ Partial Class VotePage
         Me.TextBox1.Size = New System.Drawing.Size(206, 23)
         Me.TextBox1.TabIndex = 34
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(251, 280)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(46, 21)
+        Me.ComboBox1.TabIndex = 35
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(251, 348)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(46, 21)
+        Me.ComboBox2.TabIndex = 36
+        '
         'VotePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(901, 567)
+        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.VotedHeadGirlComboBox)
         Me.Controls.Add(Label6)
         Me.Controls.Add(Label7)
         Me.Controls.Add(Label5)
         Me.Controls.Add(VotedHeadBoyLabel)
-        Me.Controls.Add(Me.VotedHeadBoyComboBox)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.CandidatesHeadGirlDataGridView)
         Me.Controls.Add(Me.Label3)
@@ -367,8 +359,8 @@ Partial Class VotePage
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents Label4 As Label
     Friend WithEvents UsersBindingSource As BindingSource
-    Friend WithEvents VotedHeadBoyComboBox As ComboBox
-    Friend WithEvents VotedHeadGirlComboBox As ComboBox
     Friend WithEvents Button1 As Button
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBox2 As ComboBox
 End Class
