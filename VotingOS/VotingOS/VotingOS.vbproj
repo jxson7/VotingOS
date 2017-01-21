@@ -130,6 +130,13 @@
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="fade.vb" />
+    <Compile Include="InitialBoot.Designer.vb">
+      <DependentUpon>InitialBoot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InitialBoot.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Start.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +221,9 @@
     <EmbeddedResource Include="ContinueMsgBox.resx">
       <DependentUpon>ContinueMsgBox.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InitialBoot.resx">
+      <DependentUpon>InitialBoot.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Start.resx">
       <DependentUpon>Start.vb</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +289,14 @@
     <Content Include="Database.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\intiating.png" />
+    <None Include="Resources\STARTUPPAGE2.png" />
+    <None Include="Resources\STARTUPPAGE.png" />
+    <None Include="Resources\signinpage.png" />
+    <None Include="Resources\mydecision.png" />
+    <None Include="Resources\MESSAGEBOX.png" />
+    <None Include="Resources\mainpage.png" />
+    <None Include="Resources\tumblr_n2y4h6gMP51sxqyhyo2_500.gif" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

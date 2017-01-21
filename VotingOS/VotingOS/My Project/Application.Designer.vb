@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.VotingOS.Start
+            Me.MainForm = Global.VotingOS.InitialBoot
         End Sub
     End Class
 End Namespace
