@@ -280,6 +280,7 @@
     <Content Include="Database.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\oie_22144313V6e6p5oQ.gif" />
     <None Include="Resources\line.png" />
     <None Include="Resources\error.png" />
     <None Include="Resources\oie_21184432rQxdUsIt.gif" />

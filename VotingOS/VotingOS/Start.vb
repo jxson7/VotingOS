@@ -1,4 +1,5 @@
-﻿Public Class Start
+﻿Imports System.Drawing.Imaging
+Public Class Start
     Dim r As Integer = 0
     'Main Start-Up menu only. 
 
@@ -22,6 +23,7 @@
     End Sub
 
     Private Sub Start_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Timer2.Start()
         Timer1.Start()
 
         Dim ofd As New OpenFileDialog()
@@ -37,34 +39,10 @@
 
 
 
+
         End If
     End Sub
-    Public Sub fade()
 
-        Dim FadeIn As Double
-        Label1.Visible = True
-        Timer2.Start()
-        Label1.Visible = True
-        For FadeIn = 0.0 To 1.1 Step 0.1
-            Threading.Thread.Sleep(100)
-            fadeout()
-        Next
-
-
-    End Sub
-
-    Public Sub fadeout()
-
-        Dim fadeout As Double
-        For fadeout = 90 To 10 Step -10
-            Label1.Text = fadeout / 100
-            Me.Refresh()
-            Threading.Thread.Sleep(50)
-            Label1.Visible = False
-            fade()
-        Next
-
-    End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         closeform()
@@ -75,6 +53,11 @@
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
 
+
     End Sub
+
+
+
+
 End Class
 
