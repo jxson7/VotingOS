@@ -71,8 +71,7 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>votingOS.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -280,6 +279,7 @@
     <Content Include="Database.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="votingOS.ico" />
     <None Include="Resources\oie_22144313V6e6p5oQ.gif" />
     <None Include="Resources\line.png" />
     <None Include="Resources\error.png" />

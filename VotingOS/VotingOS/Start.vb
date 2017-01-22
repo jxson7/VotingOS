@@ -24,6 +24,7 @@ Public Class Start
 
     Private Sub Start_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Timer2.Start()
+        Me.Icon = New Icon("C:\Users\Owner\Desktop\VotingOS.ico")
         Timer1.Start()
 
         Dim ofd As New OpenFileDialog()

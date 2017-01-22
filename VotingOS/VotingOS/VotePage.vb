@@ -32,11 +32,11 @@ Class VotePage
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
 
-        Dim result As Integer = MsgBox("Do you wish to vote this candidate as head boy: headboyvote.Text", MsgBoxStyle.YesNo)
-        If result = DialogResult.Yes Then
-            Dim result2 As Integer = MsgBox("Do you wish to vote this candidate as head girl:", headgirlvote.Text, MsgBoxStyle.YesNo)
-            If result = DialogResult.Yes Then
-                Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
+        'Dim result As Integer = MsgBox("Do you wish to vote this candidate as head boy: headboyvote.Text", MsgBoxStyle.YesNo)
+        'If result = DialogResult.Yes Then
+        'Dim result2 As Integer = MsgBox("Do you wish to vote this candidate as head girl:", headgirlvote.Text, MsgBoxStyle.YesNo)
+        'If result = DialogResult.Yes Then
+        Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
 
                 myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
                 myConnection.Open()
@@ -51,8 +51,8 @@ Class VotePage
                 myConnection.Close()
                 Me.Close()
 
-            End If
-        End If
+        'End If
+        'End If
 
 
     End Sub

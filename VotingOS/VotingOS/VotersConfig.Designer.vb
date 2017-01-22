@@ -424,6 +424,7 @@ Partial Class VotersConfig
         Me.Controls.Add(Me.UserTextBox)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
         Me.Name = "VotersConfig"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
