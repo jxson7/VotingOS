@@ -14,7 +14,7 @@ Public Class MainLogin
 
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
         'Change the following to your access database location
-        dataFile = "C:\Users\J Dookarun\Voting System_MainFrame\VotingOS\VotingOS\bin\Debug\Database.accdb"
+        dataFile = "C:\Users\Owner\Voting System\VotingOS\VotingOS\bin\Debug\Database.accdb"
         connString = provider & dataFile
         myConnection.ConnectionString = connString
 
@@ -83,7 +83,7 @@ Public Class MainLogin
 
             provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
             'Change the following to your access database location
-            dataFile = "N:\VOTER_OS\VotingOS\VotingOS\bin\debug\Database.accdb"
+            dataFile = "C:\Users\Owner\Voting System\VotingOS\VotingOS\bin\Debug\Database.accdb"
             connString = provider & dataFile
             myConnection.ConnectionString = connString
 

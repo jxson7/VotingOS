@@ -8,7 +8,7 @@ Public Class authorisedlogin
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
         'Applies the confirmation of where exactly the file is for the database. Applicable version that has been applied is recorded as a ACCDB (Access Only)
-        dataFile = "N:\VOTER_OS\VotingOS\VotingOS\Database.accdb"
+        dataFile = "C:\Users\Owner\Voting System\VotingOS\VotingOS\bin\Debug\Database.accdb"
         connString = provider & dataFile
         myConnection.ConnectionString = connString
 

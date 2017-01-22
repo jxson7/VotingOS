@@ -32,13 +32,34 @@
         ProgressBar1.Increment(5)
         If ProgressBar1.Value = ProgressBar1.Maximum Then
             PictureBox1.Hide()
-            Label1.Visible = True
+            fade()
+            fadeout()
 
         End If
+    End Sub
+    Public Sub fade()
+
+        Dim FadeIn As Double
+        Label1.Visible = True
+        For FadeIn = 0.0 To 1.1 Step 0.1
+            Label1.Text = FadeIn
+            Label1.Refresh()
+            Threading.Thread.Sleep(100)
+        Next
+
 
     End Sub
 
-    Private Sub PictureBox1_Click_2(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Public Sub fadeout()
+
+        Dim fadeout As Double
+        For fadeout = 90 To 10 Step -10
+            Label1.Text = fadeout / 100
+            Me.Refresh()
+            Threading.Thread.Sleep(50)
+            Label1.Visible = False
+        Next
 
     End Sub
+
 End Class
