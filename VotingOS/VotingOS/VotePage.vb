@@ -1,4 +1,5 @@
 ﻿Imports VotingOS.MainLogin
+Imports System.Data.OleDb
 
 Class VotePage
 
@@ -21,6 +22,7 @@ Class VotePage
         Dim SQL As String = "SELECT * FROM Database"
 
 
+
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
@@ -30,24 +32,47 @@ Class VotePage
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
 
+        Dim result As Integer = MsgBox("Do you wish to vote this candidate as head boy: headboyvote.Text", MsgBoxStyle.YesNo)
+        If result = DialogResult.Yes Then
+            Dim result2 As Integer = MsgBox("Do you wish to vote this candidate as head girl:", headgirlvote.Text, MsgBoxStyle.YesNo)
+            If result = DialogResult.Yes Then
+                Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
+
+                myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
+                myConnection.Open()
+                cmd.CommandText = "UPDATE users SET VotedHeadBoy = @update1, VotedHeadGirl = @update2, Voted = True WHERE user = @update3 "
+                cmd.Parameters.AddWithValue("@update1", headboyvote.Text)
+                cmd.Parameters.AddWithValue("@update2", headgirlvote.Text)
+                cmd.Parameters.AddWithValue("@update3", Username)
+
+                MsgBox("You have successfully casted your vote. You will now be signed out. Thank you and goodbye.")
+                cmd.ExecuteNonQuery()
+                cmd.Dispose()
+                myConnection.Close()
+                Me.Close()
+
+            End If
+        End If
 
 
-        Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
+    End Sub
 
-        myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Dim query As String
+
+        Dim command As OleDbCommand
+        Dim reader As OleDbDataReader
+
         myConnection.Open()
-        cmd.CommandText = "UPDATE users SET VotedHeadBoy = @update1, VotedHeadGirl = @update2, Voted = True WHERE user = @update3 "
-        cmd.Parameters.AddWithValue("@update1", headboyvote.text)
-        cmd.Parameters.AddWithValue("@update2", headgirlvote.text)
-        cmd.Parameters.AddWithValue("@update3", Username)
-
-        MsgBox("You have successfully casted your vote. You will now be signed out. Thank you and goodbye.")
-        cmd.ExecuteNonQuery()
-        cmd.Dispose()
-        myConnection.Close()
-        Me.Close()
-
-
+        query = "select * from HeadBoyCandidates"
+        command = New OleDbCommand(query, myConnection)
+        reader = command.ExecuteReader()
+        If reader.HasRows Then
+            While reader.Read()
+                ComboBox1.Items.Add(reader("ID"))
+            End While
+        End If
     End Sub
 
 

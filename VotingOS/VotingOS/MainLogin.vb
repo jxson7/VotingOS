@@ -27,6 +27,7 @@ Public Class MainLogin
         Dim FirstName As String = ""
         Dim LastName As String = ""
         Dim Username As String = ""
+        Dim Voted As String = ""
 
         'if found:CONFIRMATION IS REQUIRED IF IT IS NEEDED. 
         While dr.Read
@@ -38,8 +39,6 @@ Public Class MainLogin
         End While
 
         'checking the result: IF FOUND, THE PIECE IS DIRECTED FOR THE STUDENTS DIRECTLY TO THE VOTING PAGE OS (STUDENTS ONLY)
-
-
 
 
         If Voted = True Then

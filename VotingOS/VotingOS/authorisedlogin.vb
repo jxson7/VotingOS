@@ -6,6 +6,7 @@ Public Class authorisedlogin
     Dim myConnection As OleDbConnection = New OleDbConnection
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
         'Applies the confirmation of where exactly the file is for the database. Applicable version that has been applied is recorded as a ACCDB (Access Only)
         dataFile = "C:\Users\Owner\Voting System\VotingOS\VotingOS\bin\Debug\Database.accdb"

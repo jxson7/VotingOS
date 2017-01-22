@@ -53,11 +53,11 @@ Partial Class VotersConfig
         Me.LastNameTextBox = New System.Windows.Forms.TextBox()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.YearGroupComboBox = New System.Windows.Forms.ComboBox()
-        Me.VotedHeadBoyLabel1 = New System.Windows.Forms.Label()
-        Me.VotedHeadGirlLabel1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
+        Me.VotedHeadBoyTextBox = New System.Windows.Forms.TextBox()
+        Me.VotedHeadGirlTextBox = New System.Windows.Forms.TextBox()
         CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsersBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -338,24 +338,6 @@ Partial Class VotersConfig
         Me.YearGroupComboBox.Size = New System.Drawing.Size(39, 24)
         Me.YearGroupComboBox.TabIndex = 13
         '
-        'VotedHeadBoyLabel1
-        '
-        Me.VotedHeadBoyLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadBoy", True))
-        Me.VotedHeadBoyLabel1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VotedHeadBoyLabel1.Location = New System.Drawing.Point(590, 266)
-        Me.VotedHeadBoyLabel1.Name = "VotedHeadBoyLabel1"
-        Me.VotedHeadBoyLabel1.Size = New System.Drawing.Size(100, 35)
-        Me.VotedHeadBoyLabel1.TabIndex = 14
-        '
-        'VotedHeadGirlLabel1
-        '
-        Me.VotedHeadGirlLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadGirl", True))
-        Me.VotedHeadGirlLabel1.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.VotedHeadGirlLabel1.Location = New System.Drawing.Point(590, 373)
-        Me.VotedHeadGirlLabel1.Name = "VotedHeadGirlLabel1"
-        Me.VotedHeadGirlLabel1.Size = New System.Drawing.Size(100, 35)
-        Me.VotedHeadGirlLabel1.TabIndex = 15
-        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Transparent
@@ -401,17 +383,33 @@ Partial Class VotersConfig
         '
         Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.UsersBindingNavigator)
         '
+        'VotedHeadBoyTextBox
+        '
+        Me.VotedHeadBoyTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadBoy", True))
+        Me.VotedHeadBoyTextBox.Location = New System.Drawing.Point(593, 273)
+        Me.VotedHeadBoyTextBox.Name = "VotedHeadBoyTextBox"
+        Me.VotedHeadBoyTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.VotedHeadBoyTextBox.TabIndex = 19
+        '
+        'VotedHeadGirlTextBox
+        '
+        Me.VotedHeadGirlTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadGirl", True))
+        Me.VotedHeadGirlTextBox.Location = New System.Drawing.Point(593, 373)
+        Me.VotedHeadGirlTextBox.Name = "VotedHeadGirlTextBox"
+        Me.VotedHeadGirlTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.VotedHeadGirlTextBox.TabIndex = 20
+        '
         'VotersConfig
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(901, 567)
+        Me.Controls.Add(Me.VotedHeadGirlTextBox)
+        Me.Controls.Add(Me.VotedHeadBoyTextBox)
         Me.Controls.Add(Me.ToolStripContainer1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.VotedHeadGirlLabel1)
-        Me.Controls.Add(Me.VotedHeadBoyLabel1)
         Me.Controls.Add(Me.YearGroupComboBox)
         Me.Controls.Add(Me.PasswordTextBox)
         Me.Controls.Add(Me.LastNameTextBox)
@@ -473,9 +471,9 @@ Partial Class VotersConfig
     Friend WithEvents LastNameTextBox As TextBox
     Friend WithEvents PasswordTextBox As TextBox
     Friend WithEvents YearGroupComboBox As ComboBox
-    Friend WithEvents VotedHeadBoyLabel1 As Label
-    Friend WithEvents VotedHeadGirlLabel1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents ToolStripContainer1 As ToolStripContainer
+    Friend WithEvents VotedHeadBoyTextBox As TextBox
+    Friend WithEvents VotedHeadGirlTextBox As TextBox
 End Class
