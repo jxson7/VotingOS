@@ -112,6 +112,7 @@
     <Compile Include="authorisedlogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="close.vb" />
     <Compile Include="configchoice.Designer.vb">
       <DependentUpon>configchoice.vb</DependentUpon>
     </Compile>
@@ -129,6 +130,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Start.vb">
       <SubType>Form</SubType>
@@ -171,11 +177,6 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -234,9 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="VotePage.resx">
       <DependentUpon>VotePage.vb</DependentUpon>
@@ -279,16 +280,15 @@
     <Content Include="Database.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\line.png" />
+    <None Include="Resources\error.png" />
     <None Include="Resources\oie_21184432rQxdUsIt.gif" />
-    <None Include="Resources\oie_21182958BEtJkbA9.gif" />
-    <None Include="Resources\intiating.png" />
     <None Include="Resources\STARTUPPAGE2.png" />
     <None Include="Resources\STARTUPPAGE.png" />
     <None Include="Resources\signinpage.png" />
     <None Include="Resources\mydecision.png" />
     <None Include="Resources\MESSAGEBOX.png" />
     <None Include="Resources\mainpage.png" />
-    <None Include="Resources\tumblr_n2y4h6gMP51sxqyhyo2_500.gif" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

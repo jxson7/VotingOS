@@ -1,4 +1,5 @@
 ﻿Public Class Start
+    Dim r As Integer = 0
     'Main Start-Up menu only. 
 
 
@@ -32,8 +33,9 @@
         ProgressBar1.Increment(5)
         If ProgressBar1.Value = ProgressBar1.Maximum Then
             PictureBox1.Hide()
-            fade()
-            fadeout()
+            Label1.Visible = True
+
+
 
         End If
     End Sub
@@ -41,10 +43,11 @@
 
         Dim FadeIn As Double
         Label1.Visible = True
+        Timer2.Start()
+        Label1.Visible = True
         For FadeIn = 0.0 To 1.1 Step 0.1
-            Label1.Text = FadeIn
-            Label1.Refresh()
             Threading.Thread.Sleep(100)
+            fadeout()
         Next
 
 
@@ -58,8 +61,20 @@
             Me.Refresh()
             Threading.Thread.Sleep(50)
             Label1.Visible = False
+            fade()
         Next
 
     End Sub
 
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        closeform()
+
+
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
+
+    End Sub
 End Class
+
