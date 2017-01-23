@@ -93,6 +93,7 @@ Partial Class Start
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Image = Global.VotingOS.My.Resources.Resources.line
         Me.PictureBox3.Location = New System.Drawing.Point(835, 8)
         Me.PictureBox3.Name = "PictureBox3"

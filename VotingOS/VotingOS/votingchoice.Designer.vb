@@ -39,6 +39,7 @@ Partial Class votingchoice
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
@@ -65,6 +66,7 @@ Partial Class votingchoice
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.Transparent
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.White
@@ -103,6 +105,7 @@ Partial Class votingchoice
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Image = Global.VotingOS.My.Resources.Resources.line
         Me.PictureBox3.Location = New System.Drawing.Point(294, 4)
         Me.PictureBox3.Name = "PictureBox3"
@@ -126,6 +129,7 @@ Partial Class votingchoice
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox1.Image = Global.VotingOS.My.Resources.Resources.left_arrow1
         Me.PictureBox1.Location = New System.Drawing.Point(2, 4)
         Me.PictureBox1.Name = "PictureBox1"

@@ -379,6 +379,7 @@ Partial Class HeadBoyProfiles
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Image = Global.VotingOS.My.Resources.Resources.line
         Me.PictureBox3.Location = New System.Drawing.Point(835, 12)
         Me.PictureBox3.Name = "PictureBox3"
@@ -402,6 +403,7 @@ Partial Class HeadBoyProfiles
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox1.Image = Global.VotingOS.My.Resources.Resources.left_arrow1
         Me.PictureBox1.Location = New System.Drawing.Point(26, 12)
         Me.PictureBox1.Name = "PictureBox1"
