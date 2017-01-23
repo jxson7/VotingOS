@@ -109,4 +109,12 @@ Public Class authorisedlogin
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         closeform()
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Dim result As Integer = MsgBox("By clicking back here, you will be taken out of the Authorised Members' login and returned back to the student login, do you wish to proceed", MsgBoxStyle.YesNo)
+        If result = DialogResult.Yes Then
+            MainLogin.Show()
+            Me.Hide()
+        End If
+    End Sub
 End Class

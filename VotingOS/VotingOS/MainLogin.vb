@@ -6,6 +6,7 @@ Public Class MainLogin
     Public Shared MyName As String
     Public Shared MySurname As String
     Public Shared Voted As String
+
     Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         Dim provider As String
@@ -136,5 +137,10 @@ Public Class MainLogin
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
 
+    End Sub
+
+    Private Sub MainLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
+        userinput.Clear()
+        TextBox2.Clear()
     End Sub
 End Class

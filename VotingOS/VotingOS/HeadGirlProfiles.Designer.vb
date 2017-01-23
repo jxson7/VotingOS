@@ -56,6 +56,9 @@ Partial Class HeadGirlProfiles
         Me.Button2 = New System.Windows.Forms.Button()
         Me.IDLabel1 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Why_would_you_like_to_be_head_girl_Label = New System.Windows.Forms.Label()
         What_changes_would_you_make_Label = New System.Windows.Forms.Label()
         Number_of_GCSEsLabel = New System.Windows.Forms.Label()
@@ -67,6 +70,9 @@ Partial Class HeadGirlProfiles
         CType(Me.CandidatesHeadGirlBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CandidatesHeadGirlBindingNavigator.SuspendLayout()
         CType(Me.Profile_ImagePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Why_would_you_like_to_be_head_girl_Label
@@ -340,9 +346,9 @@ Partial Class HeadGirlProfiles
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(637, 437)
+        Me.Button1.Location = New System.Drawing.Point(637, 451)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(173, 26)
+        Me.Button1.Size = New System.Drawing.Size(173, 30)
         Me.Button1.TabIndex = 14
         Me.Button1.Text = "View Head Boy Profiles"
         Me.Button1.UseVisualStyleBackColor = False
@@ -354,7 +360,7 @@ Partial Class HeadGirlProfiles
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(637, 483)
+        Me.Button2.Location = New System.Drawing.Point(637, 484)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(173, 31)
         Me.Button2.TabIndex = 15
@@ -383,6 +389,40 @@ Partial Class HeadGirlProfiles
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Head Girl Candidates"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.VotingOS.My.Resources.Resources.left_arrow1
+        Me.PictureBox1.Location = New System.Drawing.Point(26, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 25
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Image = Global.VotingOS.My.Resources.Resources.line
+        Me.PictureBox3.Location = New System.Drawing.Point(835, 12)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox3.TabIndex = 24
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(865, 12)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox2.TabIndex = 23
+        Me.PictureBox2.TabStop = False
+        '
         'HeadGirlProfiles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -390,6 +430,9 @@ Partial Class HeadGirlProfiles
         Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(901, 567)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CandidatesHeadGirlBindingNavigator)
         Me.Controls.Add(IDLabel)
@@ -419,6 +462,9 @@ Partial Class HeadGirlProfiles
         Me.CandidatesHeadGirlBindingNavigator.ResumeLayout(False)
         Me.CandidatesHeadGirlBindingNavigator.PerformLayout()
         CType(Me.Profile_ImagePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -450,4 +496,7 @@ Partial Class HeadGirlProfiles
     Friend WithEvents Button2 As Button
     Friend WithEvents IDLabel1 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

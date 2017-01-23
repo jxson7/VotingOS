@@ -47,4 +47,18 @@
         Me.Hide()
         PollsViewer.Show()
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Dim result As Integer = MsgBox("By clicking back here, you will be signed out of VotingOS. Do you wish to proceed?", MsgBoxStyle.YesNo)
+        If result = DialogResult.Yes Then
+            Me.Hide()
+            authorisedlogin.TextBox1.Clear()
+            authorisedlogin.Show()
+        End If
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
+
+    End Sub
 End Class

@@ -54,6 +54,9 @@ Partial Class HeadBoyProfiles
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Why_would_you_like_to_be_head_boy_girl_Label = New System.Windows.Forms.Label()
         What_changes_would_you_make_Label = New System.Windows.Forms.Label()
         Number_of_GCSELabel = New System.Windows.Forms.Label()
@@ -64,6 +67,9 @@ Partial Class HeadBoyProfiles
         CType(Me.CandidateHeadBoyBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CandidateHeadBoyBindingNavigator.SuspendLayout()
         CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Why_would_you_like_to_be_head_boy_girl_Label
@@ -243,7 +249,7 @@ Partial Class HeadBoyProfiles
         Me.First_NameLabel1.BackColor = System.Drawing.Color.White
         Me.First_NameLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.First_NameLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidateHeadBoyBindingSource, "First Name", True))
-        Me.First_NameLabel1.ForeColor = System.Drawing.Color.White
+        Me.First_NameLabel1.ForeColor = System.Drawing.Color.Black
         Me.First_NameLabel1.Location = New System.Drawing.Point(144, 304)
         Me.First_NameLabel1.Name = "First_NameLabel1"
         Me.First_NameLabel1.Size = New System.Drawing.Size(100, 23)
@@ -254,7 +260,7 @@ Partial Class HeadBoyProfiles
         Me.Last_NameLabel1.BackColor = System.Drawing.Color.White
         Me.Last_NameLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Last_NameLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidateHeadBoyBindingSource, "Last Name", True))
-        Me.Last_NameLabel1.ForeColor = System.Drawing.Color.White
+        Me.Last_NameLabel1.ForeColor = System.Drawing.Color.Black
         Me.Last_NameLabel1.Location = New System.Drawing.Point(250, 304)
         Me.Last_NameLabel1.Name = "Last_NameLabel1"
         Me.Last_NameLabel1.Size = New System.Drawing.Size(100, 23)
@@ -266,7 +272,7 @@ Partial Class HeadBoyProfiles
         Me.Why_would_you_like_to_be_head_boy_girl_Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Why_would_you_like_to_be_head_boy_girl_Label1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Why_would_you_like_to_be_head_boy_girl_Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidateHeadBoyBindingSource, "Why would you like to be head boy/girl?", True))
-        Me.Why_would_you_like_to_be_head_boy_girl_Label1.ForeColor = System.Drawing.Color.White
+        Me.Why_would_you_like_to_be_head_boy_girl_Label1.ForeColor = System.Drawing.Color.Black
         Me.Why_would_you_like_to_be_head_boy_girl_Label1.Location = New System.Drawing.Point(552, 188)
         Me.Why_would_you_like_to_be_head_boy_girl_Label1.Name = "Why_would_you_like_to_be_head_boy_girl_Label1"
         Me.Why_would_you_like_to_be_head_boy_girl_Label1.Size = New System.Drawing.Size(238, 45)
@@ -278,7 +284,7 @@ Partial Class HeadBoyProfiles
         Me.What_changes_would_you_make_Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.What_changes_would_you_make_Label1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.What_changes_would_you_make_Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidateHeadBoyBindingSource, "What changes would you make?", True))
-        Me.What_changes_would_you_make_Label1.ForeColor = System.Drawing.Color.White
+        Me.What_changes_would_you_make_Label1.ForeColor = System.Drawing.Color.Black
         Me.What_changes_would_you_make_Label1.Location = New System.Drawing.Point(552, 246)
         Me.What_changes_would_you_make_Label1.Name = "What_changes_would_you_make_Label1"
         Me.What_changes_would_you_make_Label1.Size = New System.Drawing.Size(238, 51)
@@ -289,7 +295,7 @@ Partial Class HeadBoyProfiles
         Me.Number_of_GCSELabel1.BackColor = System.Drawing.Color.White
         Me.Number_of_GCSELabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Number_of_GCSELabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidateHeadBoyBindingSource, "Number of GCSE", True))
-        Me.Number_of_GCSELabel1.ForeColor = System.Drawing.Color.White
+        Me.Number_of_GCSELabel1.ForeColor = System.Drawing.Color.Black
         Me.Number_of_GCSELabel1.Location = New System.Drawing.Point(669, 351)
         Me.Number_of_GCSELabel1.Name = "Number_of_GCSELabel1"
         Me.Number_of_GCSELabel1.Size = New System.Drawing.Size(56, 23)
@@ -301,7 +307,7 @@ Partial Class HeadBoyProfiles
         Me.Previously_part_of_school_house_council_CheckBox.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Previously_part_of_school_house_council_CheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.CandidateHeadBoyBindingSource, "Previously part of school/house council?", True))
         Me.Previously_part_of_school_house_council_CheckBox.Enabled = False
-        Me.Previously_part_of_school_house_council_CheckBox.ForeColor = System.Drawing.Color.White
+        Me.Previously_part_of_school_house_council_CheckBox.ForeColor = System.Drawing.Color.Black
         Me.Previously_part_of_school_house_council_CheckBox.Location = New System.Drawing.Point(686, 318)
         Me.Previously_part_of_school_house_council_CheckBox.Name = "Previously_part_of_school_house_council_CheckBox"
         Me.Previously_part_of_school_house_council_CheckBox.Size = New System.Drawing.Size(104, 24)
@@ -314,7 +320,7 @@ Partial Class HeadBoyProfiles
         Me.Personal_SkillsLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Personal_SkillsLabel1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Personal_SkillsLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidateHeadBoyBindingSource, "Personal Skills", True))
-        Me.Personal_SkillsLabel1.ForeColor = System.Drawing.Color.White
+        Me.Personal_SkillsLabel1.ForeColor = System.Drawing.Color.Black
         Me.Personal_SkillsLabel1.Location = New System.Drawing.Point(239, 396)
         Me.Personal_SkillsLabel1.Name = "Personal_SkillsLabel1"
         Me.Personal_SkillsLabel1.Size = New System.Drawing.Size(270, 70)
@@ -370,6 +376,40 @@ Partial Class HeadBoyProfiles
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "Head Boy Candidates"
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Image = Global.VotingOS.My.Resources.Resources.line
+        Me.PictureBox3.Location = New System.Drawing.Point(835, 12)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox3.TabIndex = 21
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(865, 12)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox2.TabIndex = 20
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.VotingOS.My.Resources.Resources.left_arrow1
+        Me.PictureBox1.Location = New System.Drawing.Point(26, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 22
+        Me.PictureBox1.TabStop = False
+        '
         'HeadBoyProfiles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -377,6 +417,9 @@ Partial Class HeadBoyProfiles
         Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(901, 567)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CandidateHeadBoyBindingNavigator)
         Me.Controls.Add(Me.Button2)
@@ -405,6 +448,9 @@ Partial Class HeadBoyProfiles
         Me.CandidateHeadBoyBindingNavigator.ResumeLayout(False)
         Me.CandidateHeadBoyBindingNavigator.PerformLayout()
         CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -435,4 +481,7 @@ Partial Class HeadBoyProfiles
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

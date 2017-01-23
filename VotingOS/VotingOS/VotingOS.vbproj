@@ -291,6 +291,7 @@
     </Content>
     <None Include="Resources\oie_21184432rQxdUsIt.gif" />
     <None Include="Resources\pollsviewer.png" />
+    <None Include="Resources\left-arrow.png" />
     <Content Include="votingOS.ico" />
     <None Include="Resources\line.png" />
     <None Include="Resources\error.png" />

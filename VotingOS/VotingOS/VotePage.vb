@@ -12,6 +12,8 @@ Class VotePage
     End Sub
 
     Private Sub VotePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        headboyvote.Clear()
+        headgirlvote.Clear()
         'TODO: This line of code loads data into the 'DatabaseDataSet.users' table. You can move, or remove it, as needed.
         Me.UsersTableAdapter.Fill(Me.DatabaseDataSet.users)
         'TODO: This line of code loads data into the 'DatabaseDataSet.CandidatesHeadGirl' table. You can move, or remove it, as needed.
@@ -91,5 +93,22 @@ Class VotePage
             MessageBox.Show("Please enter numbers only. Make sure the value you have entered is a candidate running for this position else your vote will not be counted.")
             e.Handled = True
         End If
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Dim result As Integer = MsgBox("By clicking back here, your vote will not be saved. Do you wish to proceed?", MsgBoxStyle.YesNo)
+        If result = DialogResult.Yes Then
+            Me.Hide()
+            votingchoice.Show()
+        End If
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
+
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        closeform()
     End Sub
 End Class
