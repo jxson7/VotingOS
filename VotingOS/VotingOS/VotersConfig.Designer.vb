@@ -341,7 +341,8 @@ Partial Class VotersConfig
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button1.BackgroundImage = Global.VotingOS.My.Resources.Resources.STARTUPPAGE2
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(408, 476)
@@ -394,7 +395,7 @@ Partial Class VotersConfig
         'VotedHeadGirlTextBox
         '
         Me.VotedHeadGirlTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.UsersBindingSource, "VotedHeadGirl", True))
-        Me.VotedHeadGirlTextBox.Location = New System.Drawing.Point(593, 373)
+        Me.VotedHeadGirlTextBox.Location = New System.Drawing.Point(593, 394)
         Me.VotedHeadGirlTextBox.Name = "VotedHeadGirlTextBox"
         Me.VotedHeadGirlTextBox.Size = New System.Drawing.Size(100, 20)
         Me.VotedHeadGirlTextBox.TabIndex = 20

@@ -61,6 +61,7 @@ Partial Class Start
         '
         'Timer1
         '
+        Me.Timer1.Enabled = True
         '
         'PictureBox1
         '

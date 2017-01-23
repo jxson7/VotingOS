@@ -143,7 +143,7 @@ Partial Class AdminConfig
         Me.AuthorisedmembersBindingNavigator.Dock = System.Windows.Forms.DockStyle.None
         Me.AuthorisedmembersBindingNavigator.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.AuthorisedmembersBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.AuthorisedmembersBindingNavigatorSaveItem})
-        Me.AuthorisedmembersBindingNavigator.Location = New System.Drawing.Point(3, 25)
+        Me.AuthorisedmembersBindingNavigator.Location = New System.Drawing.Point(3, 0)
         Me.AuthorisedmembersBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.AuthorisedmembersBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.AuthorisedmembersBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
@@ -267,10 +267,13 @@ Partial Class AdminConfig
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(192, 380)
+        Me.Button1.BackgroundImage = Global.VotingOS.My.Resources.Resources.STARTUPPAGE2
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(225, 402)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(176, 34)
+        Me.Button1.Size = New System.Drawing.Size(131, 34)
         Me.Button1.TabIndex = 9
         Me.Button1.Text = "SAVE"
         Me.Button1.UseVisualStyleBackColor = False
