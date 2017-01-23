@@ -23,7 +23,6 @@ Partial Class AdminConfig
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim IDLabel As System.Windows.Forms.Label
         Dim FirstNameLabel As System.Windows.Forms.Label
         Dim LastNameLabel As System.Windows.Forms.Label
         Dim PasswordLabel As System.Windows.Forms.Label
@@ -43,7 +42,6 @@ Partial Class AdminConfig
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.AuthorisedmembersBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.IDTextBox = New System.Windows.Forms.TextBox()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.LastNameTextBox = New System.Windows.Forms.TextBox()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
@@ -53,7 +51,7 @@ Partial Class AdminConfig
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        IDLabel = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         FirstNameLabel = New System.Windows.Forms.Label()
         LastNameLabel = New System.Windows.Forms.Label()
         PasswordLabel = New System.Windows.Forms.Label()
@@ -67,18 +65,6 @@ Partial Class AdminConfig
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'IDLabel
-        '
-        IDLabel.AutoSize = True
-        IDLabel.BackColor = System.Drawing.Color.Transparent
-        IDLabel.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        IDLabel.ForeColor = System.Drawing.Color.White
-        IDLabel.Location = New System.Drawing.Point(250, 207)
-        IDLabel.Name = "IDLabel"
-        IDLabel.Size = New System.Drawing.Size(27, 18)
-        IDLabel.TabIndex = 1
-        IDLabel.Text = "ID:"
         '
         'FirstNameLabel
         '
@@ -238,14 +224,6 @@ Partial Class AdminConfig
         Me.AuthorisedmembersBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.AuthorisedmembersBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'IDTextBox
-        '
-        Me.IDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AuthorisedmembersBindingSource, "ID", True))
-        Me.IDTextBox.Location = New System.Drawing.Point(283, 205)
-        Me.IDTextBox.Name = "IDTextBox"
-        Me.IDTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.IDTextBox.TabIndex = 2
-        '
         'FirstNameTextBox
         '
         Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AuthorisedmembersBindingSource, "FirstName", True))
@@ -269,6 +247,7 @@ Partial Class AdminConfig
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PasswordTextBox.TabIndex = 8
+        Me.ToolTip1.SetToolTip(Me.PasswordTextBox, "Numerical Values Only.")
         '
         'Button1
         '
@@ -283,6 +262,7 @@ Partial Class AdminConfig
         Me.Button1.Size = New System.Drawing.Size(176, 34)
         Me.Button1.TabIndex = 9
         Me.Button1.Text = "SAVE"
+        Me.ToolTip1.SetToolTip(Me.Button1, "Click Here or the save button on the tab to save any changes made.")
         Me.Button1.UseVisualStyleBackColor = False
         '
         'ToolStripContainer1
@@ -327,6 +307,7 @@ Partial Class AdminConfig
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox3.TabIndex = 26
         Me.PictureBox3.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox3, "Click here to minimise the application.")
         '
         'PictureBox2
         '
@@ -339,6 +320,7 @@ Partial Class AdminConfig
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox2.TabIndex = 25
         Me.PictureBox2.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox2, "Want to exit VotingOS? Click here to exit.")
         '
         'PictureBox1
         '
@@ -351,6 +333,7 @@ Partial Class AdminConfig
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox1.TabIndex = 27
         Me.PictureBox1.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox1, "Go Back")
         '
         'AdminConfig
         '
@@ -372,8 +355,6 @@ Partial Class AdminConfig
         Me.Controls.Add(Me.LastNameTextBox)
         Me.Controls.Add(FirstNameLabel)
         Me.Controls.Add(Me.FirstNameTextBox)
-        Me.Controls.Add(IDLabel)
-        Me.Controls.Add(Me.IDTextBox)
         Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -413,7 +394,6 @@ Partial Class AdminConfig
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents AuthorisedmembersBindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents IDTextBox As TextBox
     Friend WithEvents FirstNameTextBox As TextBox
     Friend WithEvents LastNameTextBox As TextBox
     Friend WithEvents PasswordTextBox As TextBox
@@ -423,4 +403,5 @@ Partial Class AdminConfig
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

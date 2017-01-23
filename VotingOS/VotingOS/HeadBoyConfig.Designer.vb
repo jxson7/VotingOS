@@ -60,6 +60,7 @@ Partial Class HeadBoyConfig
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         First_NameLabel = New System.Windows.Forms.Label()
         Last_NameLabel = New System.Windows.Forms.Label()
         Why_would_you_like_to_be_head_boy_girl_Label = New System.Windows.Forms.Label()
@@ -405,6 +406,7 @@ Partial Class HeadBoyConfig
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox1.TabIndex = 31
         Me.PictureBox1.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox1, "Go Back")
         '
         'PictureBox3
         '
@@ -417,6 +419,7 @@ Partial Class HeadBoyConfig
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox3.TabIndex = 30
         Me.PictureBox3.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox3, "Click here to minimise the application.")
         '
         'PictureBox2
         '
@@ -429,6 +432,7 @@ Partial Class HeadBoyConfig
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox2.TabIndex = 29
         Me.PictureBox2.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox2, "Want to exit VotingOS? Click here to exit.")
         '
         'HeadBoyConfig
         '
@@ -505,4 +509,5 @@ Partial Class HeadBoyConfig
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

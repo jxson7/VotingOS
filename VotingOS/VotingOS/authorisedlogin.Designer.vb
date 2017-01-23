@@ -22,6 +22,7 @@ Partial Class authorisedlogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(authorisedlogin))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -31,6 +32,7 @@ Partial Class authorisedlogin
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,6 +63,7 @@ Partial Class authorisedlogin
         Me.Button1.Size = New System.Drawing.Size(154, 33)
         Me.Button1.TabIndex = 9
         Me.Button1.Text = "SIGN IN"
+        Me.ToolTip1.SetToolTip(Me.Button1, "Click here to sign in.")
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Label3
@@ -85,6 +88,8 @@ Partial Class authorisedlogin
         Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox1.Size = New System.Drawing.Size(159, 20)
         Me.TextBox1.TabIndex = 11
+        Me.ToolTip1.SetToolTip(Me.TextBox1, "Here you will need to enter your string of numerical values, created during the c" &
+        "reation of your account.")
         '
         'Label1
         '
@@ -110,6 +115,7 @@ Partial Class authorisedlogin
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox3.TabIndex = 14
         Me.PictureBox3.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox3, "Click here to minimise the application.")
         '
         'PictureBox2
         '
@@ -122,6 +128,7 @@ Partial Class authorisedlogin
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox2.TabIndex = 13
         Me.PictureBox2.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox2, "Want to exit VotingOS? Click Here.")
         '
         'PictureBox1
         '
@@ -134,6 +141,7 @@ Partial Class authorisedlogin
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox1.TabIndex = 29
         Me.PictureBox1.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox1, "Go Back")
         '
         'authorisedlogin
         '
@@ -172,4 +180,5 @@ Partial Class authorisedlogin
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

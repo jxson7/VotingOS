@@ -21,7 +21,7 @@
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        Dim result As Integer = MsgBox("By clicking back here, you will be taken back to the sign in page and WILL be signed out. Do you wish to proceed", MsgBoxStyle.YesNo)
+        Dim result As Integer = MsgBox("By clicking back here, you will be taken back to the sign in page and WILL be signed out. Do you wish to proceed?", MsgBoxStyle.YesNo)
         If result = DialogResult.Yes Then
             Me.Hide()
             MainLogin.userinput.Clear()

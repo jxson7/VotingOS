@@ -22,6 +22,7 @@ Partial Class configchoice
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(configchoice))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -33,6 +34,7 @@ Partial Class configchoice
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,6 +65,7 @@ Partial Class configchoice
         Me.Button1.Size = New System.Drawing.Size(154, 33)
         Me.Button1.TabIndex = 10
         Me.Button1.Text = "HEAD BOY"
+        Me.ToolTip1.SetToolTip(Me.Button1, "Click here to change Head Boy credentials.")
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
@@ -78,6 +81,7 @@ Partial Class configchoice
         Me.Button2.Size = New System.Drawing.Size(154, 33)
         Me.Button2.TabIndex = 11
         Me.Button2.Text = "HEAD GIRL"
+        Me.ToolTip1.SetToolTip(Me.Button2, "Click here to change Head Girl credentials.")
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
@@ -93,6 +97,7 @@ Partial Class configchoice
         Me.Button3.Size = New System.Drawing.Size(154, 33)
         Me.Button3.TabIndex = 12
         Me.Button3.Text = "STUDENT DETAILS"
+        Me.ToolTip1.SetToolTip(Me.Button3, "Click here to change student details.")
         Me.Button3.UseVisualStyleBackColor = False
         '
         'Button6
@@ -108,6 +113,7 @@ Partial Class configchoice
         Me.Button6.Size = New System.Drawing.Size(154, 33)
         Me.Button6.TabIndex = 15
         Me.Button6.Text = "ADMIN DETAILS"
+        Me.ToolTip1.SetToolTip(Me.Button6, "Click here to change /add admins.")
         Me.Button6.UseVisualStyleBackColor = False
         '
         'PictureBox2
@@ -121,6 +127,7 @@ Partial Class configchoice
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox2.TabIndex = 17
         Me.PictureBox2.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox2, "Want to exit VotingOS? Click here to exit.")
         '
         'PictureBox3
         '
@@ -133,6 +140,7 @@ Partial Class configchoice
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox3.TabIndex = 18
         Me.PictureBox3.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox3, "Click here to minimise the application.")
         '
         'Button7
         '
@@ -147,6 +155,7 @@ Partial Class configchoice
         Me.Button7.Size = New System.Drawing.Size(154, 33)
         Me.Button7.TabIndex = 20
         Me.Button7.Text = "VIEW POLLS"
+        Me.ToolTip1.SetToolTip(Me.Button7, "Click here to view polls.")
         Me.Button7.UseVisualStyleBackColor = False
         '
         'PictureBox1
@@ -160,6 +169,7 @@ Partial Class configchoice
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox1.TabIndex = 28
         Me.PictureBox1.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.PictureBox1, "Go Back")
         '
         'configchoice
         '
@@ -197,4 +207,5 @@ Partial Class configchoice
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Button7 As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents ToolTip1 As ToolTip
 End Class
