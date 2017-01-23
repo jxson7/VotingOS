@@ -293,10 +293,8 @@
     <None Include="Resources\PollsView.png" />
     <None Include="Resources\pollsviewer.png" />
     <Content Include="votingOS.ico" />
-    <None Include="Resources\oie_22144313V6e6p5oQ.gif" />
     <None Include="Resources\line.png" />
     <None Include="Resources\error.png" />
-    <None Include="Resources\oie_21184432rQxdUsIt.gif" />
     <None Include="Resources\STARTUPPAGE2.png" />
     <None Include="Resources\STARTUPPAGE.png" />
     <None Include="Resources\signinpage.png" />
