@@ -258,10 +258,10 @@ Partial Class HeadGirlProfiles
         '
         'First_NameLabel1
         '
-        Me.First_NameLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.First_NameLabel1.BackColor = System.Drawing.Color.White
         Me.First_NameLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.First_NameLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidatesHeadGirlBindingSource, "First Name", True))
-        Me.First_NameLabel1.ForeColor = System.Drawing.Color.White
+        Me.First_NameLabel1.ForeColor = System.Drawing.Color.Black
         Me.First_NameLabel1.Location = New System.Drawing.Point(593, 314)
         Me.First_NameLabel1.Name = "First_NameLabel1"
         Me.First_NameLabel1.Size = New System.Drawing.Size(100, 23)
@@ -269,10 +269,10 @@ Partial Class HeadGirlProfiles
         '
         'Last_NameLabel1
         '
-        Me.Last_NameLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.Last_NameLabel1.BackColor = System.Drawing.Color.White
         Me.Last_NameLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Last_NameLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidatesHeadGirlBindingSource, "Last Name", True))
-        Me.Last_NameLabel1.ForeColor = System.Drawing.Color.White
+        Me.Last_NameLabel1.ForeColor = System.Drawing.Color.Black
         Me.Last_NameLabel1.Location = New System.Drawing.Point(699, 314)
         Me.Last_NameLabel1.Name = "Last_NameLabel1"
         Me.Last_NameLabel1.Size = New System.Drawing.Size(100, 23)
@@ -280,10 +280,10 @@ Partial Class HeadGirlProfiles
         '
         'Why_would_you_like_to_be_head_girl_Label1
         '
-        Me.Why_would_you_like_to_be_head_girl_Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Why_would_you_like_to_be_head_girl_Label1.BackColor = System.Drawing.Color.White
         Me.Why_would_you_like_to_be_head_girl_Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Why_would_you_like_to_be_head_girl_Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidatesHeadGirlBindingSource, "Why would you like to be head girl?", True))
-        Me.Why_would_you_like_to_be_head_girl_Label1.ForeColor = System.Drawing.Color.White
+        Me.Why_would_you_like_to_be_head_girl_Label1.ForeColor = System.Drawing.Color.Black
         Me.Why_would_you_like_to_be_head_girl_Label1.Location = New System.Drawing.Point(310, 303)
         Me.Why_would_you_like_to_be_head_girl_Label1.Name = "Why_would_you_like_to_be_head_girl_Label1"
         Me.Why_would_you_like_to_be_head_girl_Label1.Size = New System.Drawing.Size(270, 45)
@@ -291,10 +291,10 @@ Partial Class HeadGirlProfiles
         '
         'What_changes_would_you_make_Label1
         '
-        Me.What_changes_would_you_make_Label1.BackColor = System.Drawing.Color.Transparent
+        Me.What_changes_would_you_make_Label1.BackColor = System.Drawing.Color.White
         Me.What_changes_would_you_make_Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.What_changes_would_you_make_Label1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidatesHeadGirlBindingSource, "What changes would you make?", True))
-        Me.What_changes_would_you_make_Label1.ForeColor = System.Drawing.Color.White
+        Me.What_changes_would_you_make_Label1.ForeColor = System.Drawing.Color.Black
         Me.What_changes_would_you_make_Label1.Location = New System.Drawing.Point(310, 430)
         Me.What_changes_would_you_make_Label1.Name = "What_changes_would_you_make_Label1"
         Me.What_changes_would_you_make_Label1.Size = New System.Drawing.Size(272, 48)
@@ -302,10 +302,10 @@ Partial Class HeadGirlProfiles
         '
         'Number_of_GCSEsLabel1
         '
-        Me.Number_of_GCSEsLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.Number_of_GCSEsLabel1.BackColor = System.Drawing.Color.White
         Me.Number_of_GCSEsLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Number_of_GCSEsLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidatesHeadGirlBindingSource, "Number of GCSEs", True))
-        Me.Number_of_GCSEsLabel1.ForeColor = System.Drawing.Color.White
+        Me.Number_of_GCSEsLabel1.ForeColor = System.Drawing.Color.Black
         Me.Number_of_GCSEsLabel1.Location = New System.Drawing.Point(310, 206)
         Me.Number_of_GCSEsLabel1.Name = "Number_of_GCSEsLabel1"
         Me.Number_of_GCSEsLabel1.Size = New System.Drawing.Size(100, 23)
@@ -324,10 +324,10 @@ Partial Class HeadGirlProfiles
         '
         'Personal_SkillsLabel1
         '
-        Me.Personal_SkillsLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.Personal_SkillsLabel1.BackColor = System.Drawing.Color.White
         Me.Personal_SkillsLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Personal_SkillsLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidatesHeadGirlBindingSource, "Personal Skills", True))
-        Me.Personal_SkillsLabel1.ForeColor = System.Drawing.Color.White
+        Me.Personal_SkillsLabel1.ForeColor = System.Drawing.Color.Black
         Me.Personal_SkillsLabel1.Location = New System.Drawing.Point(310, 359)
         Me.Personal_SkillsLabel1.Name = "Personal_SkillsLabel1"
         Me.Personal_SkillsLabel1.Size = New System.Drawing.Size(271, 57)
@@ -336,10 +336,13 @@ Partial Class HeadGirlProfiles
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Button1.Location = New System.Drawing.Point(662, 437)
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(637, 437)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(148, 26)
+        Me.Button1.Size = New System.Drawing.Size(173, 26)
         Me.Button1.TabIndex = 14
         Me.Button1.Text = "View Head Boy Profiles"
         Me.Button1.UseVisualStyleBackColor = False
@@ -347,19 +350,23 @@ Partial Class HeadGirlProfiles
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Button2.Location = New System.Drawing.Point(662, 483)
+        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(637, 483)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(148, 31)
+        Me.Button2.Size = New System.Drawing.Size(173, 31)
         Me.Button2.TabIndex = 15
         Me.Button2.Text = "Cast Your Final Vote"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'IDLabel1
         '
-        Me.IDLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.IDLabel1.BackColor = System.Drawing.Color.White
         Me.IDLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.IDLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CandidatesHeadGirlBindingSource, "ID", True))
+        Me.IDLabel1.ForeColor = System.Drawing.Color.Black
         Me.IDLabel1.Location = New System.Drawing.Point(310, 170)
         Me.IDLabel1.Name = "IDLabel1"
         Me.IDLabel1.Size = New System.Drawing.Size(33, 23)

@@ -16,7 +16,7 @@
         Me.Hide()
     End Sub
     ' If wanting to exit the entire system. 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
         MsgBox("Are you sure you want to quit?", MsgBoxStyle.YesNo)
         If vbYes Then
             Close()
@@ -36,7 +36,7 @@
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-
+        Close()
     End Sub
 
     Private Sub PictureBox2_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox2.MouseMove

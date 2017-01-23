@@ -27,7 +27,6 @@ Partial Class configchoice
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -91,20 +90,6 @@ Partial Class configchoice
         Me.Button3.Text = "STUDENT DETAILS"
         Me.Button3.UseVisualStyleBackColor = False
         '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.Transparent
-        Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(318, 494)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(154, 33)
-        Me.Button4.TabIndex = 13
-        Me.Button4.Text = "EXIT"
-        Me.Button4.UseVisualStyleBackColor = False
-        '
         'Button6
         '
         Me.Button6.BackColor = System.Drawing.Color.Transparent
@@ -134,6 +119,7 @@ Partial Class configchoice
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Black
+        Me.PictureBox3.Image = Global.VotingOS.My.Resources.Resources.line
         Me.PictureBox3.Location = New System.Drawing.Point(527, 12)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(24, 24)
@@ -165,7 +151,6 @@ Partial Class configchoice
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -184,7 +169,6 @@ Partial Class configchoice
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents HelpProvider1 As HelpProvider
     Friend WithEvents PictureBox2 As PictureBox
