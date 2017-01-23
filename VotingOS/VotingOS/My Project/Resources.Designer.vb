@@ -93,6 +93,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property loading1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("loading1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property mainpage() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("mainpage", resourceCulture)
@@ -126,6 +136,26 @@ Namespace My.Resources
         Friend ReadOnly Property oie_22144313V6e6p5oQ() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("oie_22144313V6e6p5oQ", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property PollsView() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("PollsView", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property pollsviewer() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("pollsviewer", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

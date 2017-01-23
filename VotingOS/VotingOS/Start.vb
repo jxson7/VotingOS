@@ -33,7 +33,7 @@ Public Class Start
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
-        ProgressBar1.Increment(5)
+        ProgressBar1.Increment(10)
         If ProgressBar1.Value = ProgressBar1.Maximum Then
             PictureBox1.Hide()
             Label1.Visible = True
@@ -57,8 +57,8 @@ Public Class Start
 
     End Sub
 
+    Private Sub PictureBox1_Click_2(sender As Object, e As EventArgs)
 
-
-
+    End Sub
 End Class
 
