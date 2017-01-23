@@ -138,7 +138,7 @@ Partial Class MainLogin
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = Global.VotingOS.My.Resources.Resources.line1
+        Me.PictureBox3.Image = Global.VotingOS.My.Resources.Resources.line
         Me.PictureBox3.Location = New System.Drawing.Point(527, 12)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(24, 24)

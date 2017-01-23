@@ -65,10 +65,10 @@ Partial Class Start
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.VotingOS.My.Resources.Resources.oie_22144313V6e6p5oQ
-        Me.PictureBox1.Location = New System.Drawing.Point(282, 286)
+        Me.PictureBox1.Image = Global.VotingOS.My.Resources.Resources.oie_21184432rQxdUsIt
+        Me.PictureBox1.Location = New System.Drawing.Point(381, 287)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(388, 355)
+        Me.PictureBox1.Size = New System.Drawing.Size(193, 203)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
@@ -93,7 +93,7 @@ Partial Class Start
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = Global.VotingOS.My.Resources.Resources.line1
+        Me.PictureBox3.Image = Global.VotingOS.My.Resources.Resources.line
         Me.PictureBox3.Location = New System.Drawing.Point(835, 8)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(24, 24)

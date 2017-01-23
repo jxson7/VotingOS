@@ -12,6 +12,7 @@ Public Class MainLogin
         Dim dataFile As String
         Dim connString As String
 
+
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
         'Change the following to your access database location
         dataFile = "C:\Users\Owner\Voting System\VotingOS\VotingOS\bin\Debug\Database.accdb"

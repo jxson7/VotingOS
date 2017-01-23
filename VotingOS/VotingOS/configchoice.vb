@@ -25,9 +25,9 @@
         End If
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) 
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
         Me.Hide()
-        MainLogin.Show()
+        PollsViewer.Show()
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
@@ -41,5 +41,10 @@
 
     Private Sub PictureBox2_MouseMove(sender As Object, e As MouseEventArgs) Handles PictureBox2.MouseMove
 
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Me.Hide()
+        PollsViewer.Show()
     End Sub
 End Class
