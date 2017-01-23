@@ -14,7 +14,7 @@ Public Class MainLogin
 
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
         'Change the following to your access database location
-        dataFile = "N:\VOTER_OS\VotingOS\VotingOS\bin\Debug\Database.accdb"
+        dataFile = "C:\Users\Owner\Voting System\VotingOS\VotingOS\bin\Debug\Database.accdb"
         connString = provider & dataFile
         myConnection.ConnectionString = connString
 
@@ -27,6 +27,7 @@ Public Class MainLogin
         Dim FirstName As String = ""
         Dim LastName As String = ""
         Dim Username As String = ""
+        Dim Voted As String = ""
 
         'if found:CONFIRMATION IS REQUIRED IF IT IS NEEDED. 
         While dr.Read
@@ -42,26 +43,18 @@ Public Class MainLogin
 
         If Voted = True Then
             MsgBox("You have already casted your vote. If you haven't previously casted a vote, please contact your administrator ")
-            Dim result As Integer = MsgBox("Do you wish to exit VotingOS?", MsgBoxStyle.YesNo)
-            If result = DialogResult.Yes Then
-                Application.Exit()
-            Else
-                userinput.Clear()
-                TextBox2.Clear()
-            End If
             Me.Close()
         ElseIf userFound = True Then
             MainLogin.Username = userinput.Text
-            MainLogin.MyName = FirstName
-            MainLogin.MySurname = LastName
-            Me.Hide()
-            ContinueMsgBox.Show()
-        Else
-            MsgBox("Sorry, your credentials are incorrect/have not been found. Please try again or contact your administrator", MsgBoxStyle.OkOnly, "Invalid Login")
+                MainLogin.MyName = FirstName
+                MainLogin.MySurname = LastName
+                Me.Hide()
+                ContinueMsgBox.Show()
+            Else
+                MsgBox("Sorry, your credentials are incorrect/have not been found. Please try again or contact your administrator", MsgBoxStyle.OkOnly, "Invalid Login")
         End If
 
         myConnection.Close()
-
 
     End Sub
 
@@ -89,7 +82,7 @@ Public Class MainLogin
 
             provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
             'Change the following to your access database location
-            dataFile = "N:\VOTER_OS\VotingOS\VotingOS\bin\Debug\Database.accdb"
+            dataFile = "C:\Users\Owner\Voting System\VotingOS\VotingOS\bin\Debug\Database.accdb"
             connString = provider & dataFile
             myConnection.ConnectionString = connString
 
@@ -117,13 +110,6 @@ Public Class MainLogin
 
             If Voted = True Then
                 MsgBox("You have already casted your vote. If you haven't previously casted a vote, please contact your administrator ")
-                Dim result As Integer = MsgBox("Do you wish to exit VotingOS?", MsgBoxStyle.YesNo)
-                If result = DialogResult.Yes Then
-                    Application.Exit()
-                Else
-                    userinput.Clear()
-                    TextBox2.Clear()
-                End If
                 Me.Close()
             ElseIf userFound = True Then
                 MainLogin.Username = userinput.Text
