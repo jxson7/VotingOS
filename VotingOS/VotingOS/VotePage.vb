@@ -49,8 +49,7 @@ Class VotePage
                 cmd.ExecuteNonQuery()
                 cmd.Dispose()
                 myConnection.Close()
-        Application.Exit()
-
+                Me.Close()
 
         'End If
         'End If
@@ -59,22 +58,22 @@ Class VotePage
     End Sub
 
 
-    'Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
-    '    Dim query As String
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Dim query As String
 
-    '    Dim command As OleDbCommand
-    '    Dim reader As OleDbDataReader
+        Dim command As OleDbCommand
+        Dim reader As OleDbDataReader
 
-    '    myConnection.Open()
-    '    query = "select * from HeadBoyCandidates"
-    '    command = New OleDbCommand(query, myConnection)
-    '    reader = command.ExecuteReader()
-    '    If reader.HasRows Then
-    '        While reader.Read()
-    '            ComboBox1.Items.Add(reader("ID"))
-    '        End While
-    '    End If
-    'End Sub
+        myConnection.Open()
+        query = "select * from HeadBoyCandidates"
+        command = New OleDbCommand(query, myConnection)
+        reader = command.ExecuteReader()
+        If reader.HasRows Then
+            While reader.Read()
+                ComboBox1.Items.Add(reader("ID"))
+            End While
+        End If
+    End Sub
 
 
 

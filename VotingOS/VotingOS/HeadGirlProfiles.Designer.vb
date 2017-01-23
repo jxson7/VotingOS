@@ -336,27 +336,21 @@ Partial Class HeadGirlProfiles
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = Global.VotingOS.My.Resources.Resources.STARTUPPAGE2
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(625, 430)
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button1.Location = New System.Drawing.Point(662, 437)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(185, 33)
+        Me.Button1.Size = New System.Drawing.Size(148, 26)
         Me.Button1.TabIndex = 14
         Me.Button1.Text = "View Head Boy Profiles"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.DimGray
-        Me.Button2.BackgroundImage = Global.VotingOS.My.Resources.Resources.STARTUPPAGE2
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(625, 482)
+        Me.Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button2.Location = New System.Drawing.Point(662, 483)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(185, 31)
+        Me.Button2.Size = New System.Drawing.Size(148, 31)
         Me.Button2.TabIndex = 15
         Me.Button2.Text = "Cast Your Final Vote"
         Me.Button2.UseVisualStyleBackColor = False
