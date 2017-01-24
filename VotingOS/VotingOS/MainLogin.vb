@@ -144,11 +144,6 @@ Public Class MainLogin
     End Sub
 
     Private Sub userinput_KeyPress(sender As Object, e As KeyPressEventArgs) Handles userinput.KeyPress
-        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
-            MessageBox.Show("Numeric values only.")
-            e.Handled = True
-        End If
-
         If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Enter) Then
             e.Handled = True
             If String.IsNullOrEmpty(userinput.Text) Then
