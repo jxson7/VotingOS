@@ -7,7 +7,6 @@
             MsgBox("Update Successful")
         Catch ex As Exception
             MsgBox("Update Failed. Please try again later or contact administrator.")
-            TextBox1.Clear()
         End Try
     End Sub
 
@@ -17,12 +16,17 @@
 
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim OpenFileDialog1 As New OpenFileDialog
 
+        OpenFileDialog1.Filter = "Picture Files (*)|*.bmp;*.gif;*.jpg"
+        If OpenFileDialog1.ShowDialog = DialogResult.OK Then
+            ImagePictureBox.Image = Image.FromFile(OpenFileDialog1.FileName)
+        End If
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
@@ -36,6 +40,6 @@
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Me.Hide()
-        votingchoice.Show()
+        configchoice.Show()
     End Sub
 End Class

@@ -53,7 +53,6 @@ Partial Class HeadBoyConfig
         Me.Personal_SkillsTextBox = New System.Windows.Forms.TextBox()
         Me.ImagePictureBox = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.First_NameTextBox = New System.Windows.Forms.TextBox()
@@ -348,24 +347,15 @@ Partial Class HeadBoyConfig
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.BackgroundImage = Global.VotingOS.My.Resources.Resources.STARTUPPAGE2
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(305, 303)
+        Me.Button1.Location = New System.Drawing.Point(242, 303)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 15
         Me.Button1.Text = "Browse"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.Color.White
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox1.ForeColor = System.Drawing.Color.Black
-        Me.TextBox1.Location = New System.Drawing.Point(124, 303)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(166, 20)
-        Me.TextBox1.TabIndex = 16
         '
         'OpenFileDialog1
         '
@@ -442,7 +432,6 @@ Partial Class HeadBoyConfig
         Me.Controls.Add(Me.First_NameTextBox)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CandidateHeadBoyBindingNavigator)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(ImageLabel)
         Me.Controls.Add(Me.ImagePictureBox)
@@ -498,7 +487,6 @@ Partial Class HeadBoyConfig
     Friend WithEvents Personal_SkillsTextBox As TextBox
     Friend WithEvents ImagePictureBox As PictureBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents Label1 As Label
     Friend WithEvents First_NameTextBox As TextBox

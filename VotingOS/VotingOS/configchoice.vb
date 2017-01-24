@@ -32,6 +32,7 @@
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Me.Hide()
+        AdminConfig.Show()
 
     End Sub
 
@@ -59,6 +60,10 @@
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
+
+    End Sub
+
+    Private Sub configchoice_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

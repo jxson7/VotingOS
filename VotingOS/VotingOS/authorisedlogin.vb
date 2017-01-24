@@ -28,7 +28,9 @@ Public Class authorisedlogin
         End While
 
         'checking the result
-        If userFound = True Then
+        If String.IsNullOrEmpty(TextBox1.Text) Then
+            MsgBox("Please enter your credentials")
+        ElseIf userFound = True Then
             Me.Hide()
             configchoice.Show()
 
@@ -79,7 +81,9 @@ Public Class authorisedlogin
             End While
 
             'checking the result
-            If userFound = True Then
+            If String.IsNullOrEmpty(TextBox1.Text) Then
+                MsgBox("Please enter your credentials")
+            ElseIf userFound = True Then
                 Me.Hide()
                 configchoice.Show()
 

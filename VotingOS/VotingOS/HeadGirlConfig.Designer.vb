@@ -31,7 +31,6 @@ Partial Class HeadGirlConfig
         Dim Last_NameLabel As System.Windows.Forms.Label
         Dim First_NameLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(HeadGirlConfig))
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DatabaseDataSet = New VotingOS.DatabaseDataSet()
         Me.CandidatesHeadGirlBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -54,11 +53,12 @@ Partial Class HeadGirlConfig
         Me.Number_of_GCSEsNumericUpDown = New System.Windows.Forms.NumericUpDown()
         Me.Why_would_you_like_to_be_head_girl_TextBox = New System.Windows.Forms.TextBox()
         Me.Personal_SkillsTextBox = New System.Windows.Forms.TextBox()
-        Me.Profile_ImagePictureBox = New System.Windows.Forms.PictureBox()
+        Me.ImagePictureBox = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         ImageLabel = New System.Windows.Forms.Label()
         Personal_SkillsLabel = New System.Windows.Forms.Label()
         Previously_part_of_school_house_council_Label = New System.Windows.Forms.Label()
@@ -71,7 +71,7 @@ Partial Class HeadGirlConfig
         CType(Me.CandidatesHeadGirlBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CandidatesHeadGirlBindingNavigator.SuspendLayout()
         CType(Me.Number_of_GCSEsNumericUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Profile_ImagePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -161,19 +161,15 @@ Partial Class HeadGirlConfig
         First_NameLabel.TabIndex = 17
         First_NameLabel.Text = "First Name:"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(147, 310)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(177, 20)
-        Me.TextBox1.TabIndex = 25
-        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.BackgroundImage = Global.VotingOS.My.Resources.Resources.STARTUPPAGE2
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(338, 309)
+        Me.Button1.Location = New System.Drawing.Point(237, 310)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 24
@@ -352,16 +348,16 @@ Partial Class HeadGirlConfig
         Me.Personal_SkillsTextBox.Size = New System.Drawing.Size(233, 67)
         Me.Personal_SkillsTextBox.TabIndex = 32
         '
-        'Profile_ImagePictureBox
+        'ImagePictureBox
         '
-        Me.Profile_ImagePictureBox.BackColor = System.Drawing.Color.Transparent
-        Me.Profile_ImagePictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.CandidatesHeadGirlBindingSource, "Profile Image", True))
-        Me.Profile_ImagePictureBox.Location = New System.Drawing.Point(223, 163)
-        Me.Profile_ImagePictureBox.Name = "Profile_ImagePictureBox"
-        Me.Profile_ImagePictureBox.Size = New System.Drawing.Size(100, 141)
-        Me.Profile_ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Profile_ImagePictureBox.TabIndex = 33
-        Me.Profile_ImagePictureBox.TabStop = False
+        Me.ImagePictureBox.BackColor = System.Drawing.Color.Transparent
+        Me.ImagePictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.CandidatesHeadGirlBindingSource, "Profile Image", True))
+        Me.ImagePictureBox.Location = New System.Drawing.Point(223, 163)
+        Me.ImagePictureBox.Name = "ImagePictureBox"
+        Me.ImagePictureBox.Size = New System.Drawing.Size(100, 141)
+        Me.ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ImagePictureBox.TabIndex = 33
+        Me.ImagePictureBox.TabStop = False
         '
         'Label1
         '
@@ -411,6 +407,10 @@ Partial Class HeadGirlConfig
         Me.PictureBox2.TabIndex = 36
         Me.PictureBox2.TabStop = False
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'HeadGirlConfig
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -423,14 +423,13 @@ Partial Class HeadGirlConfig
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.CandidatesHeadGirlBindingNavigator)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Profile_ImagePictureBox)
+        Me.Controls.Add(Me.ImagePictureBox)
         Me.Controls.Add(Me.Personal_SkillsTextBox)
         Me.Controls.Add(Me.Why_would_you_like_to_be_head_girl_TextBox)
         Me.Controls.Add(Me.Number_of_GCSEsNumericUpDown)
         Me.Controls.Add(Me.Previously_Part_of_School_House_CouncilCheckBox)
         Me.Controls.Add(Me.Last_NameTextBox)
         Me.Controls.Add(Me.First_NameTextBox)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(ImageLabel)
         Me.Controls.Add(Personal_SkillsLabel)
@@ -450,7 +449,7 @@ Partial Class HeadGirlConfig
         Me.CandidatesHeadGirlBindingNavigator.ResumeLayout(False)
         Me.CandidatesHeadGirlBindingNavigator.PerformLayout()
         CType(Me.Number_of_GCSEsNumericUpDown, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Profile_ImagePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ImagePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -458,8 +457,6 @@ Partial Class HeadGirlConfig
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents DatabaseDataSet As DatabaseDataSet
     Friend WithEvents CandidatesHeadGirlBindingSource As BindingSource
@@ -482,9 +479,10 @@ Partial Class HeadGirlConfig
     Friend WithEvents Number_of_GCSEsNumericUpDown As NumericUpDown
     Friend WithEvents Why_would_you_like_to_be_head_girl_TextBox As TextBox
     Friend WithEvents Personal_SkillsTextBox As TextBox
-    Friend WithEvents Profile_ImagePictureBox As PictureBox
+    Friend WithEvents ImagePictureBox As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class

@@ -45,9 +45,9 @@ Public Class MainLogin
         End While
 
         'checking the result: IF FOUND, THE PIECE IS DIRECTED FOR THE STUDENTS DIRECTLY TO THE VOTING PAGE OS (STUDENTS ONLY)
-
-
-        If Voted = True Then
+        If String.IsNullOrEmpty(userinput.Text) Then
+            MsgBox("Please enter your credentials")
+        ElseIf Voted = True Then
             MsgBox("You have already casted your vote. If you haven't previously casted a vote, please contact your administrator ")
             Me.Close()
         ElseIf userFound = True Then
@@ -108,8 +108,9 @@ Public Class MainLogin
 
             'checking the result: IF FOUND, THE PIECE IS DIRECTED FOR THE STUDENTS DIRECTLY TO THE VOTING PAGE OS (STUDENTS ONLY)
 
-
-            If Voted = True Then
+            If String.IsNullOrEmpty(userinput.Text) Then
+                MsgBox("Please enter your credentials")
+            ElseIf Voted = True Then
                 MsgBox("You have already casted your vote. If you haven't previously casted a vote, please contact your administrator ")
                 Me.Close()
             ElseIf userFound = True Then
@@ -140,5 +141,20 @@ Public Class MainLogin
     Private Sub MainLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
         userinput.Clear()
         TextBox2.Clear()
+    End Sub
+
+    Private Sub userinput_KeyPress(sender As Object, e As KeyPressEventArgs) Handles userinput.KeyPress
+        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+            MessageBox.Show("Numeric values only.")
+            e.Handled = True
+        End If
+
+        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Enter) Then
+            e.Handled = True
+            If String.IsNullOrEmpty(userinput.Text) Then
+                MsgBox("Please enter your credentials")
+            End If
+        End If
+
     End Sub
 End Class

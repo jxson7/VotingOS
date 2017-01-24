@@ -6,6 +6,8 @@
             Me.UsersBindingSource.EndEdit()
             Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
             MsgBox("Update Successful")
+            Me.Hide()
+            configchoice.Show()
         Catch ex As Exception
             MsgBox("Update Failed. Please try again later or conbtact your administrator.")
         End Try
@@ -20,6 +22,29 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Try
+            Me.Validate()
+            Me.UsersBindingSource.EndEdit()
+            Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
+            MsgBox("Update Successful")
+            Me.Hide()
+            configchoice.Show()
+        Catch ex As Exception
+            MsgBox("Update Failed. Please try again later or conbtact your administrator.")
+        End Try
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Me.Hide()
+        configchoice.Show()
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        closeform()
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
 
     End Sub
 End Class
