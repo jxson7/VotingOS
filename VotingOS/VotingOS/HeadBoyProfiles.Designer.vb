@@ -57,7 +57,6 @@ Partial Class HeadBoyProfiles
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Why_would_you_like_to_be_head_boy_girl_Label = New System.Windows.Forms.Label()
         What_changes_would_you_make_Label = New System.Windows.Forms.Label()
         Number_of_GCSELabel = New System.Windows.Forms.Label()
@@ -350,7 +349,6 @@ Partial Class HeadBoyProfiles
         Me.Button2.Size = New System.Drawing.Size(175, 31)
         Me.Button2.TabIndex = 18
         Me.Button2.Text = "Cast Your Final Vote"
-        Me.ToolTip1.SetToolTip(Me.Button2, "Click Here to cast your final vote.")
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
@@ -366,7 +364,6 @@ Partial Class HeadBoyProfiles
         Me.Button1.Size = New System.Drawing.Size(175, 26)
         Me.Button1.TabIndex = 17
         Me.Button1.Text = "View Head Girl Profiles"
-        Me.ToolTip1.SetToolTip(Me.Button1, "Click here to view the candidates running for the Head Girl position.")
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Label1
@@ -390,7 +387,6 @@ Partial Class HeadBoyProfiles
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox3.TabIndex = 21
         Me.PictureBox3.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox3, "Click here to minimise the application.")
         '
         'PictureBox2
         '
@@ -403,7 +399,6 @@ Partial Class HeadBoyProfiles
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox2.TabIndex = 20
         Me.PictureBox2.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox2, "Want to exit VotingOS? Click here to exit.")
         '
         'PictureBox1
         '
@@ -416,7 +411,6 @@ Partial Class HeadBoyProfiles
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox1.TabIndex = 22
         Me.PictureBox1.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox1, "Go Back")
         '
         'HeadBoyProfiles
         '
@@ -492,5 +486,4 @@ Partial Class HeadBoyProfiles
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents ToolTip1 As ToolTip
 End Class

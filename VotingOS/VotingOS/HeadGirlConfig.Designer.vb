@@ -59,7 +59,6 @@ Partial Class HeadGirlConfig
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         ImageLabel = New System.Windows.Forms.Label()
         Personal_SkillsLabel = New System.Windows.Forms.Label()
         Previously_part_of_school_house_council_Label = New System.Windows.Forms.Label()
@@ -387,7 +386,6 @@ Partial Class HeadGirlConfig
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox1.TabIndex = 38
         Me.PictureBox1.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox1, "Go Back")
         '
         'PictureBox3
         '
@@ -400,7 +398,6 @@ Partial Class HeadGirlConfig
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox3.TabIndex = 37
         Me.PictureBox3.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox3, "Click here to minimise the application.")
         '
         'PictureBox2
         '
@@ -413,7 +410,6 @@ Partial Class HeadGirlConfig
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox2.TabIndex = 36
         Me.PictureBox2.TabStop = False
-        Me.ToolTip1.SetToolTip(Me.PictureBox2, "Want to exit VotingOS? Click here to exit.")
         '
         'HeadGirlConfig
         '
@@ -491,5 +487,4 @@ Partial Class HeadGirlConfig
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents ToolTip1 As ToolTip
 End Class
