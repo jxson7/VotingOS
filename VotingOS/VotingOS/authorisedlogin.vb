@@ -7,15 +7,11 @@ Public Class authorisedlogin
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
-        'Applies the confirmation of where exactly the file is for the database. Applicable version that has been applied is recorded as a ACCDB (Access Only)
-        dataFile = "C:\Users\Owner\Voting System\VotingOS\VotingOS\bin\Debug\Database.accdb"
-        connString = provider & dataFile
-        myConnection.ConnectionString = connString
+        Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
 
+        myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
         myConnection.Open()
-
-        Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM [authorisedmembers] WHERE [password] = '" & TextBox1.Text & "'", myConnection)
+        cmd = New OleDbCommand("SELECT * FROM [authorisedmembers] WHERE [password] = '" & TextBox1.Text & "'", myConnection)
         Dim dr As OleDbDataReader = cmd.ExecuteReader
 
         ' the following variable is hold true if user is found, and false if user is not found
@@ -61,15 +57,12 @@ Public Class authorisedlogin
         If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Enter) Then
             e.Handled = True
 
-            provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
-            'Applies the confirmation of where exactly the file is for the databse. Applicable version that has been applied is recorded as a ACCDB (Access Only)
-            dataFile = "C:\Users\Owner\Voting System\VotingOS\VotingOS\bin\Debug\Database.accdb"
-            connString = provider & dataFile
-            myConnection.ConnectionString = connString
+            Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
 
+            myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
             myConnection.Open()
 
-            Dim cmd As OleDbCommand = New OleDbCommand("SELECT * FROM [authorisedmembers] WHERE [password] = '" & TextBox1.Text & "'", myConnection)
+            cmd = New OleDbCommand("SELECT * FROM [authorisedmembers] WHERE [password] = '" & TextBox1.Text & "'", myConnection)
             Dim dr As OleDbDataReader = cmd.ExecuteReader
 
             ' the following variable is hold true if user is found, and false if user is not found

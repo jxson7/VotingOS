@@ -9,19 +9,23 @@ Public Class MainLogin
 
     Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        Dim provider As String
-        Dim dataFile As String
-        Dim connString As String
+        'Dim provider As String
+        'Dim dataFile As String
+        'Dim connString As String
 
 
-        provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
-        'Change the following to your access database location
-        dataFile = "C:\Users\Owner\Voting System\VotingOS\VotingOS\bin\Debug\Database.accdb"
-        connString = provider & dataFile
-        myConnection.ConnectionString = connString
+        'provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
+        ''Change the following to your access database location
+        'dataFile = "N:\VOTER_OS\VotingOS\VotingOS\bin\Debug\Database.accdb"
+        'connString = provider & dataFile
+        'myConnection.ConnectionString = connString
 
+        Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
+
+        myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
         myConnection.Open()
-        Dim cmd As OleDb.OleDbCommand = New OleDb.OleDbCommand("SELECT * FROM [users] WHERE [user] = '" & userinput.Text & "' AND [password] = '" & TextBox2.Text & "'", myConnection)
+
+        cmd = New OleDb.OleDbCommand("SELECT * FROM [users] WHERE [user] = '" & userinput.Text & "' AND [password] = '" & TextBox2.Text & "'", myConnection)
         Dim dr As OleDb.OleDbDataReader = cmd.ExecuteReader
         ' the following variable is hold true if user is found, and false if user is not found
         Dim userFound As Boolean = False
@@ -78,18 +82,12 @@ Public Class MainLogin
         If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Enter) Then
             e.Handled = True
 
-            Dim provider As String
-            Dim dataFile As String
-            Dim connString As String
+            Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
 
-            provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
-            'Change the following to your access database location
-            dataFile = "C:\Users\Owner\Voting System\VotingOS\VotingOS\bin\Debug\Database.accdb"
-            connString = provider & dataFile
-            myConnection.ConnectionString = connString
-
+            myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
             myConnection.Open()
-            Dim cmd As OleDb.OleDbCommand = New OleDb.OleDbCommand("SELECT * FROM [users] WHERE [user] = '" & userinput.Text & "' AND [password] = '" & TextBox2.Text & "'", myConnection)
+
+            cmd = New OleDb.OleDbCommand("SELECT * FROM [users] WHERE [user] = '" & userinput.Text & "' AND [password] = '" & TextBox2.Text & "'", myConnection)
             Dim dr As OleDb.OleDbDataReader = cmd.ExecuteReader
             ' the following variable is hold true if user is found, and false if user is not found
             Dim userFound As Boolean = False
@@ -97,6 +95,7 @@ Public Class MainLogin
             Dim FirstName As String = ""
             Dim LastName As String = ""
             Dim Username As String = ""
+            Dim Voted As String = ""
 
             'if found:CONFIRMATION IS REQUIRED IF IT IS NEEDED. 
             While dr.Read
@@ -124,7 +123,6 @@ Public Class MainLogin
             End If
 
             myConnection.Close()
-
         End If
 
     End Sub
