@@ -30,7 +30,7 @@
             Me.Hide()
             configchoice.Show()
         Catch ex As Exception
-            MsgBox("Update Failed. Please try again later or conbtact your administrator.")
+            MsgBox("Update Failed. Please try again later or contact your administrator.")
         End Try
     End Sub
 
@@ -46,5 +46,10 @@
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
 
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Hide()
+        allusers.Show()
     End Sub
 End Class

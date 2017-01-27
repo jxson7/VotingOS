@@ -106,6 +106,12 @@
     <Compile Include="AdminConfig.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="allusers.Designer.vb">
+      <DependentUpon>allusers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="allusers.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="authorisedlogin.Designer.vb">
       <DependentUpon>authorisedlogin.vb</DependentUpon>
     </Compile>
@@ -211,6 +217,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AdminConfig.resx">
       <DependentUpon>AdminConfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="allusers.resx">
+      <DependentUpon>allusers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="authorisedlogin.resx">
       <DependentUpon>authorisedlogin.vb</DependentUpon>
