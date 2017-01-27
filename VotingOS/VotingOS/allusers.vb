@@ -12,15 +12,16 @@ Public Class allusers
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'PrintDialog1.Document = PrintDocument1
-        'If PrintDialog1.ShowDialog = DialogResult.Yes Then
+        PrintPreviewDialog1.Document = PrintDocument1
         PrintDocument1.DefaultPageSettings.Landscape = True
-        PrintDocument1.Print()
-            'Dim result As Integer = "Would you like ", MsgBoxStyle.YesNo)
-        'If result = DialogResult.Yes Then
-        '    Application.Exit()
+        PrintPreviewDialog1.ShowDialog()
+        'PrintDialog1.Document = PrintDocument1
+        If PrintPreviewDialog1.ShowDialog = DialogResult.Yes Then
+            PrintDocument1.DefaultPageSettings.Landscape = True
+            PrintDocument1.Print()
 
-        'End If
+
+        End If
     End Sub
 
     Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
