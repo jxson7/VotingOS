@@ -53,6 +53,7 @@ Partial Class AdminConfig
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         IDLabel = New System.Windows.Forms.Label()
         FirstNameLabel = New System.Windows.Forms.Label()
         LastNameLabel = New System.Windows.Forms.Label()
@@ -352,6 +353,21 @@ Partial Class AdminConfig
         Me.PictureBox1.TabIndex = 27
         Me.PictureBox1.TabStop = False
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Button2.BackgroundImage = Global.VotingOS.My.Resources.Resources.STARTUPPAGE2
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(192, 443)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(176, 34)
+        Me.Button2.TabIndex = 28
+        Me.Button2.Text = "VIEW ALL ADMINS"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'AdminConfig
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -360,6 +376,7 @@ Partial Class AdminConfig
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(593, 563)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
@@ -423,4 +440,5 @@ Partial Class AdminConfig
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button2 As Button
 End Class

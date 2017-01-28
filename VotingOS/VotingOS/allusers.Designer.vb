@@ -45,8 +45,8 @@ Partial Class allusers
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.VotesTableAdapter1 = New VotingOS.DatabaseDataSetTableAdapters.VotesTableAdapter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -155,9 +155,9 @@ Partial Class allusers
         Me.UsersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.UsersDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.UsersDataGridView.DataSource = Me.UsersBindingSource
-        Me.UsersDataGridView.Location = New System.Drawing.Point(3, 13)
+        Me.UsersDataGridView.Location = New System.Drawing.Point(7, 3)
         Me.UsersDataGridView.Name = "UsersDataGridView"
-        Me.UsersDataGridView.Size = New System.Drawing.Size(834, 360)
+        Me.UsersDataGridView.Size = New System.Drawing.Size(834, 373)
         Me.UsersDataGridView.TabIndex = 36
         '
         'DataGridViewTextBoxColumn1
@@ -215,20 +215,11 @@ Partial Class allusers
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Black
-        Me.Panel1.Controls.Add(Me.ToolStrip1)
         Me.Panel1.Controls.Add(Me.UsersDataGridView)
         Me.Panel1.Location = New System.Drawing.Point(32, 82)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(847, 439)
         Me.Panel1.TabIndex = 37
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(847, 25)
-        Me.ToolStrip1.TabIndex = 37
-        Me.ToolStrip1.Text = "ToolStrip1"
         '
         'PrintPreviewDialog1
         '
@@ -239,6 +230,10 @@ Partial Class allusers
         Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
+        '
+        'VotesTableAdapter1
+        '
+        Me.VotesTableAdapter1.ClearBeforeFill = True
         '
         'allusers
         '
@@ -263,7 +258,6 @@ Partial Class allusers
         CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UsersDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -289,6 +283,6 @@ Partial Class allusers
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents PrintDialog1 As PrintDialog
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
+    Friend WithEvents VotesTableAdapter1 As DatabaseDataSetTableAdapters.VotesTableAdapter
 End Class

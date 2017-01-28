@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 
 
 Public Class allusers
-    
+    Public Property UserDataGridView As Object
 
     Private Sub allusers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'DatabaseDataSet.users' table. You can move, or remove it, as needed.
@@ -19,55 +19,53 @@ Public Class allusers
         'If PrintPreviewDialog1.ShowDialog = DialogResult.Yes Then
         '    PrintDocument1.DefaultPageSettings.Landscape = True
         '    PrintDocument1.Print()
-        If PrintDialog1.ShowDialog() = DialogResult.OK Then
-            PrintDocument1.Print()
-
-
-        End If
+        ''If PrintDialog1.ShowDialog() = DialogResult.OK Then
+        ''    PrintDocument1.Print()
+        PrintDocument1.DefaultPageSettings.Landscape = True
+        PrintPreviewDialog1.Document = PrintDocument1
+        PrintPreviewDialog1.ShowDialog()
     End Sub
+
 
     Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
         PrintDocument1.DefaultPageSettings.Landscape = True
-        Dim bm As New Bitmap(Me.UsersDataGridView.Width, Me.UsersDataGridView.Height)
-        UsersDataGridView.DrawToBitmap(bm, New Rectangle(0, 0, Me.UsersDataGridView.Width, Me.UsersDataGridView.Height))
-        e.Graphics.DrawImage(bm, 0, 0)
-        'Dim drawstring As String = Nothing
-        'Dim i As Integer = 0
-        'Dim j As Integer = 0
-        'Dim rc As Integer = UsersDataGridView.Rows.Count
-        'Dim cc As Integer = UsersDataGridView.Columns.Count
-        'Dim x As Integer = 10
-        'Dim y As Integer = 10
-        'Dim cnt As Integer = 0
-
-        'While i < rc
-
-        '    While j < cc
-        '        drawstring = UsersDataGridView.Item(UsersDataGridView.Columns(j).Index, UsersDataGridView.Rows(i).Index).Value().ToString()
-        '        e.Graphics.DrawString(drawstring, Me.Font, Brushes.Black, x, y)
-
-        '        ' adjust spacing between columns, if column texts are too long
-
-        '        If j = 4 Then  ' Example of adjusting 4th column
-        '            x += 160
-        '        ElseIf j = 5 Then   ' Example of adjusting 5th column
-        '            x += 50
-        '        ElseIf j = 8 Then
-        '            x += 170
-        '        End If
-
-        '        x += 40
-        '        j += 1
-        '    End While
-
-        '    i += 1 ' Increment row position
-        '    j = 0  ' Make column position to zero
-
-        '    ' adjust y,x position
-        '    y += 30
-        '    x = 10
-
-        'End While
+        ''Dim bm As New Bitmap(Me.UsersDataGridView.Width, Me.UsersDataGridView.Height)
+        ''UsersDataGridView.DrawToBitmap(bm, New Rectangle(0, 0, Me.UsersDataGridView.Width, Me.UsersDataGridView.Height))
+        ''e.Graphics.DrawImage(bm, 0, 0)
+        Dim mRow As Integer = 0
+        Dim newpage As Boolean = True
+        With UserDataGridView
+            Dim fmt As StringFormat = New StringFormat(StringFormatFlags.LineLimit)
+            fmt.LineAlignment = StringAlignment.Center
+            fmt.Trimming = StringTrimming.EllipsisCharacter
+            Dim y As Single = e.MarginBounds.Top
+            Do While mRow < .RowCount
+                Dim row As DataGridViewRow = .Rows(mRow)
+                Dim x As Single = e.MarginBounds.Left
+                Dim h As Single = 0
+                For Each cell As DataGridViewCell In row.Cells
+                    Dim rc As RectangleF = New RectangleF(x, y, cell.Size.Width, cell.Size.Height)
+                    e.Graphics.DrawRectangle(Pens.Black, rc.Left, rc.Top, rc.Width, rc.Height)
+                    If (newpage) Then
+                        e.Graphics.DrawString(UserDataGridView.Columns(cell.ColumnIndex).HeaderText, .Font, Brushes.Black, rc, fmt)
+                    Else
+                        e.Graphics.DrawString(UserDataGridView.Rows(cell.RowIndex).Cells(cell.ColumnIndex).FormattedValue.ToString(), .Font, Brushes.Black, rc, fmt)
+                    End If
+                    x += rc.Width
+                    h = Math.Max(h, rc.Height)
+                Next
+                newpage = False
+                y += h
+                mRow += 1
+                If y + h > e.MarginBounds.Bottom Then
+                    e.HasMorePages = True
+                    mRow -= 1
+                    newpage = True
+                    Exit Sub
+                End If
+            Loop
+            mRow = 0
+        End With
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
