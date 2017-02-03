@@ -350,7 +350,7 @@ Partial Class HeadGirlConfig
         '
         'ImagePictureBox
         '
-        Me.ImagePictureBox.BackColor = System.Drawing.Color.Transparent
+        Me.ImagePictureBox.BackColor = System.Drawing.Color.White
         Me.ImagePictureBox.DataBindings.Add(New System.Windows.Forms.Binding("Image", Me.CandidatesHeadGirlBindingSource, "Profile Image", True))
         Me.ImagePictureBox.Location = New System.Drawing.Point(223, 163)
         Me.ImagePictureBox.Name = "ImagePictureBox"

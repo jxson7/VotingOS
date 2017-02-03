@@ -54,5 +54,5 @@
             mRow = 0
         End With
     End Sub
-    End Sub
+
 End Class

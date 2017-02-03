@@ -333,6 +333,7 @@ Partial Class HeadBoyProfiles
         Me.ImagePictureBox.Location = New System.Drawing.Point(180, 160)
         Me.ImagePictureBox.Name = "ImagePictureBox"
         Me.ImagePictureBox.Size = New System.Drawing.Size(100, 131)
+        Me.ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.ImagePictureBox.TabIndex = 16
         Me.ImagePictureBox.TabStop = False
         '

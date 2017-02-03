@@ -340,7 +340,7 @@ Partial Class HeadBoyConfig
         Me.ImagePictureBox.Location = New System.Drawing.Point(222, 152)
         Me.ImagePictureBox.Name = "ImagePictureBox"
         Me.ImagePictureBox.Size = New System.Drawing.Size(117, 145)
-        Me.ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ImagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.ImagePictureBox.TabIndex = 14
         Me.ImagePictureBox.TabStop = False
         '

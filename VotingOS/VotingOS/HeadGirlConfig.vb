@@ -5,6 +5,8 @@
             Me.CandidatesHeadGirlBindingSource.EndEdit()
             Me.TableAdapterManager.UpdateAll(Me.DatabaseDataSet)
             MsgBox("Update Successful")
+            Me.Hide()
+            configchoice.Show()
         Catch ex As Exception
             MsgBox("Update Failed. Please try again later or contact administrator.")
         End Try
