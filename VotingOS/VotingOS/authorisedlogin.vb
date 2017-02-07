@@ -7,12 +7,17 @@ Public Class authorisedlogin
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+        'Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
         Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
 
         myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
         myConnection.Open()
+
+        'myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
+        'myConnection.Open()
         cmd = New OleDbCommand("SELECT * FROM [authorisedmembers] WHERE [password] = '" & TextBox1.Text & "'", myConnection)
         Dim dr As OleDbDataReader = cmd.ExecuteReader
+
 
         ' the following variable is hold true if user is found, and false if user is not found
         Dim userFound As Boolean = False
