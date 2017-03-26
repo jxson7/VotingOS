@@ -25,7 +25,6 @@ Partial Class configchoice
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(configchoice))
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
@@ -52,21 +51,6 @@ Partial Class configchoice
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "What would you like to add/change?"
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(221, 191)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(154, 33)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "HEAD BOY"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.Transparent
@@ -79,7 +63,7 @@ Partial Class configchoice
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(154, 33)
         Me.Button2.TabIndex = 11
-        Me.Button2.Text = "HEAD GIRL"
+        Me.Button2.Text = "CANDIDATES"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
@@ -179,7 +163,6 @@ Partial Class configchoice
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "configchoice"
