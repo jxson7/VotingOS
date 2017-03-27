@@ -34,6 +34,8 @@ Partial Class configchoice
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,11 +61,11 @@ Partial Class configchoice
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(221, 245)
+        Me.Button2.Location = New System.Drawing.Point(219, 187)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(154, 33)
         Me.Button2.TabIndex = 11
-        Me.Button2.Text = "CANDIDATES"
+        Me.Button2.Text = "DELETE DATA"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
@@ -74,7 +76,7 @@ Partial Class configchoice
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(221, 298)
+        Me.Button3.Location = New System.Drawing.Point(219, 240)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(154, 33)
         Me.Button3.TabIndex = 12
@@ -89,7 +91,7 @@ Partial Class configchoice
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.Color.White
-        Me.Button6.Location = New System.Drawing.Point(221, 347)
+        Me.Button6.Location = New System.Drawing.Point(219, 289)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(154, 33)
         Me.Button6.TabIndex = 15
@@ -117,7 +119,7 @@ Partial Class configchoice
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.Color.White
-        Me.Button7.Location = New System.Drawing.Point(221, 398)
+        Me.Button7.Location = New System.Drawing.Point(219, 340)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(154, 33)
         Me.Button7.TabIndex = 20
@@ -150,12 +152,44 @@ Partial Class configchoice
         Me.PictureBox2.TabStop = False
         Me.ToolTip1.SetToolTip(Me.PictureBox2, "Want to exit VotingOS? Click Here")
         '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.Transparent
+        Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.Color.White
+        Me.Button4.Location = New System.Drawing.Point(219, 389)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(154, 33)
+        Me.Button4.TabIndex = 30
+        Me.Button4.Text = "VIEW HEAD BOYS"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.Transparent
+        Me.Button5.BackgroundImage = CType(resources.GetObject("Button5.BackgroundImage"), System.Drawing.Image)
+        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.Color.White
+        Me.Button5.Location = New System.Drawing.Point(219, 443)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(154, 33)
+        Me.Button5.TabIndex = 31
+        Me.Button5.Text = "VIEW HEAD GIRLS"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
         'configchoice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(593, 567)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button7)
@@ -186,4 +220,6 @@ Partial Class configchoice
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
 End Class

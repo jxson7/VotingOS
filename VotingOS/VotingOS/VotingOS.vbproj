@@ -124,10 +124,10 @@
     <Compile Include="authorisedlogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CandConfigChoice.Designer.vb">
-      <DependentUpon>CandConfigChoice.vb</DependentUpon>
+    <Compile Include="deleteforms.Designer.vb">
+      <DependentUpon>deleteforms.vb</DependentUpon>
     </Compile>
-    <Compile Include="CandConfigChoice.vb">
+    <Compile Include="deleteforms.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="close.vb" />
@@ -239,8 +239,8 @@
     <EmbeddedResource Include="authorisedlogin.resx">
       <DependentUpon>authorisedlogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CandConfigChoice.resx">
-      <DependentUpon>CandConfigChoice.vb</DependentUpon>
+    <EmbeddedResource Include="deleteforms.resx">
+      <DependentUpon>deleteforms.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="configchoice.resx">
       <DependentUpon>configchoice.vb</DependentUpon>
