@@ -82,9 +82,9 @@ Partial Class authorisedlogin
         Me.TextBox1.ForeColor = System.Drawing.Color.White
         Me.TextBox1.Location = New System.Drawing.Point(295, 245)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox1.Size = New System.Drawing.Size(159, 20)
         Me.TextBox1.TabIndex = 11
+        Me.TextBox1.UseSystemPasswordChar = True
         '
         'Label1
         '

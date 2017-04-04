@@ -94,10 +94,10 @@ Partial Class MainLogin
         Me.TextBox2.ForeColor = System.Drawing.Color.White
         Me.TextBox2.Location = New System.Drawing.Point(285, 255)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.Size = New System.Drawing.Size(156, 20)
         Me.TextBox2.TabIndex = 7
         Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TextBox2.UseSystemPasswordChar = True
         '
         'Button1
         '
