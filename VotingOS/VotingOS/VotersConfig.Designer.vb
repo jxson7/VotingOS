@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class VotersConfig
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class VotersConfig
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VotersConfig))
@@ -61,7 +61,6 @@ Partial Class VotersConfig
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsersBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -443,28 +442,12 @@ Partial Class VotersConfig
         Me.PictureBox2.TabIndex = 29
         Me.PictureBox2.TabStop = False
         '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImage = Global.VotingOS.My.Resources.Resources.STARTUPPAGE2
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(475, 475)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 5, 3, 5)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(164, 33)
-        Me.Button2.TabIndex = 32
-        Me.Button2.Text = "VIEW ALL USERS"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
         'VotersConfig
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(901, 567)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
@@ -546,5 +529,4 @@ Partial Class VotersConfig
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Button2 As Button
 End Class

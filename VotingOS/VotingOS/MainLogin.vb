@@ -49,7 +49,6 @@ Public Class MainLogin
             MsgBox("Please enter your credentials")
         ElseIf Voted = True Then
             MsgBox("You have already casted your vote. If you haven't previously casted a vote, please contact your administrator ")
-            Me.Close()
         ElseIf userFound = True Then
             MainLogin.Username = userinput.Text
                 MainLogin.MyName = FirstName
@@ -112,7 +111,6 @@ Public Class MainLogin
                 MsgBox("Please enter your credentials")
             ElseIf Voted = True Then
                 MsgBox("You have already casted your vote. If you haven't previously casted a vote, please contact your administrator ")
-                Me.Close()
             ElseIf userFound = True Then
                 MainLogin.Username = userinput.Text
                 MainLogin.MyName = FirstName

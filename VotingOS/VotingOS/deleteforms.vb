@@ -3,18 +3,21 @@ Public Class deleteforms
     Dim myConnection As OleDbConnection = New OleDbConnection
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
+        Dim result As Integer = MsgBox("Are you sure you wish to delete ALL head boy candidates? This data cannot be retrieved once deleted", MsgBoxStyle.YesNo)
+        If result = DialogResult.Yes Then
+            Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
 
-        myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
-        myConnection.Open()
-        cmd.CommandText = "DELETE * FROM CandidateHeadBoy"
+            myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
+            myConnection.Open()
+            cmd.CommandText = "DELETE * FROM CandidateHeadBoy"
 
-        cmd.ExecuteNonQuery()
-        cmd.Dispose()
-        MsgBox("HEAD BOY DETAILS HAVE BEEN DELETED")
-        myConnection.Close()
-        Me.Close()
-        configchoice.Show()
+            cmd.ExecuteNonQuery()
+            cmd.Dispose()
+            MsgBox("HEAD BOY DETAILS HAVE BEEN DELETED")
+            myConnection.Close()
+            Me.Close()
+            configchoice.Show()
+        End If
 
     End Sub
 
@@ -33,32 +36,41 @@ Public Class deleteforms
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
+        Dim result As Integer = MsgBox("Are you sure you wish to delete ALL head girl candidates? This data cannot be retrieved once deleted", MsgBoxStyle.YesNo)
+        If result = DialogResult.Yes Then
+            Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
 
-        myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
-        myConnection.Open()
-        cmd.CommandText = "DELETE * FROM CandidatesHeadGirl"
+            myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
+            myConnection.Open()
+            cmd.CommandText = "DELETE * FROM CandidatesHeadGirl"
 
-        cmd.ExecuteNonQuery()
-        cmd.Dispose()
-        MsgBox("HEAD GIRL DETAILS HAVE BEEN DELETED")
-        myConnection.Close()
-        Me.Close()
-        configchoice.Show()
+            cmd.ExecuteNonQuery()
+            cmd.Dispose()
+            MsgBox("HEAD GIRL DETAILS HAVE BEEN DELETED")
+            myConnection.Close()
+            Me.Close()
+            configchoice.Show()
+
+        End If
+
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
+        Dim result As Integer = MsgBox("Are you sure you wish to delete ALL student details? This data cannot be retrieved once deleted", MsgBoxStyle.YesNo)
+        If result = DialogResult.Yes Then
+            Dim cmd As OleDb.OleDbCommand = myConnection.CreateCommand
 
-        myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
-        myConnection.Open()
-        cmd.CommandText = "DELETE * FROM users"
+            myConnection.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source = Database.accdb"
+            myConnection.Open()
+            cmd.CommandText = "DELETE * FROM users"
 
-        cmd.ExecuteNonQuery()
-        cmd.Dispose()
-        MsgBox("ALL VOTER DETAILS HAVE BEEN DELETED")
-        myConnection.Close()
-        Me.Close()
-        configchoice.Show()
+            cmd.ExecuteNonQuery()
+            cmd.Dispose()
+            MsgBox("ALL VOTER DETAILS HAVE BEEN DELETED")
+            myConnection.Close()
+            Me.Close()
+            configchoice.Show()
+        End If
+
     End Sub
 End Class
