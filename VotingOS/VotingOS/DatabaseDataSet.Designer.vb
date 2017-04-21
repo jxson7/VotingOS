@@ -546,6 +546,8 @@ Partial Public Class DatabaseDataSet
         
         Private columnpassword As Global.System.Data.DataColumn
         
+        Private columnLevel As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -614,6 +616,14 @@ Partial Public Class DatabaseDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property LevelColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLevel
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -650,9 +660,9 @@ Partial Public Class DatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddauthorisedmembersRow(ByVal FirstName As String, ByVal LastName As String, ByVal password As String) As authorisedmembersRow
+        Public Overloads Function AddauthorisedmembersRow(ByVal FirstName As String, ByVal LastName As String, ByVal password As String, ByVal Level As String) As authorisedmembersRow
             Dim rowauthorisedmembersRow As authorisedmembersRow = CType(Me.NewRow,authorisedmembersRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, FirstName, LastName, password}
+            Dim columnValuesArray() As Object = New Object() {Nothing, FirstName, LastName, password, Level}
             rowauthorisedmembersRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowauthorisedmembersRow)
             Return rowauthorisedmembersRow
@@ -685,6 +695,7 @@ Partial Public Class DatabaseDataSet
             Me.columnFirstName = MyBase.Columns("FirstName")
             Me.columnLastName = MyBase.Columns("LastName")
             Me.columnpassword = MyBase.Columns("password")
+            Me.columnLevel = MyBase.Columns("Level")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -698,6 +709,8 @@ Partial Public Class DatabaseDataSet
             MyBase.Columns.Add(Me.columnLastName)
             Me.columnpassword = New Global.System.Data.DataColumn("password", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnpassword)
+            Me.columnLevel = New Global.System.Data.DataColumn("Level", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLevel)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
             Me.columnID.AutoIncrement = true
             Me.columnID.AutoIncrementSeed = -1
@@ -707,6 +720,7 @@ Partial Public Class DatabaseDataSet
             Me.columnFirstName.MaxLength = 255
             Me.columnLastName.MaxLength = 255
             Me.columnpassword.MaxLength = 255
+            Me.columnLevel.MaxLength = 255
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1621,6 +1635,8 @@ Partial Public Class DatabaseDataSet
         
         Private columnVotedHeadGirl As Global.System.Data.DataColumn
         
+        Private columnVoted As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -1721,6 +1737,14 @@ Partial Public Class DatabaseDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property VotedColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnVoted
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1757,9 +1781,9 @@ Partial Public Class DatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddusersRow(ByVal user As String, ByVal FirstName As String, ByVal LastName As String, ByVal password As String, ByVal YearGroup As String, ByVal parentCandidateHeadBoyRowByCandidateHeadBoyusers As CandidateHeadBoyRow, ByVal parentCandidatesHeadGirlRowByCandidatesHeadGirlusers As CandidatesHeadGirlRow) As usersRow
+        Public Overloads Function AddusersRow(ByVal user As String, ByVal FirstName As String, ByVal LastName As String, ByVal password As String, ByVal YearGroup As String, ByVal parentCandidateHeadBoyRowByCandidateHeadBoyusers As CandidateHeadBoyRow, ByVal parentCandidatesHeadGirlRowByCandidatesHeadGirlusers As CandidatesHeadGirlRow, ByVal Voted As Boolean) As usersRow
             Dim rowusersRow As usersRow = CType(Me.NewRow,usersRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, user, FirstName, LastName, password, YearGroup, Nothing, Nothing}
+            Dim columnValuesArray() As Object = New Object() {Nothing, user, FirstName, LastName, password, YearGroup, Nothing, Nothing, Voted}
             If (Not (parentCandidateHeadBoyRowByCandidateHeadBoyusers) Is Nothing) Then
                 columnValuesArray(6) = parentCandidateHeadBoyRowByCandidateHeadBoyusers(0)
             End If
@@ -1802,6 +1826,7 @@ Partial Public Class DatabaseDataSet
             Me.columnYearGroup = MyBase.Columns("YearGroup")
             Me.columnVotedHeadBoy = MyBase.Columns("VotedHeadBoy")
             Me.columnVotedHeadGirl = MyBase.Columns("VotedHeadGirl")
+            Me.columnVoted = MyBase.Columns("Voted")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1823,6 +1848,8 @@ Partial Public Class DatabaseDataSet
             MyBase.Columns.Add(Me.columnVotedHeadBoy)
             Me.columnVotedHeadGirl = New Global.System.Data.DataColumn("VotedHeadGirl", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnVotedHeadGirl)
+            Me.columnVoted = New Global.System.Data.DataColumn("Voted", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnVoted)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
             Me.columnID.AutoIncrement = true
             Me.columnID.AutoIncrementSeed = -1
@@ -3228,6 +3255,21 @@ Partial Public Class DatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Level() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableauthorisedmembers.LevelColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Level' in table 'authorisedmembers' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableauthorisedmembers.LevelColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsFirstNameNull() As Boolean
             Return Me.IsNull(Me.tableauthorisedmembers.FirstNameColumn)
         End Function
@@ -3260,6 +3302,18 @@ Partial Public Class DatabaseDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetpasswordNull()
             Me(Me.tableauthorisedmembers.passwordColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsLevelNull() As Boolean
+            Return Me.IsNull(Me.tableauthorisedmembers.LevelColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetLevelNull()
+            Me(Me.tableauthorisedmembers.LevelColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -3908,6 +3962,21 @@ Partial Public Class DatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Voted() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableusers.VotedColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Voted' in table 'users' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableusers.VotedColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property CandidateHeadBoyRow() As CandidateHeadBoyRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("CandidateHeadBoyusers")),CandidateHeadBoyRow)
@@ -4010,6 +4079,18 @@ Partial Public Class DatabaseDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetVotedHeadGirlNull()
             Me(Me.tableusers.VotedHeadGirlColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsVotedNull() As Boolean
+            Return Me.IsNull(Me.tableusers.VotedColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetVotedNull()
+            Me(Me.tableusers.VotedColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -4813,12 +4894,14 @@ Namespace DatabaseDataSetTableAdapters
             tableMapping.ColumnMappings.Add("FirstName", "FirstName")
             tableMapping.ColumnMappings.Add("LastName", "LastName")
             tableMapping.ColumnMappings.Add("password", "password")
+            tableMapping.ColumnMappings.Add("Level", "Level")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `authorisedmembers` WHERE ((`ID` = ?) AND ((? = 1 AND `FirstName` IS "& _ 
                 "NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` ="& _ 
-                " ?)) AND ((? = 1 AND `password` IS NULL) OR (`password` = ?)))"
+                " ?)) AND ((? = 1 AND `password` IS NULL) OR (`password` = ?)) AND ((? = 1 AND `L"& _ 
+                "evel` IS NULL) OR (`Level` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FirstName", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FirstName", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -4827,24 +4910,29 @@ Namespace DatabaseDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_LastName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LastName", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_password", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "password", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_password", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "password", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Level", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Level", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Level", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Level", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `authorisedmembers` (`FirstName`, `LastName`, `password`) VALUES (?, "& _ 
-                "?, ?)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `authorisedmembers` (`FirstName`, `LastName`, `password`, `Level`) VA"& _ 
+                "LUES (?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FirstName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FirstName", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("LastName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LastName", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("password", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "password", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Level", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Level", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `authorisedmembers` SET `FirstName` = ?, `LastName` = ?, `password` = ? WH"& _ 
-                "ERE ((`ID` = ?) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ("& _ 
-                "(? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `password` I"& _ 
-                "S NULL) OR (`password` = ?)))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `authorisedmembers` SET `FirstName` = ?, `LastName` = ?, `password` = ?, `"& _ 
+                "Level` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName"& _ 
+                "` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND"& _ 
+                " `password` IS NULL) OR (`password` = ?)) AND ((? = 1 AND `Level` IS NULL) OR (`"& _ 
+                "Level` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FirstName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FirstName", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("LastName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LastName", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("password", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "password", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Level", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Level", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_FirstName", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FirstName", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_FirstName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FirstName", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -4852,6 +4940,8 @@ Namespace DatabaseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_LastName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "LastName", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_password", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "password", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_password", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "password", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Level", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Level", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Level", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Level", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4867,7 +4957,7 @@ Namespace DatabaseDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT ID, FirstName, LastName, [password] FROM authorisedmembers"
+            Me._commandCollection(0).CommandText = "SELECT ID, FirstName, LastName, [password], [Level] FROM authorisedmembers"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -4927,7 +5017,7 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_FirstName As String, ByVal Original_LastName As String, ByVal Original_password As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_FirstName As String, ByVal Original_LastName As String, ByVal Original_password As String, ByVal Original_Level As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
             If (Original_FirstName Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
@@ -4950,6 +5040,13 @@ Namespace DatabaseDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_password,String)
             End If
+            If (Original_Level Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Level,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -4969,7 +5066,7 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal FirstName As String, ByVal LastName As String, ByVal password As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal FirstName As String, ByVal LastName As String, ByVal password As String, ByVal Level As String) As Integer
             If (FirstName Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -4984,6 +5081,11 @@ Namespace DatabaseDataSetTableAdapters
                 Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(2).Value = CType(password,String)
+            End If
+            If (Level Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Level,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -5004,7 +5106,7 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal FirstName As String, ByVal LastName As String, ByVal password As String, ByVal Original_ID As Integer, ByVal Original_FirstName As String, ByVal Original_LastName As String, ByVal Original_password As String) As Integer
+        Public Overloads Overridable Function Update(ByVal FirstName As String, ByVal LastName As String, ByVal password As String, ByVal Level As String, ByVal Original_ID As Integer, ByVal Original_FirstName As String, ByVal Original_LastName As String, ByVal Original_password As String, ByVal Original_Level As String) As Integer
             If (FirstName Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -5020,27 +5122,39 @@ Namespace DatabaseDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(2).Value = CType(password,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Original_ID,Integer)
-            If (Original_FirstName Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            If (Level Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_FirstName,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Level,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_ID,Integer)
+            If (Original_FirstName Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_FirstName,String)
             End If
             If (Original_LastName Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_LastName,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_LastName,String)
             End If
             If (Original_password Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_password,String)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_password,String)
+            End If
+            If (Original_Level Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Level,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -6117,6 +6231,7 @@ Namespace DatabaseDataSetTableAdapters
             tableMapping.ColumnMappings.Add("YearGroup", "YearGroup")
             tableMapping.ColumnMappings.Add("VotedHeadBoy", "VotedHeadBoy")
             tableMapping.ColumnMappings.Add("VotedHeadGirl", "VotedHeadGirl")
+            tableMapping.ColumnMappings.Add("Voted", "Voted")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -6125,7 +6240,8 @@ Namespace DatabaseDataSetTableAdapters
                 " `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `password` IS NULL) OR"& _ 
                 " (`password` = ?)) AND ((? = 1 AND `YearGroup` IS NULL) OR (`YearGroup` = ?)) AN"& _ 
                 "D ((? = 1 AND `VotedHeadBoy` IS NULL) OR (`VotedHeadBoy` = ?)) AND ((? = 1 AND `"& _ 
-                "VotedHeadGirl` IS NULL) OR (`VotedHeadGirl` = ?)))"
+                "VotedHeadGirl` IS NULL) OR (`VotedHeadGirl` = ?)) AND ((? = 1 AND `Voted` IS NUL"& _ 
+                "L) OR (`Voted` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_user", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "user", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -6142,10 +6258,12 @@ Namespace DatabaseDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_VotedHeadBoy", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VotedHeadBoy", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_VotedHeadGirl", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VotedHeadGirl", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_VotedHeadGirl", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VotedHeadGirl", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Voted", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Voted", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Voted", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Voted", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `users` (`user`, `FirstName`, `LastName`, `password`, `YearGroup`, `V"& _ 
-                "otedHeadBoy`, `VotedHeadGirl`) VALUES (?, ?, ?, ?, ?, ?, ?)"
+                "otedHeadBoy`, `VotedHeadGirl`, `Voted`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("user", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "user", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FirstName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FirstName", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -6154,16 +6272,17 @@ Namespace DatabaseDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("YearGroup", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YearGroup", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("VotedHeadBoy", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VotedHeadBoy", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("VotedHeadGirl", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VotedHeadGirl", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Voted", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Voted", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `users` SET `user` = ?, `FirstName` = ?, `LastName` = ?, `password` = ?, `"& _ 
-                "YearGroup` = ?, `VotedHeadBoy` = ?, `VotedHeadGirl` = ? WHERE ((`ID` = ?) AND (("& _ 
-                "? = 1 AND `user` IS NULL) OR (`user` = ?)) AND ((? = 1 AND `FirstName` IS NULL) "& _ 
-                "OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) A"& _ 
-                "ND ((? = 1 AND `password` IS NULL) OR (`password` = ?)) AND ((? = 1 AND `YearGro"& _ 
-                "up` IS NULL) OR (`YearGroup` = ?)) AND ((? = 1 AND `VotedHeadBoy` IS NULL) OR (`"& _ 
-                "VotedHeadBoy` = ?)) AND ((? = 1 AND `VotedHeadGirl` IS NULL) OR (`VotedHeadGirl`"& _ 
-                " = ?)))"
+                "YearGroup` = ?, `VotedHeadBoy` = ?, `VotedHeadGirl` = ?, `Voted` = ? WHERE ((`ID"& _ 
+                "` = ?) AND ((? = 1 AND `user` IS NULL) OR (`user` = ?)) AND ((? = 1 AND `FirstNa"& _ 
+                "me` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`Last"& _ 
+                "Name` = ?)) AND ((? = 1 AND `password` IS NULL) OR (`password` = ?)) AND ((? = 1"& _ 
+                " AND `YearGroup` IS NULL) OR (`YearGroup` = ?)) AND ((? = 1 AND `VotedHeadBoy` I"& _ 
+                "S NULL) OR (`VotedHeadBoy` = ?)) AND ((? = 1 AND `VotedHeadGirl` IS NULL) OR (`V"& _ 
+                "otedHeadGirl` = ?)) AND ((? = 1 AND `Voted` IS NULL) OR (`Voted` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("user", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "user", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("FirstName", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "FirstName", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -6172,6 +6291,7 @@ Namespace DatabaseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("YearGroup", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "YearGroup", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("VotedHeadBoy", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VotedHeadBoy", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("VotedHeadGirl", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VotedHeadGirl", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Voted", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Voted", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_user", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "user", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_user", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "user", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -6187,6 +6307,8 @@ Namespace DatabaseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_VotedHeadBoy", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VotedHeadBoy", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_VotedHeadGirl", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VotedHeadGirl", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_VotedHeadGirl", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "VotedHeadGirl", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Voted", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Voted", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Voted", Global.System.Data.OleDb.OleDbType.[Boolean], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Voted", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6203,12 +6325,12 @@ Namespace DatabaseDataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT ID, [user], FirstName, LastName, [password], YearGroup, VotedHeadBoy, Vote"& _ 
-                "dHeadGirl FROM users"
+                "dHeadGirl, Voted FROM users"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "SELECT ID, [user], FirstName, LastName, [password], YearGroup, VotedHeadBoy, Vote"& _ 
-                "dHeadGirl FROM users WHERE [user] = mainlogin.username"
+                "dHeadGirl, Voted FROM users WHERE ([user] = mainlogin.username)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -6281,7 +6403,7 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_user As String, ByVal Original_FirstName As String, ByVal Original_LastName As String, ByVal Original_password As String, ByVal Original_YearGroup As String, ByVal Original_VotedHeadBoy As Global.System.Nullable(Of Integer), ByVal Original_VotedHeadGirl As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_user As String, ByVal Original_FirstName As String, ByVal Original_LastName As String, ByVal Original_password As String, ByVal Original_YearGroup As String, ByVal Original_VotedHeadBoy As Global.System.Nullable(Of Integer), ByVal Original_VotedHeadGirl As Global.System.Nullable(Of Integer), ByVal Original_Voted As Boolean) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
             If (Original_user Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
@@ -6332,6 +6454,8 @@ Namespace DatabaseDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
             End If
+            Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Voted,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -6351,7 +6475,7 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal user As String, ByVal FirstName As String, ByVal LastName As String, ByVal password As String, ByVal YearGroup As String, ByVal VotedHeadBoy As Global.System.Nullable(Of Integer), ByVal VotedHeadGirl As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Insert(ByVal user As String, ByVal FirstName As String, ByVal LastName As String, ByVal password As String, ByVal YearGroup As String, ByVal VotedHeadBoy As Global.System.Nullable(Of Integer), ByVal VotedHeadGirl As Global.System.Nullable(Of Integer), ByVal Voted As Boolean) As Integer
             If (user Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -6387,6 +6511,7 @@ Namespace DatabaseDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
             End If
+            Me.Adapter.InsertCommand.Parameters(7).Value = CType(Voted,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -6406,7 +6531,24 @@ Namespace DatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal user As String, ByVal FirstName As String, ByVal LastName As String, ByVal password As String, ByVal YearGroup As String, ByVal VotedHeadBoy As Global.System.Nullable(Of Integer), ByVal VotedHeadGirl As Global.System.Nullable(Of Integer), ByVal Original_ID As Integer, ByVal Original_user As String, ByVal Original_FirstName As String, ByVal Original_LastName As String, ByVal Original_password As String, ByVal Original_YearGroup As String, ByVal Original_VotedHeadBoy As Global.System.Nullable(Of Integer), ByVal Original_VotedHeadGirl As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Update( _
+                    ByVal user As String,  _
+                    ByVal FirstName As String,  _
+                    ByVal LastName As String,  _
+                    ByVal password As String,  _
+                    ByVal YearGroup As String,  _
+                    ByVal VotedHeadBoy As Global.System.Nullable(Of Integer),  _
+                    ByVal VotedHeadGirl As Global.System.Nullable(Of Integer),  _
+                    ByVal Voted As Boolean,  _
+                    ByVal Original_ID As Integer,  _
+                    ByVal Original_user As String,  _
+                    ByVal Original_FirstName As String,  _
+                    ByVal Original_LastName As String,  _
+                    ByVal Original_password As String,  _
+                    ByVal Original_YearGroup As String,  _
+                    ByVal Original_VotedHeadBoy As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_VotedHeadGirl As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_Voted As Boolean) As Integer
             If (user Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -6442,56 +6584,59 @@ Namespace DatabaseDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_ID,Integer)
+            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Voted,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_ID,Integer)
             If (Original_user Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_user,String)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_user,String)
             End If
             If (Original_FirstName Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_FirstName,String)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_FirstName,String)
             End If
             If (Original_LastName Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_LastName,String)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_LastName,String)
             End If
             If (Original_password Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_password,String)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_password,String)
             End If
             If (Original_YearGroup Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_YearGroup,String)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_YearGroup,String)
             End If
             If (Original_VotedHeadBoy.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_VotedHeadBoy.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_VotedHeadBoy.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
             End If
             If (Original_VotedHeadGirl.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_VotedHeadGirl.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_VotedHeadGirl.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
             End If
+            Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_Voted,Boolean)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then

@@ -110,6 +110,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addadminconfig.Designer.vb">
+      <DependentUpon>addadminconfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addadminconfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addadminlogin.Designer.vb">
+      <DependentUpon>addadminlogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addadminlogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminConfig.Designer.vb">
       <DependentUpon>AdminConfig.vb</DependentUpon>
     </Compile>
@@ -133,6 +145,9 @@
     </Compile>
     <Compile Include="authorisedlogin.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseDataSet.vb">
+      <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="deleteforms.Designer.vb">
       <DependentUpon>deleteforms.vb</DependentUpon>
@@ -158,6 +173,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="headlogin.Designer.vb">
+      <DependentUpon>headlogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="headlogin.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -217,6 +238,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="sysadminconfig.Designer.vb">
+      <DependentUpon>sysadminconfig.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sysadminconfig.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sysadminlogin.Designer.vb">
+      <DependentUpon>sysadminlogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="sysadminlogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VotePage.Designer.vb">
       <DependentUpon>VotePage.vb</DependentUpon>
     </Compile>
@@ -237,6 +270,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="addadminconfig.resx">
+      <DependentUpon>addadminconfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addadminlogin.resx">
+      <DependentUpon>addadminlogin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminConfig.resx">
       <DependentUpon>AdminConfig.vb</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ContinueMsgBox.resx">
       <DependentUpon>ContinueMsgBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="headlogin.resx">
+      <DependentUpon>headlogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PollsViewer.resx">
       <DependentUpon>PollsViewer.vb</DependentUpon>
@@ -284,6 +326,12 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sysadminconfig.resx">
+      <DependentUpon>sysadminconfig.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sysadminlogin.resx">
+      <DependentUpon>sysadminlogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VotePage.resx">
       <DependentUpon>VotePage.vb</DependentUpon>

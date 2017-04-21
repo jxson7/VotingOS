@@ -2,7 +2,7 @@
     ' This aspect has been specifically created in order for the admin to gain access to configure the voters that wish to vote for those running for a position.
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Hide()
-        VotersConfig.Show()
+        addadminlogin.Show()
     End Sub
 
     ' If wanting to exit the entire system. 
@@ -21,9 +21,14 @@
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        Me.Hide()
-        AdminConfig.Show()
-
+        Dim result As Integer = MsgBox("Is your level of access: ADDITIONAL ADMINISTRATOR?", MsgBoxStyle.YesNo)
+        If result = DialogResult.Yes Then
+            Me.Hide()
+            addadminlogin.Show()
+        Else
+            Me.Hide()
+            sysadminlogin.Show()
+        End If
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs)
@@ -32,7 +37,7 @@
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         Me.Hide()
-        PollsViewer.Show()
+        headlogin.Show()
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
@@ -65,17 +70,17 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Hide()
-        deleteforms.Show()
+        sysadminlogin.Show()
     End Sub
 
     Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
         Me.Hide()
-        HeadBoyConfig.Show()
+        addadminlogin.Show()
     End Sub
 
     Private Sub Button5_Click_1(sender As Object, e As EventArgs) Handles Button5.Click
         Me.Hide()
-        HeadGirlConfig.Show()
+        addadminlogin.Show()
 
     End Sub
 End Class

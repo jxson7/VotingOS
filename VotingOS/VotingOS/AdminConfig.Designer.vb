@@ -23,17 +23,15 @@ Partial Class AdminConfig
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim IDLabel As System.Windows.Forms.Label
         Dim FirstNameLabel As System.Windows.Forms.Label
         Dim LastNameLabel As System.Windows.Forms.Label
         Dim PasswordLabel As System.Windows.Forms.Label
+        Dim LevelLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminConfig))
-        Me.DatabaseDataSet = New VotingOS.DatabaseDataSet()
-        Me.AuthorisedmembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AuthorisedmembersTableAdapter = New VotingOS.DatabaseDataSetTableAdapters.authorisedmembersTableAdapter()
-        Me.TableAdapterManager = New VotingOS.DatabaseDataSetTableAdapters.TableAdapterManager()
         Me.AuthorisedmembersBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.AuthorisedmembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatabaseDataSet = New VotingOS.DatabaseDataSet()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
@@ -43,7 +41,6 @@ Partial Class AdminConfig
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.AuthorisedmembersBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.IDTextBox = New System.Windows.Forms.TextBox()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.LastNameTextBox = New System.Windows.Forms.TextBox()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
@@ -53,15 +50,17 @@ Partial Class AdminConfig
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        IDLabel = New System.Windows.Forms.Label()
+        Me.AuthorisedmembersTableAdapter = New VotingOS.DatabaseDataSetTableAdapters.authorisedmembersTableAdapter()
+        Me.TableAdapterManager = New VotingOS.DatabaseDataSetTableAdapters.TableAdapterManager()
+        Me.LevelComboBox = New System.Windows.Forms.ComboBox()
         FirstNameLabel = New System.Windows.Forms.Label()
         LastNameLabel = New System.Windows.Forms.Label()
         PasswordLabel = New System.Windows.Forms.Label()
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AuthorisedmembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        LevelLabel = New System.Windows.Forms.Label()
         CType(Me.AuthorisedmembersBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.AuthorisedmembersBindingNavigator.SuspendLayout()
+        CType(Me.AuthorisedmembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStripContainer1.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,25 +68,13 @@ Partial Class AdminConfig
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'IDLabel
-        '
-        IDLabel.AutoSize = True
-        IDLabel.BackColor = System.Drawing.Color.Transparent
-        IDLabel.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        IDLabel.ForeColor = System.Drawing.Color.White
-        IDLabel.Location = New System.Drawing.Point(250, 207)
-        IDLabel.Name = "IDLabel"
-        IDLabel.Size = New System.Drawing.Size(27, 18)
-        IDLabel.TabIndex = 1
-        IDLabel.Text = "ID:"
-        '
         'FirstNameLabel
         '
         FirstNameLabel.AutoSize = True
         FirstNameLabel.BackColor = System.Drawing.Color.Transparent
         FirstNameLabel.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         FirstNameLabel.ForeColor = System.Drawing.Color.White
-        FirstNameLabel.Location = New System.Drawing.Point(189, 244)
+        FirstNameLabel.Location = New System.Drawing.Point(203, 214)
         FirstNameLabel.Name = "FirstNameLabel"
         FirstNameLabel.Size = New System.Drawing.Size(88, 18)
         FirstNameLabel.TabIndex = 3
@@ -99,7 +86,7 @@ Partial Class AdminConfig
         LastNameLabel.BackColor = System.Drawing.Color.Transparent
         LastNameLabel.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         LastNameLabel.ForeColor = System.Drawing.Color.White
-        LastNameLabel.Location = New System.Drawing.Point(188, 284)
+        LastNameLabel.Location = New System.Drawing.Point(202, 254)
         LastNameLabel.Name = "LastNameLabel"
         LastNameLabel.Size = New System.Drawing.Size(89, 18)
         LastNameLabel.TabIndex = 5
@@ -111,35 +98,23 @@ Partial Class AdminConfig
         PasswordLabel.BackColor = System.Drawing.Color.Transparent
         PasswordLabel.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         PasswordLabel.ForeColor = System.Drawing.Color.White
-        PasswordLabel.Location = New System.Drawing.Point(145, 323)
+        PasswordLabel.Location = New System.Drawing.Point(159, 291)
         PasswordLabel.Name = "PasswordLabel"
         PasswordLabel.Size = New System.Drawing.Size(132, 18)
         PasswordLabel.TabIndex = 7
         PasswordLabel.Text = "Unique ID Code: "
         '
-        'DatabaseDataSet
+        'LevelLabel
         '
-        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
-        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'AuthorisedmembersBindingSource
-        '
-        Me.AuthorisedmembersBindingSource.DataMember = "authorisedmembers"
-        Me.AuthorisedmembersBindingSource.DataSource = Me.DatabaseDataSet
-        '
-        'AuthorisedmembersTableAdapter
-        '
-        Me.AuthorisedmembersTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.authorisedmembersTableAdapter = Me.AuthorisedmembersTableAdapter
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.CandidateHeadBoyTableAdapter = Nothing
-        Me.TableAdapterManager.CandidatesHeadGirlTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = VotingOS.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.usersTableAdapter = Nothing
-        Me.TableAdapterManager.VotesTableAdapter = Nothing
+        LevelLabel.AutoSize = True
+        LevelLabel.BackColor = System.Drawing.Color.Transparent
+        LevelLabel.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        LevelLabel.ForeColor = System.Drawing.Color.White
+        LevelLabel.Location = New System.Drawing.Point(158, 335)
+        LevelLabel.Name = "LevelLabel"
+        LevelLabel.Size = New System.Drawing.Size(132, 19)
+        LevelLabel.TabIndex = 28
+        LevelLabel.Text = "Level of Access:"
         '
         'AuthorisedmembersBindingNavigator
         '
@@ -170,6 +145,16 @@ Partial Class AdminConfig
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'AuthorisedmembersBindingSource
+        '
+        Me.AuthorisedmembersBindingSource.DataMember = "authorisedmembers"
+        Me.AuthorisedmembersBindingSource.DataSource = Me.DatabaseDataSet
+        '
+        'DatabaseDataSet
+        '
+        Me.DatabaseDataSet.DataSetName = "DatabaseDataSet"
+        Me.DatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorDeleteItem
         '
@@ -239,18 +224,10 @@ Partial Class AdminConfig
         Me.AuthorisedmembersBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.AuthorisedmembersBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'IDTextBox
-        '
-        Me.IDTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AuthorisedmembersBindingSource, "ID", True))
-        Me.IDTextBox.Location = New System.Drawing.Point(283, 205)
-        Me.IDTextBox.Name = "IDTextBox"
-        Me.IDTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.IDTextBox.TabIndex = 2
-        '
         'FirstNameTextBox
         '
         Me.FirstNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AuthorisedmembersBindingSource, "FirstName", True))
-        Me.FirstNameTextBox.Location = New System.Drawing.Point(283, 242)
+        Me.FirstNameTextBox.Location = New System.Drawing.Point(297, 212)
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
         Me.FirstNameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.FirstNameTextBox.TabIndex = 4
@@ -258,7 +235,7 @@ Partial Class AdminConfig
         'LastNameTextBox
         '
         Me.LastNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AuthorisedmembersBindingSource, "LastName", True))
-        Me.LastNameTextBox.Location = New System.Drawing.Point(283, 281)
+        Me.LastNameTextBox.Location = New System.Drawing.Point(297, 251)
         Me.LastNameTextBox.Name = "LastNameTextBox"
         Me.LastNameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.LastNameTextBox.TabIndex = 6
@@ -266,7 +243,7 @@ Partial Class AdminConfig
         'PasswordTextBox
         '
         Me.PasswordTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AuthorisedmembersBindingSource, "password", True))
-        Me.PasswordTextBox.Location = New System.Drawing.Point(283, 321)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(297, 291)
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PasswordTextBox.TabIndex = 8
@@ -279,7 +256,7 @@ Partial Class AdminConfig
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(192, 380)
+        Me.Button1.Location = New System.Drawing.Point(192, 403)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(176, 34)
         Me.Button1.TabIndex = 9
@@ -353,20 +330,29 @@ Partial Class AdminConfig
         Me.PictureBox1.TabIndex = 27
         Me.PictureBox1.TabStop = False
         '
-        'Button2
+        'AuthorisedmembersTableAdapter
         '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImage = Global.VotingOS.My.Resources.Resources.STARTUPPAGE2
-        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(192, 443)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(176, 34)
-        Me.Button2.TabIndex = 28
-        Me.Button2.Text = "VIEW ALL ADMINS"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.AuthorisedmembersTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.authorisedmembersTableAdapter = Me.AuthorisedmembersTableAdapter
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CandidateHeadBoyTableAdapter = Nothing
+        Me.TableAdapterManager.CandidatesHeadGirlTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = VotingOS.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.usersTableAdapter = Nothing
+        Me.TableAdapterManager.VotesTableAdapter = Nothing
+        '
+        'LevelComboBox
+        '
+        Me.LevelComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AuthorisedmembersBindingSource, "Level", True))
+        Me.LevelComboBox.FormattingEnabled = True
+        Me.LevelComboBox.Items.AddRange(New Object() {"System Admin", "Additional Admin", "Assistant Head"})
+        Me.LevelComboBox.Location = New System.Drawing.Point(297, 335)
+        Me.LevelComboBox.Name = "LevelComboBox"
+        Me.LevelComboBox.Size = New System.Drawing.Size(100, 21)
+        Me.LevelComboBox.TabIndex = 29
         '
         'AdminConfig
         '
@@ -374,9 +360,10 @@ Partial Class AdminConfig
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(593, 563)
+        Me.ClientSize = New System.Drawing.Size(601, 563)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(LevelLabel)
+        Me.Controls.Add(Me.LevelComboBox)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
@@ -389,8 +376,6 @@ Partial Class AdminConfig
         Me.Controls.Add(Me.LastNameTextBox)
         Me.Controls.Add(FirstNameLabel)
         Me.Controls.Add(Me.FirstNameTextBox)
-        Me.Controls.Add(IDLabel)
-        Me.Controls.Add(Me.IDTextBox)
         Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -398,11 +383,11 @@ Partial Class AdminConfig
         Me.Name = "AdminConfig"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AdminConfig"
-        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AuthorisedmembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AuthorisedmembersBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.AuthorisedmembersBindingNavigator.ResumeLayout(False)
         Me.AuthorisedmembersBindingNavigator.PerformLayout()
+        CType(Me.AuthorisedmembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStripContainer1.BottomToolStripPanel.ResumeLayout(False)
         Me.ToolStripContainer1.BottomToolStripPanel.PerformLayout()
         Me.ToolStripContainer1.ResumeLayout(False)
@@ -430,7 +415,6 @@ Partial Class AdminConfig
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents AuthorisedmembersBindingNavigatorSaveItem As ToolStripButton
-    Friend WithEvents IDTextBox As TextBox
     Friend WithEvents FirstNameTextBox As TextBox
     Friend WithEvents LastNameTextBox As TextBox
     Friend WithEvents PasswordTextBox As TextBox
@@ -440,5 +424,5 @@ Partial Class AdminConfig
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents LevelComboBox As ComboBox
 End Class
